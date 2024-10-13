@@ -10,7 +10,7 @@ namespace Animators.UserInterface
         [SerializeField] private Text viewText;
         
         private float _initialYPosition;
-        private readonly float _onScreenYPosition = 950;
+        private readonly float _onScreenYPosition = 1000;
         
         private void Awake()
         {
@@ -19,9 +19,9 @@ namespace Animators.UserInterface
         
         public void Show()
         {
-            viewBackground.DOAnchorPosY(_onScreenYPosition, 0.3f)
+            viewBackground.DOAnchorPosY(_onScreenYPosition, 0.2f)
                 .OnComplete(() => 
-                    viewText.DOFade(1f, 0.15f));
+                    viewText.DOFade(1f, 0.1f));
         }
 
         public void Hide()

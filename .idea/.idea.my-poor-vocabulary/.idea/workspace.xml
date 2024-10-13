@@ -4,11 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="" />
+    <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/UserInterface/TipViewAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animators/UserInterface/TipViewAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/PractiseButton.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/PractiseButton/PractiseIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/PractiseButton/PractiseIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/PractiseButton/WordCard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/PractiseButton/WordCard.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/StatsButton.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/StatsButton/StatsIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/StatsButton/StatsIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/StatsButton/StatsIconBackground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/StatsButton/StatsIconBackground.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/VocabularyButton.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/VocabularyButton/VocabularyIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavigationButtons/VocabularyButton/VocabularyIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tip.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tip/TipCloud.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tip/TipCloud.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordAddingElements.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordAddingElements/InputLine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordAddingElements/InputLine.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordAddingElements/OriginalWordInput.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordAddingElements/OriginalWordInput.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordAddingElements/Plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordAddingElements/Plus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordAddingElements/TranslatedWordInput.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordAddingElements/TranslatedWordInput.png.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="SWEA" />
@@ -18,6 +53,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2nNmnhO5tsQhtJhkiXDLvOmwZPp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,6 +63,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -82,7 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728822078450</updated>
       <workItem from="1728822080754" duration="954000" />
-      <workItem from="1728824676053" duration="317000" />
+      <workItem from="1728824676053" duration="2725000" />
     </task>
     <servers />
   </component>
