@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Animators.Generic
+namespace UserInterface.Animators.Generic
 {
     public class InteractableButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {

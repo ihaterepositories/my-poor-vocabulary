@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Animators.UserInterface
+namespace UserInterface.Animators.Custom
 {
     public class TipViewAnimator : MonoBehaviour
     {

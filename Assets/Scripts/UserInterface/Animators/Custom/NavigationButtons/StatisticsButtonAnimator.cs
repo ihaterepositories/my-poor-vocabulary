@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Animators.UserInterface.NavigationButtons
+namespace UserInterface.Animators.Custom.NavigationButtons
 {
     public class StatisticsButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {

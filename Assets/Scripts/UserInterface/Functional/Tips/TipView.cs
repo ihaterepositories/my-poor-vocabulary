@@ -1,10 +1,10 @@
 using System.Collections;
-using Animators.UserInterface;
 using Constants;
 using UnityEngine;
 using UnityEngine.UI;
+using UserInterface.Animators.Custom;
 
-namespace UserInterface.Tips
+namespace UserInterface.Functional.Tips
 {
     public class TipView : MonoBehaviour
     {

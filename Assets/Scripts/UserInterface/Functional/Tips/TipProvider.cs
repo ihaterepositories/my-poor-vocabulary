@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace UserInterface.Tips
+namespace UserInterface.Functional.Tips
 {
     public class TipProvider : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
