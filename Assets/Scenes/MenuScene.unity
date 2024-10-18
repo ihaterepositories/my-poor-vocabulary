@@ -1847,8 +1847,9 @@ GameObject:
   - component: {fileID: 1754962693}
   - component: {fileID: 1754962692}
   - component: {fileID: 1754962695}
-  - component: {fileID: 1754962694}
   - component: {fileID: 1754962696}
+  - component: {fileID: 1754962697}
+  - component: {fileID: 1754962698}
   m_Layer: 0
   m_Name: VocabularyButton
   m_TagString: Untagged
@@ -1913,19 +1914,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754962690}
   m_CullTransparentMesh: 1
---- !u!114 &1754962694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754962690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2090db7dab14df79ec9ace7dacdd8ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainIcon: {fileID: 1754962691}
 --- !u!114 &1754962695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1982,8 +1970,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adb982364784173b9c35000f72fd4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tip: look through vocabulary
+  tip: Look through vocabulary
   tipView: {fileID: 136340156}
+--- !u!114 &1754962697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754962690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75865ac665746d38840ebb7c255f8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isIncrease: 1
+  scaleMultiplier: 1.1
+  isRotate: 0
+  rotateAngle: 10
+  rectTransform: {fileID: 1754962691}
+--- !u!114 &1754962698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754962690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93fa7e70c2d540388602a00d4e9d05c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiButton: {fileID: 1754962695}
+  hotkey: 0
+  sceneAddress: Assets/Scenes/VocabularyViewScene.unity
+  loadingDelay: 1
 --- !u!1 &1852900095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,6 +2066,8 @@ GameObject:
   - component: {fileID: 1974939903}
   - component: {fileID: 1974939906}
   - component: {fileID: 1974939905}
+  - component: {fileID: 1974939907}
+  - component: {fileID: 1974939908}
   m_Layer: 0
   m_Name: CallPanelButton
   m_TagString: Untagged
@@ -2153,7 +2176,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2178,6 +2201,37 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1974939907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974939901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2adb982364784173b9c35000f72fd4a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tip: Add new words
+  tipView: {fileID: 136340156}
+--- !u!114 &1974939908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974939901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75865ac665746d38840ebb7c255f8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isIncrease: 1
+  scaleMultiplier: 1.3
+  isRotate: 1
+  rotateAngle: 90
+  rectTransform: {fileID: 1974939902}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

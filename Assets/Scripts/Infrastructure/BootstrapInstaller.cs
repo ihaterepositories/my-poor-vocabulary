@@ -1,4 +1,5 @@
 using UnityEngine;
+using UserInterface.Functional.ScenesLoading;
 using VocabularyModule;
 using VocabularyModule.Data.Storage.Interfaces;
 using VocabularyModule.Data.Storage.Services;
@@ -21,6 +22,11 @@ namespace Infrastructure
             Container
                 .Bind<VocabularyController>()
                 .FromComponentInNewPrefab(vocabularyControllerPrefab)
+                .AsSingle()
+                .NonLazy();
+
+            Container
+                .Bind<SceneLoader>()
                 .AsSingle()
                 .NonLazy();
         }

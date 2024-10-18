@@ -6,26 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/VocabularyLocalStorage/vocabulary.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/VocabularyLocalStorage/vocabulary.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Custom.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Custom/NavigationButtons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Custom/NavigationButtons/PractiseButtonAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/PractiseButtonAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Custom/NavigationButtons/PractiseButtonAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/PractiseButtonAnimator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Custom/NavigationButtons/StatisticsButtonAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/StatisticsButtonAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Custom/NavigationButtons/StatisticsButtonAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/StatisticsButtonAnimator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Custom/NavigationButtons/VocabularyButtonAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/VocabularyButtonAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Custom/NavigationButtons/VocabularyButtonAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/VocabularyButtonAnimator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Custom/TipViewAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/TipViewAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Custom/TipViewAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/TipViewAnimator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Generic.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Generic.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Generic/InteractableButtonAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Generic/InteractableButtonAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animators/Generic/InteractableButtonAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Generic/InteractableButtonAnimator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Tips.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Tips.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Tips/TipProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Tips/TipProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Tips/TipProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Tips/TipProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Tips/TipView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Tips/TipView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Tips/TipView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Tips/TipView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/VocabularyButtonAnimator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/VocabularyButtonAnimator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Calling.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/UICalling.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Calling/CallButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/UICalling/CallButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Calling/CallButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/UICalling/CallButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/VocabularyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/VocabularyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +31,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animators/Generic/InteractableButton.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -119,6 +111,7 @@
       <workItem from="1728830959246" duration="3028000" />
       <workItem from="1728993553237" duration="90000" />
       <workItem from="1728993651772" duration="2971000" />
+      <workItem from="1729247612820" duration="9946000" />
     </task>
     <servers />
   </component>

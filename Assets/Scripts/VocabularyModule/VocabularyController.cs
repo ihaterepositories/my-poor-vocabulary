@@ -36,6 +36,7 @@ namespace VocabularyModule
         private void LoadVocabularyFromStorage()
         {
             Vocabulary = _storageService.Load();
+            Debug.Log("Words loaded: " + Vocabulary.Words.Count);
         }
         
         private void SaveVocabularyToStorage()
