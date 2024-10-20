@@ -7,17 +7,10 @@
     <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/VocabularyLocalStorage/vocabulary.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/VocabularyLocalStorage/vocabulary.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/VocabularyButtonAnimator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/VocabularyButtonAnimator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Calling.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/UICalling.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Calling/CallButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/UICalling/CallButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Calling/CallButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/UICalling/CallButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/VocabularyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/VocabularyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VocabularyViewScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VocabularyViewScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/View/VocabularyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/View/VocabularyView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/View/Fonts/CourierPrime-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/View/Fonts/CourierPrime-Regular SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +105,8 @@
       <workItem from="1728993553237" duration="90000" />
       <workItem from="1728993651772" duration="2971000" />
       <workItem from="1729247612820" duration="9946000" />
+      <workItem from="1729427016279" duration="174000" />
+      <workItem from="1729427201470" duration="5789000" />
     </task>
     <servers />
   </component>
