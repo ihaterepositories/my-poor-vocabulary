@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using VocabularyModule.Data.Input.Validation;
+using VocabularyModule.Data.Input.Validation.UI;
 using VocabularyModule.Data.Models;
 using Zenject;
 
@@ -11,8 +13,10 @@ namespace VocabularyModule.Data.Input
         [SerializeField] private InputField originalWordInputField;
         [SerializeField] private InputField translatedWordInputField;
         [SerializeField] private Button addWordButton;
+        [SerializeField] private ValidationMessageView validationMessageView;
         
         private VocabularyController _vocabularyController;
+        private InputValidationChainExecutor _inputValidationChainExecutor;
         
         public static event Action OnWordAdded;
 
@@ -24,17 +28,25 @@ namespace VocabularyModule.Data.Input
         
         private void Awake()
         {
+            _inputValidationChainExecutor = new InputValidationChainExecutor();
             addWordButton.onClick.AddListener(AddWord);
         }
         
         private void AddWord()
         {
             var word = CreateWord();
-            Debug.Log("Created word: " + word.Original + " - " + word.Translation);
-
-            // Get and show error message
+            
+            if (!ValidateInputPart(word.Original, "Original word") || !ValidateInputPart(word.Translation, "Translated word"))
+            {
+                validationMessageView.ShowError(GetErrorMessage());
+                return;
+            }
+            
+            // TODO: check spelling
+            // TODO: check if word already exists in vocabulary
             
             AddWordToVocabulary(word);
+            validationMessageView.HideMessage();
             OnWordAdded?.Invoke();
         }
         
@@ -45,21 +57,20 @@ namespace VocabularyModule.Data.Input
             return new Word(originalWord, translatedWord);
         }
 
-        private bool CheckWord(Word word)
+        private bool ValidateInputPart(string input, string inputPart)
         {
-            // InputErrorChecker have to check if the word is correct
-            return true;
+            return _inputValidationChainExecutor.Execute(input, inputPart);
         }
         
         private string GetErrorMessage()
         {
-            // InputErrorChecker have to return error message
-            return "";
+            return _inputValidationChainExecutor.LastValidationError;
         }
         
         private void AddWordToVocabulary(Word word)
         {
             _vocabularyController.Vocabulary.Words.Add(word);
+            Debug.Log("Word added to vocabulary");
         }
     }
 }

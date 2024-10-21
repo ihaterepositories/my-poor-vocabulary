@@ -2,6 +2,7 @@ using VocabularyModule.Data.View.Sorting.Interfaces;
 
 namespace VocabularyModule.Data.View.Sorting
 {
+    // Factory pattern for creating sorters
     public static class VocabularySortFactory
     {
         public static IVocabularySorter GetSorter(int sortType)

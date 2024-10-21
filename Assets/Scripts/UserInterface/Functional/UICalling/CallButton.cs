@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UserInterface.SerializingModels;
 
-namespace UserInterface.Functional.Calling
+namespace UserInterface.Functional.UICalling
 {
     public class CallButton : MonoBehaviour
     {
