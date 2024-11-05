@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using VocabularyModule.Data.Input.Validation;
 using VocabularyModule.Data.Input.Validation.UI;
@@ -14,9 +15,11 @@ namespace VocabularyModule.Data.Input
         [SerializeField] private InputField translatedWordInputField;
         [SerializeField] private Button addWordButton;
         [SerializeField] private ValidationMessageView validationMessageView;
+        [SerializeField] private Button addWordPanelCallButton;
         
         private VocabularyController _vocabularyController;
         private InputValidationChainExecutor _inputValidationChainExecutor;
+        private bool _isPanelActive;
         
         public static event Action OnWordAdded;
 
@@ -29,11 +32,28 @@ namespace VocabularyModule.Data.Input
         private void Awake()
         {
             _inputValidationChainExecutor = new InputValidationChainExecutor();
+            
+            // Remove focusing from button to make "Return" key free to use 
+            addWordPanelCallButton.onClick.AddListener(() => EventSystem.current.SetSelectedGameObject(null));
+            addWordPanelCallButton.onClick.AddListener(() => _isPanelActive = !_isPanelActive);
+            
             addWordButton.onClick.AddListener(AddWord);
         }
-        
+
+        private void Update()
+        {
+            if (_isPanelActive)
+            {
+                if (UnityEngine.Input.GetKeyDown(KeyCode.Return))
+                {
+                    AddWord();
+                }
+            }
+        }
+
         private void AddWord()
         {
+            Debug.Log("AddWord called");
             var word = CreateWord();
             
             if (!ValidateInputPart(word.Original, "Original word") || !ValidateInputPart(word.Translation, "Translated word"))
@@ -46,6 +66,7 @@ namespace VocabularyModule.Data.Input
             // TODO: check if word already exists in vocabulary
             
             AddWordToVocabulary(word);
+            ClearInputs();
             validationMessageView.HideMessage();
             OnWordAdded?.Invoke();
         }
@@ -71,6 +92,12 @@ namespace VocabularyModule.Data.Input
         {
             _vocabularyController.Vocabulary.Words.Add(word);
             Debug.Log("Word added to vocabulary");
+        }
+
+        private void ClearInputs()
+        {
+            originalWordInputField.text = "";
+            translatedWordInputField.text = "";
         }
     }
 }

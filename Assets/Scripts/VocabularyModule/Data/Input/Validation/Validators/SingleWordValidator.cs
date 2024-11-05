@@ -1,16 +1,14 @@
-using System;
-using VocabularyModule.Data.Input.Validation.UI;
 using VocabularyModule.Data.Input.Validation.Validators.Interfaces;
 
 namespace VocabularyModule.Data.Input.Validation.Validators
 {
-    public class ExtraSpacesValidator : InputValidator
+    public class SingleWordValidator : InputValidator
     {
         public override bool Validate(string input, string inputPart)
         {
-            if (input.Contains("  ") || input.StartsWith(" ") || input.EndsWith(" "))
+            if (input.Contains(" "))
             {
-                SendValidationError($"{inputPart} contains extra spaces");
+                SendValidationError($"{inputPart} contains spaces");
                 return false;
             }
 

@@ -5,21 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/InputValidationChainExecutor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/UI/ValidationMessageView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Zenject-ReflectionBaking.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/Signals/Zenject-Signals.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/VocabularyLocalStorage/vocabulary.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/VocabularyLocalStorage/vocabulary.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/UICalling/CallButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/UICalling/CallButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/InputErrorsHandle.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/InputErrorsHandle/InputErrorChecker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/InputErrorsHandle/InputErrorChecker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/InputValidationChainExecutor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/InputErrorsHandle/InputErrorView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/InputErrorsHandle/InputErrorView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/UI/ValidationMessageView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/AppConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/AppConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/CorrectionGameButtonAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/CorrectionGameButtonAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/SerializingModels/MoveableUIObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/SerializingModels/MoveableUIObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/InputValidationChainExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/InputValidationChainExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/AlphabeticWordValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/AlphabeticWordValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/EmptyInputValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/EmptyInputValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/ExtraSpacesValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/SingleWordValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/ExtraSpacesValidator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/SingleWordValidator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/LengthValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/LengthValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/WordAddController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/WordAddController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/View/Sorting/VocabularySortFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/View/Sorting/VocabularySortFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/View/Fonts/CourierPrime-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/View/Fonts/CourierPrime-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Models/Vocabulary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Models/Vocabulary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/View/VocabularyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/View/VocabularyView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/View/Sprites/NavigationButtons/PractiseButton/PractiseIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/View/Sprites/NavigationButtons/PractiseButton/PractiseIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/View/Sprites/NavigationButtons/PractiseButton/WordCard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/View/Sprites/NavigationButtons/PractiseButton/WordCard.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,23 +60,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Software\Unity\Editors\2022.3.51f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Data\Projects\Unity\my-poor-vocabulary -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Data\Projects\Unity\my-poor-vocabulary" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -71,7 +84,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Software\Unity\Editors\2022.3.51f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Data\Projects\Unity\my-poor-vocabulary -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Data\Projects\Unity\my-poor-vocabulary" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -120,6 +133,8 @@
       <workItem from="1729514048570" duration="29000" />
       <workItem from="1729514088975" duration="365000" />
       <workItem from="1729514467277" duration="9305000" />
+      <workItem from="1730740639180" duration="4761000" />
+      <workItem from="1730798202616" duration="7578000" />
     </task>
     <servers />
   </component>
@@ -134,7 +149,10 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

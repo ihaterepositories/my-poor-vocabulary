@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace VocabularyModule.Data.Models
@@ -9,6 +10,12 @@ namespace VocabularyModule.Data.Models
         public Vocabulary()
         {
             Words = new List<Word>();
+        }
+        
+        public string GetRandomOriginal()
+        {
+            var random = new Random();
+            return Words[random.Next(Words.Count)].Original;
         }
     }
 }

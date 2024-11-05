@@ -29,7 +29,7 @@ namespace VocabularyModule.Data.Input.Validation
         {
             InputValidator emptyInputValidator = new EmptyInputValidator();
             InputValidator lengthValidator = new LengthValidator();
-            InputValidator extraSpacesValidator = new ExtraSpacesValidator();
+            InputValidator extraSpacesValidator = new SingleWordValidator();
             InputValidator alphabeticWordValidator = new AlphabeticWordValidator();
             
             emptyInputValidator.SetNext(lengthValidator);

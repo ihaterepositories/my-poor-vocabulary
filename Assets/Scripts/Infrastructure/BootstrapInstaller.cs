@@ -1,3 +1,5 @@
+using CorrectionGameModule.TypoGeneration.Generators;
+using CorrectionGameModule.TypoGeneration.Interfaces;
 using UnityEngine;
 using UserInterface.Functional.ScenesLoading;
 using VocabularyModule;
@@ -34,6 +36,7 @@ namespace Infrastructure
         private void BindDependencyInjections()
         {
             Container.Bind<IStorageService>().To<LocalStorageService>().AsSingle();
+            Container.Bind<ITypoGenerator>().To<LstmModelClient>().AsSingle();
         }
     }
 }
