@@ -7,6 +7,7 @@ namespace UserInterface.Functional.ScenesLoading
     public class SceneLoadProvider : MonoBehaviour
     {
         [SerializeField] private Button uiButton;
+        [SerializeField] private bool isGoBackButton;
         [SerializeField] private KeyCode hotkey;
         [SerializeField] private string sceneAddress;
         [SerializeField] private float loadingDelay = 1f;
@@ -21,6 +22,12 @@ namespace UserInterface.Functional.ScenesLoading
 
         private void Awake()
         {
+            if (isGoBackButton)
+            {
+                uiButton.onClick.AddListener(LoadMenu);
+                return;
+            }
+            
             uiButton.onClick.AddListener(LoadScene);
         }
         
@@ -35,6 +42,11 @@ namespace UserInterface.Functional.ScenesLoading
         private void LoadScene()
         {
             StartCoroutine(_sceneLoader.LoadSceneWithDelayCoroutine(sceneAddress, loadingDelay));
+        }
+        
+        private void LoadMenu()
+        {
+            StartCoroutine(_sceneLoader.LoadMenuWithDelayCoroutine(loadingDelay));
         }
     }
 }

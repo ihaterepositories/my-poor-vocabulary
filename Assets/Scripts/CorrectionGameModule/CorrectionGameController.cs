@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CorrectionGameModule.Models;
@@ -6,6 +5,7 @@ using CorrectionGameModule.TypoGeneration.Interfaces;
 using Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
+using UserInterface.Functional.ProgressBar;
 using VocabularyModule;
 using VocabularyModule.Data.Models;
 using Zenject;
@@ -17,12 +17,13 @@ namespace CorrectionGameModule
         [SerializeField] private InputField inputField;
         [SerializeField] private Text typoWordText;
         [SerializeField] private Text messageText;
+        [SerializeField] private ProgressBar progressBar;
 
         private readonly int _testsPerGame = 10;
         
         private VocabularyController _vocabularyController;
         private Vocabulary Vocabulary => _vocabularyController.Vocabulary;
-        private ITypoGenerator _typoGenerator;
+        private IAsyncTypoGenerator _asyncTypoGenerator;
 
         private List<TestData> _tests;
         private string _currentTestWord;
@@ -30,10 +31,10 @@ namespace CorrectionGameModule
         private int _currentTestIndex;
         
         [Inject]
-        private void Construct(VocabularyController vocabularyController, ITypoGenerator typoGenerator)
+        private void Construct(VocabularyController vocabularyController, IAsyncTypoGenerator asyncTypoGenerator)
         {
             _vocabularyController = vocabularyController;
-            _typoGenerator = typoGenerator;
+            _asyncTypoGenerator = asyncTypoGenerator;
         }
 
         private void Start()
@@ -47,6 +48,10 @@ namespace CorrectionGameModule
             {
                 EvaluateTest();
                 _currentTestIndex++;
+                
+                inputField.text = string.Empty;
+                inputField.ActivateInputField();
+                progressBar.SetProgress(_currentTestIndex, _testsPerGame);
                 
                 if (_currentTestIndex < _testsPerGame)
                 {
@@ -72,7 +77,7 @@ namespace CorrectionGameModule
             for (var i = 0; i < _testsPerGame; i++)
             {
                 var word = Vocabulary.GetRandomOriginal();
-                var typo = await _typoGenerator.GenerateTypo(word);
+                var typo = await _asyncTypoGenerator.GenerateTypo(word);
                 _tests.Add(new TestData(word, typo));
             }
         }
@@ -94,7 +99,6 @@ namespace CorrectionGameModule
             }
             else
             {
-                // TODO: message
                 InvokeOnWrongAnswer(_currentTestWord);
             }
         }

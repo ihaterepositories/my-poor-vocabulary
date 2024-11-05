@@ -36,7 +36,7 @@ namespace Infrastructure
         private void BindDependencyInjections()
         {
             Container.Bind<IStorageService>().To<LocalStorageService>().AsSingle();
-            Container.Bind<ITypoGenerator>().To<LstmModelClient>().AsSingle();
+            Container.Bind<IAsyncTypoGenerator>().To<LstmModelClient>().AsSingle();
         }
     }
 }

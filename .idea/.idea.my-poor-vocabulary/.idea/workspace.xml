@@ -5,34 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Zenject-ReflectionBaking.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/Signals/Zenject-Signals.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/VocabularyLocalStorage/vocabulary.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/VocabularyLocalStorage/vocabulary.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/AppConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/AppConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CorrectionGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CorrectionGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VocabularyViewScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VocabularyViewScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CorrectionGameModule/CorrectionGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CorrectionGameModule/CorrectionGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CorrectionGameModule/TypoGeneration/Generators/LstmModelClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CorrectionGameModule/TypoGeneration/Generators/LstmModelClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CorrectionGameModule/TypoGeneration/Interfaces/ITypoGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CorrectionGameModule/TypoGeneration/Interfaces/IAsyncTypoGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CorrectionGameModule/TypoGeneration/Interfaces/ITypoGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CorrectionGameModule/TypoGeneration/Interfaces/IAsyncTypoGenerator.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/CorrectionGameButtonAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Animators/Custom/NavigationButtons/CorrectionGameButtonAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/SerializingModels/MoveableUIObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/SerializingModels/MoveableUIObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/InputValidationChainExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/InputValidationChainExecutor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/AlphabeticWordValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/AlphabeticWordValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/EmptyInputValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/EmptyInputValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/ExtraSpacesValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/SingleWordValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/ExtraSpacesValidator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/SingleWordValidator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/LengthValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/Validation/Validators/LengthValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/WordAddController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Input/WordAddController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Models/Vocabulary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/Models/Vocabulary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/View/VocabularyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VocabularyModule/Data/View/VocabularyView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/View/Sprites/NavigationButtons/PractiseButton/PractiseIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/View/Sprites/NavigationButtons/PractiseButton/PractiseIcon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/View/Sprites/NavigationButtons/PractiseButton/WordCard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/View/Sprites/NavigationButtons/PractiseButton/WordCard.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/SceneLoadProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/SceneLoadProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +117,7 @@
       <workItem from="1729514088975" duration="365000" />
       <workItem from="1729514467277" duration="9305000" />
       <workItem from="1730740639180" duration="4761000" />
-      <workItem from="1730798202616" duration="7578000" />
+      <workItem from="1730798202616" duration="13206000" />
     </task>
     <servers />
   </component>

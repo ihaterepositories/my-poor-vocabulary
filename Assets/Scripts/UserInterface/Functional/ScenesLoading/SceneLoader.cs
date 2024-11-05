@@ -15,13 +15,18 @@ namespace UserInterface.Functional.ScenesLoading
         
         private async void LoadScene(string sceneAddress)
         {
-            UnloadUnusedScenes();
-            
             var handle = Addressables.LoadSceneAsync(sceneAddress);
             await handle.Task;
             var loadedScene = handle.Result.Scene;
-            
             SceneManager.SetActiveScene(loadedScene);
+            UnloadUnusedScenes();
+        }
+        
+        public IEnumerator LoadMenuWithDelayCoroutine(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            SceneManager.LoadScene("MenuScene");
+            UnloadUnusedScenes();
         }
         
         private void UnloadUnusedScenes()
