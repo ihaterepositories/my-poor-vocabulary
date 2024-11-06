@@ -75,3 +75,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vocabularyControllerPrefab: {fileID: 3805050790880882489, guid: 1c01af310af2a9447aae4c598ecc1957, type: 3}
+  fogEffectPrefab: {fileID: 6476864578061541445, guid: aa8edf2999a5f3a4cba3b6a1735e4c5c, type: 3}

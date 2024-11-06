@@ -925,9 +925,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiButton: {fileID: 378940418}
+  isGoBackButton: 0
   hotkey: 0
   sceneAddress: Assets/Scenes/CorrectionGameScene.unity
-  loadingDelay: 1
+  loadingDelay: 0.3
 --- !u!1 &429658272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,9 +2539,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiButton: {fileID: 1370854158}
+  isGoBackButton: 0
   hotkey: 0
-  sceneAddress: 
-  loadingDelay: 1
+  sceneAddress: Assets/Scenes/TranslationGameScene.unity
+  loadingDelay: 0.3
 --- !u!1 &1433189174
 GameObject:
   m_ObjectHideFlags: 0
@@ -3248,9 +3250,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiButton: {fileID: 1754962695}
+  isGoBackButton: 0
   hotkey: 0
   sceneAddress: Assets/Scenes/VocabularyViewScene.unity
-  loadingDelay: 1
+  loadingDelay: 0.3
 --- !u!1 &1852900095
 GameObject:
   m_ObjectHideFlags: 0

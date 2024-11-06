@@ -17,6 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 5c00a1865aa87a4468932737333073f6
   m_SerializeEntries:
+  - m_GUID: 166ba084bf1512c4aaae69f24c8c808b
+    m_Address: Assets/Scenes/TranslationGameScene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1d5fc321379b93f47aa4c733ca82dc70
     m_Address: Assets/Scenes/VocabularyViewScene.unity
     m_ReadOnly: 0

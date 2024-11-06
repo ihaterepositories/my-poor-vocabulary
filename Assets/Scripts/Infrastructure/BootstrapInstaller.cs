@@ -1,10 +1,11 @@
-using CorrectionGameModule.TypoGeneration.Generators;
-using CorrectionGameModule.TypoGeneration.Interfaces;
+using Modules.CorrectionGameModule.TypoGeneration.Generators;
+using Modules.CorrectionGameModule.TypoGeneration.Interfaces;
+using Modules.VocabularyModule;
+using Modules.VocabularyModule.Data.Storage.Interfaces;
+using Modules.VocabularyModule.Data.Storage.Services;
 using UnityEngine;
 using UserInterface.Functional.ScenesLoading;
-using VocabularyModule;
-using VocabularyModule.Data.Storage.Interfaces;
-using VocabularyModule.Data.Storage.Services;
+using UserInterface.Functional.ScenesLoading.Effects;
 using Zenject;
 
 namespace Infrastructure
@@ -12,6 +13,7 @@ namespace Infrastructure
     public class BootstrapInstaller : MonoInstaller
     {
         [SerializeField] private GameObject vocabularyControllerPrefab;
+        [SerializeField] private GameObject fogEffectPrefab;
         
         public override void InstallBindings()
         {
@@ -24,6 +26,12 @@ namespace Infrastructure
             Container
                 .Bind<VocabularyController>()
                 .FromComponentInNewPrefab(vocabularyControllerPrefab)
+                .AsSingle()
+                .NonLazy();
+
+            Container
+                .Bind<FogEffect>()
+                .FromComponentInNewPrefab(fogEffectPrefab)
                 .AsSingle()
                 .NonLazy();
 

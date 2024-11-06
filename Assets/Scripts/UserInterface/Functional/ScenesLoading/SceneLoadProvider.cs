@@ -10,7 +10,6 @@ namespace UserInterface.Functional.ScenesLoading
         [SerializeField] private bool isGoBackButton;
         [SerializeField] private KeyCode hotkey;
         [SerializeField] private string sceneAddress;
-        [SerializeField] private float loadingDelay = 1f;
         
         private SceneLoader _sceneLoader;
         
@@ -41,12 +40,12 @@ namespace UserInterface.Functional.ScenesLoading
         
         private void LoadScene()
         {
-            StartCoroutine(_sceneLoader.LoadSceneWithDelayCoroutine(sceneAddress, loadingDelay));
+            StartCoroutine(_sceneLoader.LoadSceneCoroutine(sceneAddress));
         }
         
         private void LoadMenu()
         {
-            StartCoroutine(_sceneLoader.LoadMenuWithDelayCoroutine(loadingDelay));
+            StartCoroutine(_sceneLoader.LoadMenuCoroutine());
         }
     }
 }

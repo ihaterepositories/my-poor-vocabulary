@@ -1,15 +1,27 @@
 using System.Collections;
+using Constants;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
+using UserInterface.Functional.ScenesLoading.Effects;
+using Zenject;
 
 namespace UserInterface.Functional.ScenesLoading
 {
     public class SceneLoader
     {
-        public IEnumerator LoadSceneWithDelayCoroutine(string sceneAddress, float delay)
+        private FogEffect _fogEffect;
+        
+        [Inject]
+        private void Construct(FogEffect fogEffect)
         {
-            yield return new WaitForSeconds(delay);
+            _fogEffect = fogEffect;
+        }
+        
+        public IEnumerator LoadSceneCoroutine(string sceneAddress)
+        {
+            _fogEffect.Increase(AppConstants.SceneLoadDelay);
+            yield return new WaitForSeconds(AppConstants.SceneLoadDelay);
             LoadScene(sceneAddress);
         }
         
@@ -19,13 +31,16 @@ namespace UserInterface.Functional.ScenesLoading
             await handle.Task;
             var loadedScene = handle.Result.Scene;
             SceneManager.SetActiveScene(loadedScene);
+            _fogEffect.Decrease(AppConstants.SceneLoadDelay);
             UnloadUnusedScenes();
         }
         
-        public IEnumerator LoadMenuWithDelayCoroutine(float delay)
+        public IEnumerator LoadMenuCoroutine()
         {
-            yield return new WaitForSeconds(delay);
+            _fogEffect.Increase(AppConstants.SceneLoadDelay);
+            yield return new WaitForSeconds(AppConstants.SceneLoadDelay);
             SceneManager.LoadScene("MenuScene");
+            _fogEffect.Decrease(AppConstants.SceneLoadDelay);
             UnloadUnusedScenes();
         }
         
