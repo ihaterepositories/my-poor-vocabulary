@@ -56,9 +56,9 @@ namespace Modules.TranslationGameModule
                 
                 userAnswerField.text = string.Empty;
                 userAnswerField.ActivateInputField();
-                progressBar.SetProgress(_currentTestIndex, _testsPerGame);
+                progressBar.SetProgress(_currentTestIndex, _tests.Count);
                 
-                if (_currentTestIndex < _testsPerGame)
+                if (_currentTestIndex < _tests.Count)
                 {
                     ShowNextTest();
                 }

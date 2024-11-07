@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,7 +27,8 @@ namespace UserInterface.Functional.UICalling
             
             if (_isCalled)
             {
-                foreach (var callObject in objectsToCall)
+                var objectToCallReversed = objectsToCall.AsEnumerable()!.Reverse().ToList();
+                foreach (var callObject in objectToCallReversed)
                 {
                     callObject.rectTransform.DOAnchorPos(callObject.outScreenPosition, delay);
                     delay += delayStep;
