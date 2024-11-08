@@ -1,6 +1,6 @@
 using Constants;
 using DG.Tweening;
-using Interfaces;
+using Modules.MiniGames.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,13 +14,13 @@ namespace UserInterface.Functional.Tests
         private void OnEnable()
         {
             miniGameController.OnRightAnswer += ShowRightResult;
-            miniGameController.OnWrongAnswer += ShowWrongResult;
+            miniGameController.OnPassRightAnswer += ShowPassRightResult;
         }
 
         private void OnDisable()
         {
             miniGameController.OnRightAnswer -= ShowRightResult;
-            miniGameController.OnWrongAnswer -= ShowWrongResult;
+            miniGameController.OnPassRightAnswer -= ShowPassRightResult;
         }
 
         private void ShowRightResult()
@@ -29,7 +29,7 @@ namespace UserInterface.Functional.Tests
             resultText.text = "+" + AppConstants.ExpPerTest + "exp";
         }
         
-        private void ShowWrongResult(string correctWord)
+        private void ShowPassRightResult(string correctWord)
         {
             resultText.DOFlip();
             resultText.text = "Wrong, right answer is " + correctWord + "...";

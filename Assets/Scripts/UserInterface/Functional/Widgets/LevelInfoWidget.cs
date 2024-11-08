@@ -23,17 +23,20 @@ namespace UserInterface.Functional.Widgets
 
         private void Start()
         {
-            SetInfo();
+            levelText.DOCounter(0,_scoreController.GetLevel(), 3f);
+            progressBar.SetProgress(_scoreController.GetCurrentLevelExp(), AppConstants.LevelSplitExpCount, 3f);
+            expText.DOCounter(0, _scoreController.GetCurrentLevelExp(), 3f)
+                .OnComplete(SetInfo);
         }
 
         private void OnEnable()
         {
-            _scoreController.OnExpChanged += SetInfo;
+            ScoreController.OnExpChanged += SetInfo;
         }
         
         private void OnDisable()
         {
-            _scoreController.OnExpChanged -= SetInfo;
+            ScoreController.OnExpChanged -= SetInfo;
         }
 
         private void SetInfo()

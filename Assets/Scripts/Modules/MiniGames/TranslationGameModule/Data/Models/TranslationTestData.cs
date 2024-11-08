@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Modules.TranslationGameModule.Data.Models
+namespace Modules.MiniGames.TranslationGameModule.Data.Models
 {
     public class TranslationTestData
     {

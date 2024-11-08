@@ -1,4 +1,4 @@
-namespace Modules.CorrectionGameModule.Models
+namespace Modules.MiniGames.CorrectionGameModule.Models
 {
     public class TestData
     {

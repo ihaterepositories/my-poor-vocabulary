@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Constants;
-using Interfaces;
-using Modules.CorrectionGameModule.Models;
-using Modules.CorrectionGameModule.TypoGeneration.Interfaces;
 using Modules.General.Navigation;
 using Modules.General.Score;
+using Modules.MiniGames.CorrectionGameModule.Models;
+using Modules.MiniGames.CorrectionGameModule.TypoGeneration.Interfaces;
+using Modules.MiniGames.Interfaces;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
@@ -13,7 +13,7 @@ using UnityEngine.UI;
 using UserInterface.Functional.ProgressBar;
 using Zenject;
 
-namespace Modules.CorrectionGameModule
+namespace Modules.MiniGames.CorrectionGameModule
 {
     // TODO: refactor -> make CorrectionTestsGenerator
     public class CorrectionGameController : MiniGameController

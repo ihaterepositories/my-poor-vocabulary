@@ -9,7 +9,7 @@ namespace Modules.General.Score
         private int _exp;
         private readonly int _levelSplitExpCount = AppConstants.LevelSplitExpCount;
         
-        public event Action OnExpChanged;
+        public static event Action OnExpChanged;
 
         private void Start()
         {

@@ -9,7 +9,7 @@ namespace Modules.General.Navigation.Effects
 
         private void Start()
         {
-            Decrease(1f);
+            Decrease(.5f);
         }
 
         public void Increase(float duration)

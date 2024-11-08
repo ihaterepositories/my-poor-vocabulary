@@ -1,11 +1,11 @@
 using System.Text;
 using System.Threading.Tasks;
 using Constants;
-using Modules.CorrectionGameModule.TypoGeneration.Interfaces;
+using Modules.MiniGames.CorrectionGameModule.TypoGeneration.Interfaces;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Modules.CorrectionGameModule.TypoGeneration.Generators
+namespace Modules.MiniGames.CorrectionGameModule.TypoGeneration.Generators
 {
     public class LstmModelClient : IAsyncTypoGenerator
     {

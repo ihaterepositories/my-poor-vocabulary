@@ -1,12 +1,11 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Constants;
-using Interfaces;
 using Modules.General.Navigation;
 using Modules.General.Score;
-using Modules.TranslationGameModule.Data.Generation;
-using Modules.TranslationGameModule.Data.Models;
+using Modules.MiniGames.Interfaces;
+using Modules.MiniGames.TranslationGameModule.Data.Generation;
+using Modules.MiniGames.TranslationGameModule.Data.Models;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
@@ -14,7 +13,7 @@ using UnityEngine.UI;
 using UserInterface.Functional.ProgressBar;
 using Zenject;
 
-namespace Modules.TranslationGameModule
+namespace Modules.MiniGames.TranslationGameModule
 {
     public class TranslationGameController : MiniGameController
     {

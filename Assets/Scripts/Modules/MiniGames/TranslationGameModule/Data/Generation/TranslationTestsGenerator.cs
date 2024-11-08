@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Modules.TranslationGameModule.Data.Models;
+using Modules.MiniGames.TranslationGameModule.Data.Models;
 using Modules.VocabularyModule.Data.Models;
 
-namespace Modules.TranslationGameModule.Data.Generation
+namespace Modules.MiniGames.TranslationGameModule.Data.Generation
 {
     // TODO: refactor
     public class TranslationTestsGenerator

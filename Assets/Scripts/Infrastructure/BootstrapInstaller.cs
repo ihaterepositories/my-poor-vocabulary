@@ -1,9 +1,9 @@
-using Modules.CorrectionGameModule.TypoGeneration.Generators;
-using Modules.CorrectionGameModule.TypoGeneration.Interfaces;
 using Modules.General.Navigation;
 using Modules.General.Navigation.Effects;
 using Modules.General.Score;
 using Modules.General.Sound;
+using Modules.MiniGames.CorrectionGameModule.TypoGeneration.Generators;
+using Modules.MiniGames.CorrectionGameModule.TypoGeneration.Interfaces;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Storage.Interfaces;
 using Modules.VocabularyModule.Data.Storage.Services;

@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Input;
 using Modules.VocabularyModule.Data.Models;
@@ -22,7 +23,7 @@ namespace UserInterface.Functional.Widgets
 
         private void Start()
         {
-            SetText();
+            widgetText.DOCounter(0, _vocabulary.GetCount(), 3f);
         }
 
         private void OnEnable()
@@ -37,7 +38,7 @@ namespace UserInterface.Functional.Widgets
 
         private void SetText()
         {
-            widgetText.text = $"{_vocabulary.GetCount()} words inside";
+            widgetText.text = $"{_vocabulary.GetCount()}";
         }
     }
 }

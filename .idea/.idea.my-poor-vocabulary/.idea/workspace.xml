@@ -7,28 +7,47 @@
     <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vocabulary.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vocabulary.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CorrectionGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CorrectionGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vocabulary.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vocabulary.json.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TranslationGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TranslationGameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/AppConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/AppConstants.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/CorrectionGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/CorrectionGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/TranslationGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/TranslationGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Input/WordAddController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Input/WordAddController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/Effects.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Navigation/Effects.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/Effects/FogEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Navigation/Effects/FogEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/Effects/FogEffect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Navigation/Effects/FogEffect.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/SceneLoadProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Navigation/SceneLoadProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/SceneLoadProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Navigation/SceneLoadProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Navigation/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ScenesLoading/SceneLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Navigation/SceneLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/Interfaces.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/MiniGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/Interfaces/MiniGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/MiniGameController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/Interfaces/MiniGameController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/CorrectionGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/CorrectionGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/CorrectionGameController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/CorrectionGameController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/Models.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/Models.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/Models/TestData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/Models/TestData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/Models/TestData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/Models/TestData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/TypoGeneration.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/TypoGeneration.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/TypoGeneration/Generators.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/TypoGeneration/Generators.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/TypoGeneration/Generators/LstmModelClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/TypoGeneration/Generators/LstmModelClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/TypoGeneration/Generators/LstmModelClient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/TypoGeneration/Generators/LstmModelClient.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/TypoGeneration/Interfaces.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/TypoGeneration/Interfaces.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/TypoGeneration/Interfaces/IAsyncTypoGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/TypoGeneration/Interfaces/IAsyncTypoGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CorrectionGameModule/TypoGeneration/Interfaces/IAsyncTypoGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/CorrectionGameModule/TypoGeneration/Interfaces/IAsyncTypoGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Navigation/Effects/FogEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Navigation/Effects/FogEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Score/ScoreController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Score/ScoreController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Sound/EventSoundPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/General/Sound/EventSoundPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/TranslationGameModule.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/Data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/TranslationGameModule/Data.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/Data/Generation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/TranslationGameModule/Data/Generation.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/Data/Generation/TranslationTestsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/TranslationGameModule/Data/Generation/TranslationTestsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/Data/Generation/TranslationTestsGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/TranslationGameModule/Data/Generation/TranslationTestsGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/Data/Models.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/TranslationGameModule/Data/Models.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/Data/Models/TranslationTestData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/TranslationGameModule/Data/Models/TranslationTestData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/Data/Models/TranslationTestData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/TranslationGameModule/Data/Models/TranslationTestData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/TranslationGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/TranslationGameModule/TranslationGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/TranslationGameModule/TranslationGameController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGames/TranslationGameModule/TranslationGameController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ProgressBar/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ProgressBar/ProgressBar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Tests/MiniGameTestResultView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Tests/MiniGameTestResultView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/UICalling/CallButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/UICalling/CallButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Widgets/LevelInfoWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Widgets/LevelInfoWidget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Widgets/VocabularyCapacityWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Widgets/VocabularyCapacityWidget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/View/Fonts/CourierPrime-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/View/Fonts/CourierPrime-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/View/Sprites/Tip/TipCloud.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/View/Sprites/Tip/TipCloud.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/View/Sounds/BootSound.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/View/Sounds/BootSound.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/View/Sounds/BootSound.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/View/Sounds/BootSound.wav.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +87,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Build\my-poor-vocabulary.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\Cursova\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Software\Unity\Editors\2022.3.51f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Data\Projects\Unity\my-poor-vocabulary -debugCodeOptimization" />
@@ -129,7 +156,8 @@
       <workItem from="1730740639180" duration="4761000" />
       <workItem from="1730798202616" duration="13206000" />
       <workItem from="1730892327495" duration="23534000" />
-      <workItem from="1730932779109" duration="23439000" />
+      <workItem from="1730932779109" duration="26979000" />
+      <workItem from="1731029021453" duration="2153000" />
     </task>
     <servers />
   </component>
@@ -143,6 +171,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

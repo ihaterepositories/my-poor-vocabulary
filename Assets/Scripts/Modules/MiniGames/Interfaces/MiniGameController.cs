@@ -1,12 +1,14 @@
 using System;
 using UnityEngine;
 
-namespace Interfaces
+namespace Modules.MiniGames.Interfaces
 {
+    // TODO: generalize more things from child controllers
     public abstract class MiniGameController : MonoBehaviour
     {
         public event Action OnRightAnswer;
-        public event Action<string> OnWrongAnswer;
+        public event Action<string> OnPassRightAnswer;
+        public static event Action OnWrongAnswer; 
         
         protected void InvokeOnRightAnswer()
         {
@@ -15,7 +17,8 @@ namespace Interfaces
 
         protected void InvokeOnWrongAnswer(string word)
         {
-            OnWrongAnswer?.Invoke(word);
+            OnPassRightAnswer?.Invoke(word);
+            OnWrongAnswer?.Invoke();
         }
     }
 }
