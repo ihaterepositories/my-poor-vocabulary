@@ -7,6 +7,11 @@ namespace Constants
         
         public const float SceneLoadDelay = .3f;
         
+        public const int LevelSplitExpCount = 1000;
+        public const int ExpPerTest = 10;
+        public const int ExpPerAddedWord = 15;
+        public const int ExpPerDayReward = 50;
+        
         public const string LocalStoragePath = "Assets/Resources/vocabulary.json";
         public const string TypoGeneratingRequestUrl = "http://127.0.0.1:8000/predict_typo";
     }

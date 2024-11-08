@@ -1,4 +1,6 @@
 using System;
+using Constants;
+using Modules.General.Score;
 using Modules.VocabularyModule.Data.Input.Validation;
 using Modules.VocabularyModule.Data.Input.Validation.UI;
 using Modules.VocabularyModule.Data.Models;
@@ -20,14 +22,19 @@ namespace Modules.VocabularyModule.Data.Input
         
         private VocabularyController _vocabularyController;
         private InputValidationChainExecutor _inputValidationChainExecutor;
+        private ScoreController _scoreController;
+        
         private bool _isPanelActive;
         
         public static event Action OnWordAdded;
 
         [Inject]
-        private void Construct(VocabularyController vocabularyController)
+        private void Construct(
+            VocabularyController vocabularyController,
+            ScoreController scoreController)
         {
             _vocabularyController = vocabularyController;
+            _scoreController = scoreController;
         }
         
         private void Awake()
@@ -68,6 +75,7 @@ namespace Modules.VocabularyModule.Data.Input
             AddWordToVocabulary(word);
             ClearInputs();
             validationMessageView.HideMessage();
+            _scoreController.AddExp(AppConstants.ExpPerAddedWord);
             OnWordAdded?.Invoke();
         }
         

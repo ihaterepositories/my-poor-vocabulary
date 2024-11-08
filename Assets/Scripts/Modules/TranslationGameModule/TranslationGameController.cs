@@ -1,6 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using Constants;
 using Interfaces;
+using Modules.General.Navigation;
+using Modules.General.Score;
 using Modules.TranslationGameModule.Data.Generation;
 using Modules.TranslationGameModule.Data.Models;
 using Modules.VocabularyModule;
@@ -8,7 +12,6 @@ using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
 using UnityEngine.UI;
 using UserInterface.Functional.ProgressBar;
-using UserInterface.Functional.ScenesLoading;
 using Zenject;
 
 namespace Modules.TranslationGameModule
@@ -21,9 +24,9 @@ namespace Modules.TranslationGameModule
         [SerializeField] private ProgressBar progressBar;
 
         private SceneLoader _sceneLoader;
-        private VocabularyController _vocabularyController;
+        private ScoreController _scoreController;
         
-        private Vocabulary Vocabulary => _vocabularyController.Vocabulary;
+        private Vocabulary _vocabulary;
         private TranslationTestsGenerator _dataGenerator;
         
         private readonly int _testsPerGame = 30;
@@ -33,15 +36,19 @@ namespace Modules.TranslationGameModule
         private TranslationTestData _currentTest;
 
         [Inject]
-        private void Construct(VocabularyController vocabularyController, SceneLoader sceneLoader)
+        private void Construct(
+            VocabularyController vocabularyController, 
+            SceneLoader sceneLoader,
+            ScoreController scoreController)
         {
             _sceneLoader = sceneLoader;
-            _vocabularyController = vocabularyController;
+            _vocabulary = vocabularyController.Vocabulary;
+            _scoreController = scoreController;
         }
         
         private void Start()
         {
-            _dataGenerator = new TranslationTestsGenerator(Vocabulary, _testsPerGame);
+            _dataGenerator = new TranslationTestsGenerator(_vocabulary, _testsPerGame);
             _tests = _dataGenerator.Generate();
             Debug.Log(_tests.Count + " tests generated");
             ShowNextTest();
@@ -73,7 +80,12 @@ namespace Modules.TranslationGameModule
         {
             _currentTest = _tests[_currentTestIndex];
             wordToTranslateText.text = _currentTest.WordToTranslate;
-            possibleAnswersText.text = string.Join(" ", _currentTest.PossibleAnswers);
+
+            var formattedPossibleAnswers = _currentTest.PossibleAnswers
+                .Select(pa => "[" + pa + "]")
+                .ToList();
+
+            possibleAnswersText.text = string.Join(" ", formattedPossibleAnswers);
         }
 
         private void EvaluateTest()
@@ -81,14 +93,14 @@ namespace Modules.TranslationGameModule
             var input = userAnswerField.text;
             if (input == _currentTest.CorrectAnswer)
             {
-                // TODO: Add score
+                _scoreController.AddExp(AppConstants.ExpPerTest);
                 InvokeOnRightAnswer();
-                Vocabulary.ModifyTranslationTestAttemptFor(_currentTest.CorrectAnswer, true);
+                _vocabulary.ModifyTranslationTestAttemptFor(_currentTest.CorrectAnswer, true);
             }
             else
             {
                 InvokeOnWrongAnswer(_currentTest.CorrectAnswer);
-                Vocabulary.ModifyTranslationTestAttemptFor(_currentTest.CorrectAnswer, false);
+                _vocabulary.ModifyTranslationTestAttemptFor(_currentTest.CorrectAnswer, false);
             }
         }
     }

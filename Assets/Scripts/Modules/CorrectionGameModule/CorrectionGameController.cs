@@ -1,14 +1,16 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Constants;
 using Interfaces;
 using Modules.CorrectionGameModule.Models;
 using Modules.CorrectionGameModule.TypoGeneration.Interfaces;
+using Modules.General.Navigation;
+using Modules.General.Score;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
 using UnityEngine.UI;
 using UserInterface.Functional.ProgressBar;
-using UserInterface.Functional.ScenesLoading;
 using Zenject;
 
 namespace Modules.CorrectionGameModule
@@ -24,9 +26,9 @@ namespace Modules.CorrectionGameModule
         private readonly int _testsPerGame = 10;
         
         private SceneLoader _sceneLoader;
-        private VocabularyController _vocabularyController;
+        private ScoreController _scoreController;
         
-        private Vocabulary Vocabulary => _vocabularyController.Vocabulary;
+        private Vocabulary _vocabulary;
         private IAsyncTypoGenerator _asyncTypoGenerator;
 
         private List<TestData> _tests;
@@ -38,11 +40,13 @@ namespace Modules.CorrectionGameModule
         private void Construct(
             VocabularyController vocabularyController, 
             IAsyncTypoGenerator asyncTypoGenerator, 
-            SceneLoader sceneLoader)
+            SceneLoader sceneLoader,
+            ScoreController scoreController)
         {
-            _vocabularyController = vocabularyController;
+            _vocabulary = vocabularyController.Vocabulary;
             _asyncTypoGenerator = asyncTypoGenerator;
             _sceneLoader = sceneLoader;
+            _scoreController = scoreController;
         }
 
         private void Start()
@@ -84,7 +88,7 @@ namespace Modules.CorrectionGameModule
             _tests = new List<TestData>();
             for (var i = 0; i < _testsPerGame; i++)
             {
-                var word = Vocabulary.GetRandom().Original;
+                var word = _vocabulary.GetRandom().Original;
                 
                 if (word.Contains(' '))
                 {
@@ -109,7 +113,7 @@ namespace Modules.CorrectionGameModule
             var input = userAnswerField.text;
             if (input == _currentTestWord)
             {
-                // TODO: Add score
+                _scoreController.AddExp(AppConstants.ExpPerTest);
                 InvokeOnRightAnswer();
             }
             else

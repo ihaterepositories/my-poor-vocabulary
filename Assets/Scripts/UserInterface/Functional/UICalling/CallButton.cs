@@ -31,7 +31,6 @@ namespace UserInterface.Functional.UICalling
                 foreach (var callObject in objectToCallReversed)
                 {
                     callObject.rectTransform.DOAnchorPos(callObject.outScreenPosition, delay);
-                    delay += delayStep;
                 }
 
                 _isCalled = false;

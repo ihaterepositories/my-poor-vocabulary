@@ -1,3 +1,5 @@
+using Constants;
+using DG.Tweening;
 using Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,11 +25,13 @@ namespace UserInterface.Functional.Tests
 
         private void ShowRightResult()
         {
-            resultText.text = "Right!";
+            resultText.DOFlip();
+            resultText.text = "+" + AppConstants.ExpPerTest + "exp";
         }
         
         private void ShowWrongResult(string correctWord)
         {
+            resultText.DOFlip();
             resultText.text = "Wrong, right answer is " + correctWord + "...";
         }
     }

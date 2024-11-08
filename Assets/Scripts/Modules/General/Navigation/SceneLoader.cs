@@ -1,12 +1,12 @@
 using System.Collections;
 using Constants;
+using Modules.General.Navigation.Effects;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
-using UserInterface.Functional.ScenesLoading.Effects;
 using Zenject;
 
-namespace UserInterface.Functional.ScenesLoading
+namespace Modules.General.Navigation
 {
     public class SceneLoader
     {

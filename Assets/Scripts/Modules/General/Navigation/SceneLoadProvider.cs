@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace UserInterface.Functional.ScenesLoading
+namespace Modules.General.Navigation
 {
     public class SceneLoadProvider : MonoBehaviour
     {
