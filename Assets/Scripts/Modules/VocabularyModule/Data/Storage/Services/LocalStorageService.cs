@@ -47,14 +47,14 @@ namespace Modules.VocabularyModule.Data.Storage.Services
         private void SaveContentToFile(string json)
         {
             CreateStorageIfNotExists();
-            File.WriteAllText(AppConstants.LocalStoragePath, json);
+            File.WriteAllText(AppConstants._localStoragePath, json);
         }
         
         private string LoadFileContent()
         {
             try
             {
-                return File.ReadAllText(AppConstants.LocalStoragePath);
+                return File.ReadAllText(AppConstants._localStoragePath);
             }
             catch
             {
@@ -65,10 +65,10 @@ namespace Modules.VocabularyModule.Data.Storage.Services
         
         private void CreateStorageIfNotExists()
         {
-            if (!File.Exists(AppConstants.LocalStoragePath))
+            if (!File.Exists(AppConstants._localStoragePath))
             {
                 Debug.Log("Local storage created");
-                File.Create(AppConstants.LocalStoragePath).Dispose();
+                File.Create(AppConstants._localStoragePath).Dispose();
             }
         }
     }

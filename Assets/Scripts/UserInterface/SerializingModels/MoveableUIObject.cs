@@ -7,6 +7,14 @@ namespace UserInterface.SerializingModels
     {
         public RectTransform rectTransform;
         public Vector3 onScreenPosition;
-        public Vector3 outScreenPosition;
+        
+        private Vector3 _outScreenPosition = Vector3.zero;
+        
+        public void SetOutScreenPosition(Vector3 outScreenPosition)
+        {
+            _outScreenPosition = outScreenPosition;
+        }
+
+        public Vector3 OutScreenPosition => _outScreenPosition;
     }
 }

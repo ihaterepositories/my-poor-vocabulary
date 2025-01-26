@@ -18,11 +18,22 @@ namespace UserInterface.Functional.UICalling
         
         private void Awake()
         {
+            SetOutScreenPositions();
             callButton.onClick.AddListener(CallObjects);
+        }
+        
+        private void SetOutScreenPositions()
+        {
+            foreach (var callObject in objectsToCall)
+            {
+                callObject.SetOutScreenPosition(new Vector3(callObject.rectTransform.anchoredPosition.x, callObject.rectTransform.anchoredPosition.y, 0f));
+            }
         }
         
         private void CallObjects()
         {
+            StopAllAnimationsOfCalledObjects();
+            
             var delay = initialDelay;
             
             if (_isCalled)
@@ -30,7 +41,7 @@ namespace UserInterface.Functional.UICalling
                 var objectToCallReversed = objectsToCall.AsEnumerable()!.Reverse().ToList();
                 foreach (var callObject in objectToCallReversed)
                 {
-                    callObject.rectTransform.DOAnchorPos(callObject.outScreenPosition, delay);
+                    callObject.rectTransform.DOAnchorPos(callObject.OutScreenPosition, delay);
                 }
 
                 _isCalled = false;
@@ -43,6 +54,14 @@ namespace UserInterface.Functional.UICalling
                     delay += delayStep;
                 }
                 _isCalled = true;
+            }
+        }
+        
+        private void StopAllAnimationsOfCalledObjects()
+        {
+            foreach (var callObject in objectsToCall)
+            {
+                callObject.rectTransform.DOKill();
             }
         }
     }

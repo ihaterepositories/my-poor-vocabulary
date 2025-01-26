@@ -9,29 +9,29 @@ namespace UserInterface.Animators.Custom.NavigationButtons
         [SerializeField] private RectTransform mainIcon;
         [SerializeField] private RectTransform closeIcon;
         
-        private Vector3 mainIconInitialScale;
-        private Vector3 closeIconInitialScale;
+        private Vector3 _mainIconInitialScale;
+        private Vector3 _closeIconInitialScale;
         
-        private readonly float scaleMultiplier = 1.05f;
-        private readonly float animationDuration = 0.2f;
+        private readonly float _scaleMultiplier = 1.05f;
+        private readonly float _animationDuration = 0.2f;
 
         private void Awake()
         {
-            mainIconInitialScale = mainIcon.localScale;
-            closeIconInitialScale = closeIcon.localScale;
+            _mainIconInitialScale = mainIcon.localScale;
+            _closeIconInitialScale = closeIcon.localScale;
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            mainIcon.DOScale(mainIconInitialScale * scaleMultiplier, animationDuration);
-            closeIcon.DOScale(closeIconInitialScale * scaleMultiplier, animationDuration);
-            closeIcon.DOLocalRotate(new Vector3(0f, 0f, 360f), animationDuration, RotateMode.FastBeyond360);
+            mainIcon.DOScale(_mainIconInitialScale * _scaleMultiplier, _animationDuration);
+            closeIcon.DOScale(_closeIconInitialScale * _scaleMultiplier, _animationDuration);
+            closeIcon.DOLocalRotate(new Vector3(0f, 0f, 360f), _animationDuration, RotateMode.FastBeyond360);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            mainIcon.DOScale(mainIconInitialScale, animationDuration);
-            closeIcon.DORotate(Vector3.zero, animationDuration, RotateMode.FastBeyond360);
+            mainIcon.DOScale(_mainIconInitialScale, _animationDuration);
+            closeIcon.DORotate(Vector3.zero, _animationDuration, RotateMode.FastBeyond360);
         }
     }
 }

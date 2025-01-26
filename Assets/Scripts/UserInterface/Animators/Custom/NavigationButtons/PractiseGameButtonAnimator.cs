@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 namespace UserInterface.Animators.Custom.NavigationButtons
 {
-    public class PractiseButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class PractiseGameButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private RectTransform mainIcon;
         [SerializeField] private List<RectTransform> backgroundIcons;
