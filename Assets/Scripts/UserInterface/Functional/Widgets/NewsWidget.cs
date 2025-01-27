@@ -1,5 +1,5 @@
 using System;
-using Modules.General.Score;
+using Modules.ScoreModule;
 using Modules.VocabularyModule.Data.Input;
 using UnityEngine;
 using UnityEngine.UI;

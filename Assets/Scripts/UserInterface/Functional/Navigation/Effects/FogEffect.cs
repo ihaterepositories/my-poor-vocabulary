@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Modules.General.Navigation.Effects
+namespace UserInterface.Functional.Navigation.Effects
 {
     public class FogEffect : MonoBehaviour
     {

@@ -4782,7 +4782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIncrease: 1
-  scaleMultiplier: 1.1
+  scaleMultiplier: 1.05
   isRotate: 0
   rotateAngle: 10
   rectTransform: {fileID: 1402626381}

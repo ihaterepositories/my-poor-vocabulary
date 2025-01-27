@@ -31,10 +31,12 @@ namespace Modules.VocabularyModule.Data.Input.Validation
             InputValidator lengthValidator = new LengthValidator();
             InputValidator extraSpacesValidator = new ExtraSpacesValidator();
             InputValidator alphabeticWordValidator = new AlphabeticWordValidator();
+            InputValidator wordsCountValidator = new WordsCountValidator();
             
             emptyInputValidator.SetNext(lengthValidator);
             lengthValidator.SetNext(extraSpacesValidator);
             extraSpacesValidator.SetNext(alphabeticWordValidator);
+            alphabeticWordValidator.SetNext(wordsCountValidator);
             
             return emptyInputValidator;
         }

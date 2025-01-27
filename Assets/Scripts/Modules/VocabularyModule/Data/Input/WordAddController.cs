@@ -1,6 +1,6 @@
 using System;
 using Constants;
-using Modules.General.Score;
+using Modules.ScoreModule;
 using Modules.VocabularyModule.Data.Input.Validation;
 using Modules.VocabularyModule.Data.Input.Validation.UI;
 using Modules.VocabularyModule.Data.Models;
@@ -70,7 +70,7 @@ namespace Modules.VocabularyModule.Data.Input
             }
             
             // TODO: check spelling
-            // TODO: check if word already exists in vocabulary
+            // ??? TODO: check if word already exists in vocabulary
             
             AddWordToVocabulary(word);
             ClearInputs();

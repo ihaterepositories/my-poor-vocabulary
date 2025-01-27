@@ -1,6 +1,6 @@
 using Constants;
 using DG.Tweening;
-using Modules.General.Score;
+using Modules.ScoreModule;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;

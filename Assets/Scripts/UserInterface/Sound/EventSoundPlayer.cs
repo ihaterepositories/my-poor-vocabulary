@@ -1,10 +1,8 @@
-using System;
-using Modules.General.Score;
 using Modules.MiniGames.Interfaces;
-using Modules.VocabularyModule.Data.Input;
+using Modules.ScoreModule;
 using UnityEngine;
 
-namespace Modules.General.Sound
+namespace UserInterface.Sound
 {
     public class EventSoundPlayer : MonoBehaviour
     {

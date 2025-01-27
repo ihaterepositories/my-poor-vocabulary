@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Modules.MiniGames.TranslationGameModule.Data.Models;
 using Modules.VocabularyModule.Data.Models;
+using UnityEngine;
+using Random = System.Random;
 
 namespace Modules.MiniGames.TranslationGameModule.Data.Generation
 {
@@ -14,41 +16,44 @@ namespace Modules.MiniGames.TranslationGameModule.Data.Generation
         
         public TranslationTestsGenerator(Vocabulary vocabulary, int testsPerGame)
         {
+            if (_testsPerGame % 3 != 0)
+            {
+                Debug.LogError("Translation game tests count must be divisible by 3");
+            }
+            
             _vocabulary = vocabulary;
             _testsPerGame = testsPerGame;
         }
 
-        public List<TranslationTestData> Generate()
+        public List<TranslationGameTestData> Generate()
         {
             var words = InitializeWordsList();
-            var tests = new List<TranslationTestData>();
+            var tests = new List<TranslationGameTestData>();
 
             for (int i = 0; i < words.Count; i++)
             {
-                TranslationTestData test;
+                TranslationGameTestData gameTest;
                 
                 if (i % 2 == 0)
                 {
-                    test = new TranslationTestData()
+                    gameTest = new TranslationGameTestData()
                     {
                         WordToTranslate = words[i].Original,
                         CorrectAnswer = words[i].Translation,
-                        PossibleAnswers = ShuffleList(FindSimilarStringsTo(words[i].Translation, _vocabulary.GetAllTranslations())),
-                        IsWordToTranslateOriginal = true
+                        PossibleAnswers = ShuffleList(FindSimilarStringsTo(words[i].Translation, _vocabulary.GetAllTranslations()))
                     };
                 }
                 else
                 {
-                    test = new TranslationTestData()
+                    gameTest = new TranslationGameTestData()
                     {
                         WordToTranslate = words[i].Translation,
                         CorrectAnswer = words[i].Original,
-                        PossibleAnswers = ShuffleList(FindSimilarStringsTo(words[i].Original, _vocabulary.GetAllOriginals())),
-                        IsWordToTranslateOriginal = false
+                        PossibleAnswers = ShuffleList(FindSimilarStringsTo(words[i].Original, _vocabulary.GetAllOriginals()))
                     };
                 }
                 
-                tests.Add(test);
+                tests.Add(gameTest);
             }
             
             return ShuffleList(tests);

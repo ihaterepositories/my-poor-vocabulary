@@ -1,11 +1,11 @@
-namespace Modules.MiniGames.CorrectionGameModule.Models
+namespace Modules.MiniGames.CorrectionGameModule.Data.Models
 {
-    public class TestData
+    public class CorrectionGameTestData
     {
         public string OriginalWord { get; set; }
         public string TypoWord { get; set; }
         
-        public TestData(string originalWord, string typoWord)
+        public CorrectionGameTestData(string originalWord, string typoWord)
         {
             OriginalWord = originalWord;
             TypoWord = typoWord;

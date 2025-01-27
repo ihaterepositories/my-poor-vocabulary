@@ -14,13 +14,13 @@ namespace UserInterface.Functional.Tests
         private void OnEnable()
         {
             miniGameController.OnRightAnswer += ShowRightResult;
-            miniGameController.OnPassRightAnswer += ShowPassRightResult;
+            miniGameController.OnWrongAnswerWithMessage += ShowOnWrongResult;
         }
 
         private void OnDisable()
         {
             miniGameController.OnRightAnswer -= ShowRightResult;
-            miniGameController.OnPassRightAnswer -= ShowPassRightResult;
+            miniGameController.OnWrongAnswerWithMessage -= ShowOnWrongResult;
         }
 
         private void ShowRightResult()
@@ -29,7 +29,7 @@ namespace UserInterface.Functional.Tests
             resultText.text = "+" + AppConstants.ExpPerTest + "exp";
         }
         
-        private void ShowPassRightResult(string correctWord)
+        private void ShowOnWrongResult(string correctWord)
         {
             resultText.DOFlip();
             resultText.text = "Wrong, right answer is " + correctWord + "...";

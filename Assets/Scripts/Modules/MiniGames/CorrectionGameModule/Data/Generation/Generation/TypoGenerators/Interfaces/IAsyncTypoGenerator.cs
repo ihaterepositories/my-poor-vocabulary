@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Modules.MiniGames.CorrectionGameModule.TypoGeneration.Interfaces
+namespace Modules.MiniGames.CorrectionGameModule.Data.Generation.Generation.TypoGenerators.Interfaces
 {
     public interface IAsyncTypoGenerator
     {

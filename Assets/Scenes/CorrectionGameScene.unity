@@ -1196,10 +1196,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a30ba610c448699acf381dc32020de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testsPerGame: 12
   userAnswerField: {fileID: 2010520789}
+  progressBar: {fileID: 1842590584}
   typoWordText: {fileID: 1223579399}
   messageText: {fileID: 542784421}
-  progressBar: {fileID: 1842590584}
 --- !u!4 &1721572958
 Transform:
   m_ObjectHideFlags: 0

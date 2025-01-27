@@ -2,7 +2,7 @@ using System;
 using Constants;
 using UnityEngine;
 
-namespace Modules.General.Score
+namespace Modules.ScoreModule
 {
     public class ScoreController : MonoBehaviour
     {
