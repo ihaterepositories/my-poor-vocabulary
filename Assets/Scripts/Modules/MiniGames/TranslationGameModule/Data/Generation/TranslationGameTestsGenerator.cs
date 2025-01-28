@@ -2,27 +2,34 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Modules.MiniGames.TranslationGameModule.Data.Models;
+using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
+using Zenject;
 using Random = System.Random;
 
 namespace Modules.MiniGames.TranslationGameModule.Data.Generation
 {
     // TODO: refactor
-    public class TranslationTestsGenerator
+    public class TranslationGameTestsGenerator
     {
-        private readonly Vocabulary _vocabulary;
+        private Vocabulary _vocabulary;
         private readonly int _testsPerGame;
         
-        public TranslationTestsGenerator(Vocabulary vocabulary, int testsPerGame)
+        public TranslationGameTestsGenerator(int testsPerGame)
         {
             if (_testsPerGame % 3 != 0)
             {
                 Debug.LogError("Translation game tests count must be divisible by 3");
             }
             
-            _vocabulary = vocabulary;
             _testsPerGame = testsPerGame;
+        }
+        
+        [Inject]
+        private void Construct(VocabularyController vocabularyController)
+        {
+            _vocabulary = vocabularyController.Vocabulary;
         }
 
         public List<TranslationGameTestData> Generate()

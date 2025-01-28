@@ -1,30 +1,26 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Modules.MiniGames.CorrectionGameModule.Data.Generation.Generation.TypoGenerators.Interfaces;
+using Modules.MiniGames.CorrectionGameModule.Data.Generation.TypoGenerators.Interfaces;
 using Modules.MiniGames.CorrectionGameModule.Data.Models;
+using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
 using Zenject;
 
-namespace Modules.MiniGames.CorrectionGameModule.Data.Generation.Generation
+namespace Modules.MiniGames.CorrectionGameModule.Data.Generation
 {
-    public class CorrectionTestsGenerator
+    public class CorrectionGameTestsGenerator
     {
-        private IAsyncTypoGenerator _asyncTypoGenerator;
+        private readonly IAsyncTypoGenerator _asyncTypoGenerator;
         private readonly Vocabulary _vocabulary;
         private readonly int _testsPerGame;
         
-        public CorrectionTestsGenerator(Vocabulary vocabulary, int testsPerGame)
-        {
-            _vocabulary = vocabulary;
-            _testsPerGame = testsPerGame;
-        }
-        
-        [Inject]
-        private void Construct(IAsyncTypoGenerator asyncTypoGenerator)
+        public CorrectionGameTestsGenerator(IAsyncTypoGenerator asyncTypoGenerator, Vocabulary vocabulary, int testsPerGame)
         {
             _asyncTypoGenerator = asyncTypoGenerator;
+            _vocabulary = vocabulary;
+            _testsPerGame = testsPerGame;
         }
         
         public List<CorrectionGameTestData> Generate()

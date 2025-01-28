@@ -1,13 +1,13 @@
 using System.Text;
 using System.Threading.Tasks;
 using Constants;
-using Modules.MiniGames.CorrectionGameModule.Data.Generation.Generation.TypoGenerators.Interfaces;
+using Modules.MiniGames.CorrectionGameModule.Data.Generation.TypoGenerators.Interfaces;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Modules.MiniGames.CorrectionGameModule.Data.Generation.Generation.TypoGenerators
+namespace Modules.MiniGames.CorrectionGameModule.Data.Generation.TypoGenerators
 {
-    public class LstmModelClient : IAsyncTypoGenerator
+    public class LstmTypoGenerator : IAsyncTypoGenerator
     {
         private readonly string _apiUrl = AppConstants.TypoGeneratingRequestUrl;
         

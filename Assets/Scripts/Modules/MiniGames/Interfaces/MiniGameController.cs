@@ -9,7 +9,6 @@ using Zenject;
 
 namespace Modules.MiniGames.Interfaces
 {
-    // TODO: generalize more things from child controllers
     public abstract class MiniGameController : MonoBehaviour
     {
         [SerializeField] protected int testsPerGame = 10;
@@ -18,7 +17,6 @@ namespace Modules.MiniGames.Interfaces
         
         protected Vocabulary Vocabulary;
         protected ScoreController ScoreController;
-        
         protected int CurrentTestIndex;
         
         public event Action OnRightAnswer;
@@ -26,9 +24,7 @@ namespace Modules.MiniGames.Interfaces
         public static event Action OnWrongAnswer; 
         
         [Inject]
-        private void Construct(
-            VocabularyController vocabularyController,
-            ScoreController scoreController)
+        private void Construct(VocabularyController vocabularyController, ScoreController scoreController)
         {
             Vocabulary = vocabularyController.Vocabulary;
             ScoreController = scoreController;

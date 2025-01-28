@@ -1,5 +1,7 @@
-using Modules.MiniGames.CorrectionGameModule.Data.Generation.Generation.TypoGenerators;
-using Modules.MiniGames.CorrectionGameModule.Data.Generation.Generation.TypoGenerators.Interfaces;
+using Modules.MiniGames.CorrectionGameModule.Data.Generation.TypoGenerators;
+using Modules.MiniGames.CorrectionGameModule.Data.Generation.TypoGenerators.Interfaces;
+using Modules.MiniGames.PasteGameModule.Data.Generation.SentenceGenerators;
+using Modules.MiniGames.PasteGameModule.Data.Generation.SentenceGenerators.Interfaces;
 using Modules.ScoreModule;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Storage.Interfaces;
@@ -60,7 +62,8 @@ namespace Infrastructure
         private void BindDependencyInjections()
         {
             Container.Bind<IStorageService>().To<LocalStorageService>().AsSingle();
-            Container.Bind<IAsyncTypoGenerator>().To<LstmModelClient>().AsSingle();
+            Container.Bind<IAsyncTypoGenerator>().To<LstmTypoGenerator>().AsSingle();
+            Container.Bind<IAsyncSentenceGenerator>().To<TestSentenceGenerator>().AsSingle();
         }
     }
 }

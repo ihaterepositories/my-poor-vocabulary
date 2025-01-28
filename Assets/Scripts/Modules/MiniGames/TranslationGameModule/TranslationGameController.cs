@@ -4,8 +4,10 @@ using Constants;
 using Modules.MiniGames.Interfaces;
 using Modules.MiniGames.TranslationGameModule.Data.Generation;
 using Modules.MiniGames.TranslationGameModule.Data.Models;
+using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Modules.MiniGames.TranslationGameModule
 {
@@ -15,10 +17,10 @@ namespace Modules.MiniGames.TranslationGameModule
         [SerializeField] private Text possibleAnswersText;
         
         private List<TranslationGameTestData> _tests;
-        
+         
         protected override void GenerateTests()
         {
-            var testsGenerator = new TranslationTestsGenerator(Vocabulary, testsPerGame);
+            var testsGenerator = new TranslationGameTestsGenerator(testsPerGame);
             _tests = testsGenerator.Generate();
         }
 
@@ -36,7 +38,9 @@ namespace Modules.MiniGames.TranslationGameModule
         protected override void EvaluateTest()
         {
             var input = userAnswerField.text;
-            if (input == _tests[CurrentTestIndex].CorrectAnswer)
+            var rightAnswer = _tests[CurrentTestIndex].CorrectAnswer;
+            
+            if (input == rightAnswer)
             {
                 ScoreController.AddExp(AppConstants.ExpPerTest);
                 InvokeEventsOnRightAnswer();
