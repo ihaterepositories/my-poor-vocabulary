@@ -23,6 +23,10 @@ namespace UserInterface.Animators.Generic
             _initialRotation = rectTransform.localEulerAngles;
         }
 
+        private void OnDisable()
+        {
+            rectTransform.DOKill();
+        }
 
         public void OnPointerEnter(PointerEventData eventData)
         {

@@ -16,7 +16,13 @@ namespace UserInterface.Animators.Custom
         {
             _initialYPosition = viewBackground.anchoredPosition.y;
         }
-        
+
+        private void OnDisable()
+        {
+            viewBackground.DOKill();
+            viewText.DOKill();
+        }
+
         public void Show()
         {
             viewBackground.DOAnchorPosY(_onScreenYPosition, 0.2f)

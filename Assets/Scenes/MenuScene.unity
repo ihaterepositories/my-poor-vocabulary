@@ -1524,7 +1524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454334075}
   m_Layer: 0
-  m_Name: MinigamesMenu
+  m_Name: MiniGamesButtonsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4403,7 +4403,7 @@ MonoBehaviour:
   uiButton: {fileID: 1328495913}
   isGoBackButton: 0
   hotkey: 0
-  sceneAddress: Assets/Scenes/PasteGameScene.unity
+  sceneAddress: Assets/Scenes/PasteGameTopicPickScene.unity
 --- !u!114 &1328495917
 MonoBehaviour:
   m_ObjectHideFlags: 0

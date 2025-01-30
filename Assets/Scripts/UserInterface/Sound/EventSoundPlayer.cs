@@ -1,4 +1,4 @@
-using Modules.MiniGames.Interfaces;
+using Modules.MiniGamesCore.Interfaces;
 using Modules.ScoreModule;
 using UnityEngine;
 

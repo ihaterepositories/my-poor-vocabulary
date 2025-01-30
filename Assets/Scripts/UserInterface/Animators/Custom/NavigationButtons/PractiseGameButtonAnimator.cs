@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
 namespace UserInterface.Animators.Custom.NavigationButtons
 {
@@ -21,7 +22,6 @@ namespace UserInterface.Animators.Custom.NavigationButtons
         private readonly float _backgroundMaxRotationValueAddition = 20f;
         
         private readonly float _animationTime = 0.3f;
-
         
         private void Awake()
         {
@@ -35,7 +35,17 @@ namespace UserInterface.Animators.Custom.NavigationButtons
                 _backgroundInitialRotationValues.Add(backgroundIcon.eulerAngles);
             }
         }
-        
+
+        private void OnDisable()
+        {
+            mainIcon.DOKill();
+
+            foreach (var bi in backgroundIcons)
+            {
+                bi.DOKill();
+            }
+        }
+
         public void OnPointerEnter(PointerEventData eventData)
         {
             mainIcon.DOScale(_mainInitialScaleValue + _mainScaleValueAddition, _animationTime);

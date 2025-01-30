@@ -24,6 +24,13 @@ namespace UserInterface.Animators.Custom.NavigationButtons
             _frontPasteIconInitialScale = frontPasteIcon.localScale;
         }
 
+        private void OnDisable()
+        {
+            mainIcon.DOKill();
+            backPasteIcon.DOKill();
+            frontPasteIcon.DOKill();
+        }
+
         public void OnPointerEnter(PointerEventData eventData)
         {
             mainIcon.DOScale(_mainIconInitialScale * _scaleMultiplier, _animationDuration);

@@ -32,6 +32,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5762ad6d6e82a314ead95f80b8db9be2
+    m_Address: Assets/Scenes/PasteGameTopicPickScene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e9f3b5293cc48bf49ad4218495543dcb
     m_Address: Assets/Scenes/PasteGameScene.unity
     m_ReadOnly: 0

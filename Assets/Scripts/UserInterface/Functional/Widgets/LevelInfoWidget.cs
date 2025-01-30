@@ -37,6 +37,10 @@ namespace UserInterface.Functional.Widgets
         private void OnDisable()
         {
             ScoreController.OnExpChanged -= SetInfo;
+
+            levelText.DOKill();
+            expText.DOKill();
+            progressBar.DOKill();
         }
 
         private void SetInfo()

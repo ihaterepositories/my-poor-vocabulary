@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -10,6 +11,11 @@ namespace UserInterface.Functional.Navigation.Effects
         private void Start()
         {
             Decrease(.5f);
+        }
+
+        private void OnDisable()
+        {
+            spriteRenderer.DOKill();
         }
 
         public void Increase(float duration)

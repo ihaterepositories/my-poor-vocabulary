@@ -21,6 +21,12 @@ namespace UserInterface.Animators.Custom.NavigationButtons
             _closeIconInitialScale = closeIcon.localScale;
         }
 
+        private void OnDisable()
+        {
+            mainIcon.DOKill();
+            closeIcon.DOKill();
+        }
+
         public void OnPointerEnter(PointerEventData eventData)
         {
             mainIcon.DOScale(_mainIconInitialScale * _scaleMultiplier, _animationDuration);

@@ -1,7 +1,7 @@
-using Modules.MiniGames.CorrectionGameModule.Data.Generation.TypoGenerators;
-using Modules.MiniGames.CorrectionGameModule.Data.Generation.TypoGenerators.Interfaces;
-using Modules.MiniGames.PasteGameModule.Data.Generation.SentenceGenerators;
-using Modules.MiniGames.PasteGameModule.Data.Generation.SentenceGenerators.Interfaces;
+using Modules.MiniGamesCore.CorrectionGameModule.Data.Generation.TypoGenerators;
+using Modules.MiniGamesCore.CorrectionGameModule.Data.Generation.TypoGenerators.Interfaces;
+using Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators;
+using Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators.Interfaces;
 using Modules.ScoreModule;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Storage.Interfaces;

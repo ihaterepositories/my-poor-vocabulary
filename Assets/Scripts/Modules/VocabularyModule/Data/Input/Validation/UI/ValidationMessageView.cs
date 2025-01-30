@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,11 @@ namespace Modules.VocabularyModule.Data.Input.Validation.UI
         [SerializeField] private Text text;
         [SerializeField] private Color defaultColor;
         [SerializeField] private Color errorColor;
+
+        private void OnDisable()
+        {
+            text.DOKill();
+        }
 
         public void ShowError(string error)
         {

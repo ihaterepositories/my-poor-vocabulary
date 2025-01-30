@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Input;
@@ -34,6 +33,8 @@ namespace UserInterface.Functional.Widgets
         private void OnDisable()
         {
             WordAddController.OnWordAdded -= SetText;
+
+            widgetText.DOKill();
         }
 
         private void SetText()
