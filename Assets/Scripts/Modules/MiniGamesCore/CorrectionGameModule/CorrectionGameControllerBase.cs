@@ -3,14 +3,13 @@ using Constants;
 using Modules.MiniGamesCore.CorrectionGameModule.Data.Generation;
 using Modules.MiniGamesCore.CorrectionGameModule.Data.Generation.TypoGenerators.Interfaces;
 using Modules.MiniGamesCore.CorrectionGameModule.Data.Models;
-using Modules.MiniGamesCore.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
 namespace Modules.MiniGamesCore.CorrectionGameModule
 {
-    public class CorrectionGameController : MiniGameController
+    public class CorrectionGameControllerBase : MiniGameControllerBase
     {
         [SerializeField] private Text typoWordText;
 

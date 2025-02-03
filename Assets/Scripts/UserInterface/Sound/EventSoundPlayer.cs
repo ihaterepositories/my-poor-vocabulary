@@ -1,4 +1,4 @@
-using Modules.MiniGamesCore.Interfaces;
+using Modules.MiniGamesCore;
 using Modules.ScoreModule;
 using UnityEngine;
 
@@ -20,13 +20,13 @@ namespace UserInterface.Sound
         private void OnEnable()
         {
             ScoreController.OnExpChanged += PlayExpEarnedSound;
-            MiniGameController.OnWrongAnswer += PlayWrongAnswerSound;
+            MiniGameControllerBase.OnWrongAnswer += PlayWrongAnswerSound;
         }
         
         private void OnDisable()
         {
             ScoreController.OnExpChanged -= PlayExpEarnedSound;
-            MiniGameController.OnWrongAnswer -= PlayWrongAnswerSound;
+            MiniGameControllerBase.OnWrongAnswer -= PlayWrongAnswerSound;
         }
 
         private void PlayExpEarnedSound()

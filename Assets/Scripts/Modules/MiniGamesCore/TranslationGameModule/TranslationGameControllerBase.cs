@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Constants;
-using Modules.MiniGamesCore.Interfaces;
 using Modules.MiniGamesCore.TranslationGameModule.Data.Generation;
 using Modules.MiniGamesCore.TranslationGameModule.Data.Models;
 using UnityEngine;
@@ -9,7 +8,7 @@ using UnityEngine.UI;
 
 namespace Modules.MiniGamesCore.TranslationGameModule
 {
-    public class TranslationGameController : MiniGameController
+    public class TranslationGameControllerBase : MiniGameControllerBase
     {
         [SerializeField] private Text wordToTranslateText;
         [SerializeField] private Text possibleAnswersText;

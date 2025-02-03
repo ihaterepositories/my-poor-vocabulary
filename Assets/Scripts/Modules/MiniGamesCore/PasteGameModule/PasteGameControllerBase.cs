@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Constants;
-using Modules.MiniGamesCore.Interfaces;
 using Modules.MiniGamesCore.PasteGameModule.Data.Generation;
 using Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators.Interfaces;
 using Modules.MiniGamesCore.PasteGameModule.Data.Models;
@@ -10,7 +9,7 @@ using Zenject;
 
 namespace Modules.MiniGamesCore.PasteGameModule
 {
-    public class PasteGameController : MiniGameController
+    public class PasteGameControllerBase : MiniGameControllerBase
     {
         [SerializeField] private Text sentenceText;
         private List<PasteGameTestData> _tests;

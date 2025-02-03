@@ -1,7 +1,8 @@
 using Constants;
 using DG.Tweening;
-using Modules.MiniGamesCore.Interfaces;
+using Modules.MiniGamesCore;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UserInterface.Functional
@@ -9,18 +10,18 @@ namespace UserInterface.Functional
     public class MiniGameTestResultView : MonoBehaviour
     {
         [SerializeField] private Text resultText;
-        [SerializeField] private MiniGameController miniGameController;
+        [FormerlySerializedAs("miniGameController")] [SerializeField] private MiniGameControllerBase miniGameControllerBase;
 
         private void OnEnable()
         {
-            miniGameController.OnRightAnswer += ShowRightResult;
-            miniGameController.OnWrongAnswerWithMessage += ShowOnWrongResult;
+            miniGameControllerBase.OnRightAnswer += ShowRightResult;
+            miniGameControllerBase.OnWrongAnswerWithMessage += ShowOnWrongResult;
         }
 
         private void OnDisable()
         {
-            miniGameController.OnRightAnswer -= ShowRightResult;
-            miniGameController.OnWrongAnswerWithMessage -= ShowOnWrongResult;
+            miniGameControllerBase.OnRightAnswer -= ShowRightResult;
+            miniGameControllerBase.OnWrongAnswerWithMessage -= ShowOnWrongResult;
             
             resultText.DOKill();
         }

@@ -7,9 +7,9 @@ using UnityEngine.UI;
 using UserInterface.Functional.ProgressBar;
 using Zenject;
 
-namespace Modules.MiniGamesCore.Interfaces
+namespace Modules.MiniGamesCore
 {
-    public abstract class MiniGameController : MonoBehaviour
+    public abstract class MiniGameControllerBase : MonoBehaviour
     {
         [SerializeField] protected int testsPerGame = 10;
         [SerializeField] protected InputField userAnswerField;
