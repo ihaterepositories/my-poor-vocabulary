@@ -10,18 +10,18 @@ namespace UserInterface.Functional
     public class MiniGameTestResultView : MonoBehaviour
     {
         [SerializeField] private Text resultText;
-        [FormerlySerializedAs("miniGameController")] [SerializeField] private MiniGameControllerBase miniGameControllerBase;
+        [FormerlySerializedAs("miniGameControllerBase")] [SerializeField] private MiniGameController miniGameController;
 
         private void OnEnable()
         {
-            miniGameControllerBase.OnRightAnswer += ShowRightResult;
-            miniGameControllerBase.OnWrongAnswerWithMessage += ShowOnWrongResult;
+            miniGameController.OnRightAnswer += ShowRightResult;
+            miniGameController.OnWrongAnswerWithMessage += ShowOnWrongResult;
         }
 
         private void OnDisable()
         {
-            miniGameControllerBase.OnRightAnswer -= ShowRightResult;
-            miniGameControllerBase.OnWrongAnswerWithMessage -= ShowOnWrongResult;
+            miniGameController.OnRightAnswer -= ShowRightResult;
+            miniGameController.OnWrongAnswerWithMessage -= ShowOnWrongResult;
             
             resultText.DOKill();
         }

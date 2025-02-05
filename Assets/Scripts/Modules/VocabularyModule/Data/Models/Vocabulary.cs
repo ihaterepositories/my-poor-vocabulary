@@ -28,8 +28,13 @@ namespace Modules.VocabularyModule.Data.Models
         public List<string> GetAllTranslations()
         {
             return Words
-                .Select(w => w.Translation)
+                .SelectMany(w => w.Translations)
                 .ToList();
+        }
+        
+        public Word GetByOriginal(string original)
+        {
+            return Words.FirstOrDefault(word => word.Original == original);
         }
         
         public Word GetRandom()
@@ -60,11 +65,16 @@ namespace Modules.VocabularyModule.Data.Models
 
         public void ModifyTranslationTestAttemptFor(string word, bool isCorrect)
         {
-            var wordFromVocabulary = Words.FirstOrDefault(w => w.Original == word || w.Translation == word);
+            var wordFromVocabulary = Words.FirstOrDefault(w => w.Original == word || w.Translations.Any(t => t == word));
             if (wordFromVocabulary != null)
             {
                 wordFromVocabulary.IsIncorrectTranslatedInTranslationGame = isCorrect;
             }
+        }
+        
+        public bool ContainsOriginalWord(string originalWord)
+        {
+            return Words.Any(w => w.Original == originalWord);
         }
     }
 }

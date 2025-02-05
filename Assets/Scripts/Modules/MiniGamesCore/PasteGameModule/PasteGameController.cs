@@ -9,7 +9,7 @@ using Zenject;
 
 namespace Modules.MiniGamesCore.PasteGameModule
 {
-    public class PasteGameControllerBase : MiniGameControllerBase
+    public class PasteGameController : MiniGameController
     {
         [SerializeField] private Text sentenceText;
         private List<PasteGameTestData> _tests;

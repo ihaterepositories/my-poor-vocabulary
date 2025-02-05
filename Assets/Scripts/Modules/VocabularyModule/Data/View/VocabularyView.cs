@@ -89,9 +89,8 @@ namespace Modules.VocabularyModule.Data.View
             var search = searchInput.text.ToLower();
             return _vocabulary
                 .Where(word => 
-                    word.Original.ToLower().Contains(search) 
-                    || 
-                    word.Translation.ToLower().Contains(search))
+                    word.Original.ToLower().Contains(search) || 
+                    word.Translations.Any(t => t.ToLower().Contains(search)))
                 .ToList();
         }
         
@@ -102,15 +101,15 @@ namespace Modules.VocabularyModule.Data.View
             foreach (var word in words)
             {
                 var original = word.Original;
-                var translation = word.Translation;
+                var translations = word.Translations;
                 
                 if (isHighlightSearched)
                 {
                     original = original.Replace(searchInput.text, $"<u>{searchInput.text}</u>");
-                    translation = translation.Replace(searchInput.text, $"<u>{searchInput.text}</u>");
+                    translations = translations.Select(t => t.Replace(searchInput.text, $"<u>{searchInput.text}</u>")).ToList();
                 }
                 
-                formattedWords.Add($"{original} - {translation}");
+                formattedWords.Add($"{original} - {string.Join(", ", translations)}");
                 formattedWords.Add(new string('-', 96));
             }
 

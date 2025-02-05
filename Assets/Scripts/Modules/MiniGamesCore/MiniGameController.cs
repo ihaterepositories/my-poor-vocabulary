@@ -9,7 +9,7 @@ using Zenject;
 
 namespace Modules.MiniGamesCore
 {
-    public abstract class MiniGameControllerBase : MonoBehaviour
+    public abstract class MiniGameController : MonoBehaviour
     {
         [SerializeField] protected int testsPerGame = 10;
         [SerializeField] protected InputField userAnswerField;

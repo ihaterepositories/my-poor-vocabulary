@@ -6,7 +6,7 @@ using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
 using Zenject;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
 {
@@ -16,20 +16,21 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
         private Vocabulary _vocabulary;
         private readonly int _testsPerGame;
         
-        public TranslationGameTestsGenerator(int testsPerGame)
+        public TranslationGameTestsGenerator(int testsPerGame, Vocabulary vocabulary)
         {
-            if (_testsPerGame % 3 != 0)
+            if (_testsPerGame % 3 != 0 || _testsPerGame < 30)
             {
-                Debug.LogError("Translation game tests count must be divisible by 3");
+                Debug.LogError("Translation game tests count must be divisible by 3 and at least 30");
             }
             
             _testsPerGame = testsPerGame;
-        }
-        
-        [Inject]
-        private void Construct(VocabularyController vocabularyController)
-        {
-            _vocabulary = vocabularyController.Vocabulary;
+            
+            _vocabulary = vocabulary;
+
+            if (_vocabulary.GetCount() < 50)
+            {
+                Debug.LogError("Vocabulary must contain at least 50 words to generate tests");
+            }
         }
 
         public List<TranslationGameTestData> Generate()
@@ -46,17 +47,17 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
                     gameTest = new TranslationGameTestData()
                     {
                         WordToTranslate = words[i].Original,
-                        CorrectAnswer = words[i].Translation,
-                        PossibleAnswers = ShuffleList(FindSimilarStringsTo(words[i].Translation, _vocabulary.GetAllTranslations()))
+                        CorrectAnswers = words[i].Translations,
+                        // PossibleAnswers = ShuffleList(FindSimilarStringsTo(words[i].Translations, _vocabulary.GetAllTranslations()))
                     };
                 }
                 else
                 {
                     gameTest = new TranslationGameTestData()
                     {
-                        WordToTranslate = words[i].Translation,
-                        CorrectAnswer = words[i].Original,
-                        PossibleAnswers = ShuffleList(FindSimilarStringsTo(words[i].Original, _vocabulary.GetAllOriginals()))
+                        WordToTranslate = words[i].Translations[Random.Range(0, words[i].Translations.Count)],
+                        CorrectAnswers = new List<string>{words[i].Original},
+                        // PossibleAnswers = ShuffleList(FindSimilarStringsTo(words[i].Original, _vocabulary.GetAllOriginals()))
                     };
                 }
                 
@@ -140,10 +141,9 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
         
         private List<T> ShuffleList<T>(List<T> list)
         {
-            var random = new Random();
             for (int i = list.Count - 1; i > 0; i--)
             {
-                int j = random.Next(i + 1);
+                int j = Random.Range(0, i + 1);
                 (list[i], list[j]) = (list[j], list[i]);
             }
             return list;

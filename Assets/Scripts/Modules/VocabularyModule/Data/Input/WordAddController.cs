@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Constants;
 using Modules.ScoreModule;
 using Modules.VocabularyModule.Data.Input.Validation;
@@ -41,7 +42,7 @@ namespace Modules.VocabularyModule.Data.Input
         {
             _inputValidationChainExecutor = new InputValidationChainExecutor();
             
-            // Remove focusing from button to make "Return" key free to use 
+            // Remove focusing from other buttons to make "Return" key free to use 
             addWordPanelCallButton.onClick.AddListener(() => EventSystem.current.SetSelectedGameObject(null));
             addWordPanelCallButton.onClick.AddListener(() => _isPanelActive = !_isPanelActive);
             
@@ -61,22 +62,44 @@ namespace Modules.VocabularyModule.Data.Input
 
         private void AddWord()
         {
-            var word = CreateWord();
-            
-            if (!ValidateInputPart(word.Original, "Original word") || !ValidateInputPart(word.Translation, "Translated word"))
+            if (!ValidateInputs())
             {
-                validationMessageView.ShowError(GetErrorMessage());
+                // TODO: spellcheck
+                validationMessageView.ShowError(GetValidationErrorMessage());
                 return;
             }
             
-            // TODO: check spelling
-            // ??? TODO: check if word already exists in vocabulary
+            if (!_vocabularyController.Vocabulary.ContainsOriginalWord(originalWordInputField.text))
+            {
+                var word = CreateWord();
+                AddWordToVocabulary(word);
+            }
+            else
+            {
+                var word = _vocabularyController.Vocabulary.GetByOriginal(originalWordInputField.text);
+                AddNewTranslationToWord(word, translatedWordInputField.text);
+            }
             
-            AddWordToVocabulary(word);
             ClearInputs();
             validationMessageView.HideMessage();
             _scoreController.AddExp(AppConstants.ExpPerAddedWord);
             OnWordAdded?.Invoke();
+        }
+
+        private bool ValidateInputs()
+        {
+            return ValidateInputPart(originalWordInputField.text, "Original word") &&
+                   ValidateInputPart(translatedWordInputField.text, "Translated word");
+        }
+        
+        private bool ValidateInputPart(string input, string inputPart)
+        {
+            return _inputValidationChainExecutor.Execute(input, inputPart);
+        }
+        
+        private string GetValidationErrorMessage()
+        {
+            return _inputValidationChainExecutor.LastValidationError;
         }
         
         private Word CreateWord()
@@ -85,20 +108,15 @@ namespace Modules.VocabularyModule.Data.Input
             var translatedWord = translatedWordInputField.text;
             return new Word(originalWord, translatedWord);
         }
-
-        private bool ValidateInputPart(string input, string inputPart)
-        {
-            return _inputValidationChainExecutor.Execute(input, inputPart);
-        }
-        
-        private string GetErrorMessage()
-        {
-            return _inputValidationChainExecutor.LastValidationError;
-        }
         
         private void AddWordToVocabulary(Word word)
         {
             _vocabularyController.Vocabulary.Add(word);
+        }
+        
+        private void AddNewTranslationToWord(Word word, string translation)
+        {
+            word.Translations.Add(translation);
         }
 
         private void ClearInputs()

@@ -9,7 +9,7 @@ using Zenject;
 
 namespace Modules.MiniGamesCore.CorrectionGameModule
 {
-    public class CorrectionGameControllerBase : MiniGameControllerBase
+    public class CorrectionGameController : MiniGameController
     {
         [SerializeField] private Text typoWordText;
 

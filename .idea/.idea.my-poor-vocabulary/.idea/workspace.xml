@@ -6,23 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PasteGameTopicPickScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PasteGameTopicPickScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameControllerBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameControllerBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/Interfaces.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/Interfaces/MiniGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/MiniGameControllerBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/Interfaces/MiniGameController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/MiniGameControllerBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameControllerBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameControllerBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameControllerBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameControllerBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameControllerBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/MiniGameControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/MiniGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/MiniGameControllerBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/MiniGameController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameControllerBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameTestsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameTestsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Models/TranslationGameTestData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Models/TranslationGameTestData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameControllerBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Input/WordAddController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Input/WordAddController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Models/Vocabulary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Models/Vocabulary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Models/Word.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Models/Word.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/View/VocabularyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/View/VocabularyView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGameTestResultView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGameTestResultView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/OptionDataTransferButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/OptionDataTransfering/OptionDataTransferButtonBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/OptionDataTransferButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/OptionDataTransfering/OptionDataTransferButtonBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/PickedPasteGameTopicText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/PickedPasteGameCharacterText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/PickedPasteGameTopicText.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/PickedPasteGameCharacterText.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Sound/EventSoundPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Sound/EventSoundPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/View/Sprites/PasteGameTopics/TopicButtonBackground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/View/Sprites/PasteGameTopics/TopicButtonBackground.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/View/Fonts/CourierPrime-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/View/Fonts/CourierPrime-Regular SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +148,8 @@
       <workItem from="1738231090735" duration="6117000" />
       <workItem from="1738244319593" duration="242000" />
       <workItem from="1738584746948" duration="3768000" />
+      <workItem from="1738761836865" duration="5119000" />
+      <workItem from="1738767071398" duration="435000" />
     </task>
     <servers />
   </component>
