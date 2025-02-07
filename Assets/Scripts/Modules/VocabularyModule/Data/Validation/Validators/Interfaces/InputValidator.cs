@@ -1,6 +1,6 @@
 using System;
 
-namespace Modules.VocabularyModule.Data.Input.Validation.Validators.Interfaces
+namespace Modules.VocabularyModule.Data.Validation.Validators.Interfaces
 {
     public abstract class InputValidator
     {

@@ -1,7 +1,7 @@
-using Modules.VocabularyModule.Data.Input.Validation.Validators;
-using Modules.VocabularyModule.Data.Input.Validation.Validators.Interfaces;
+using Modules.VocabularyModule.Data.Validation.Validators;
+using Modules.VocabularyModule.Data.Validation.Validators.Interfaces;
 
-namespace Modules.VocabularyModule.Data.Input.Validation
+namespace Modules.VocabularyModule.Data.Validation
 {
     // Chain of Responsibility pattern for original word input validating
     // *next validator will be executed if previous did not catch error* 

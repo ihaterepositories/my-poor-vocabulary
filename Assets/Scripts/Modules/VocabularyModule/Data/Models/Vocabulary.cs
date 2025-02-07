@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using Random = System.Random;
 
 namespace Modules.VocabularyModule.Data.Models
@@ -72,9 +73,19 @@ namespace Modules.VocabularyModule.Data.Models
             }
         }
         
-        public bool ContainsOriginalWord(string originalWord)
+        public bool ContainsByOriginalWord(string originalWord)
         {
             return Words.Any(w => w.Original == originalWord);
+        }
+
+        public void DeleteWordByOriginal(string original)
+        {
+            var wordToRemove = Words.FirstOrDefault(w => w.Original == original);
+            
+            if (wordToRemove!=null)
+            {
+                Words.Remove(wordToRemove);
+            }
         }
     }
 }

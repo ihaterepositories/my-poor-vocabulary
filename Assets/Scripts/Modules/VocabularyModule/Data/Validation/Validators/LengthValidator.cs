@@ -1,7 +1,7 @@
 using Constants;
-using Modules.VocabularyModule.Data.Input.Validation.Validators.Interfaces;
+using Modules.VocabularyModule.Data.Validation.Validators.Interfaces;
 
-namespace Modules.VocabularyModule.Data.Input.Validation.Validators
+namespace Modules.VocabularyModule.Data.Validation.Validators
 {
     public class LengthValidator : InputValidator
     {

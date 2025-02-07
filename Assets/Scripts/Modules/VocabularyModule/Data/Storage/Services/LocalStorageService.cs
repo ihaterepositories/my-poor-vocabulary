@@ -67,7 +67,6 @@ namespace Modules.VocabularyModule.Data.Storage.Services
         {
             if (!File.Exists(AppConstants._localStoragePath))
             {
-                Debug.Log("Local storage created");
                 File.Create(AppConstants._localStoragePath).Dispose();
             }
         }

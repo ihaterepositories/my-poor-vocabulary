@@ -1,3 +1,4 @@
+using Modules.VocabularyModule.Data.Delete;
 using Modules.VocabularyModule.Data.Input;
 using Modules.VocabularyModule.Data.Models;
 using Modules.VocabularyModule.Data.Storage.Interfaces;
@@ -6,10 +7,10 @@ using Zenject;
 
 namespace Modules.VocabularyModule
 {
+    // TODO: refactor (split to VocabularyStorageController and VocabularyHolder)
     public class VocabularyController : MonoBehaviour
     {
         private IStorageService _storageService;
-
         public Vocabulary Vocabulary;
         
         [Inject]
@@ -26,17 +27,18 @@ namespace Modules.VocabularyModule
         private void OnEnable()
         {
             WordAddController.OnWordAdded += SaveVocabularyToStorage;
+            WordDeleteController.OnWordDeleted += SaveVocabularyToStorage;
         }
         
         private void OnDisable()
         {
             WordAddController.OnWordAdded -= SaveVocabularyToStorage;
+            WordDeleteController.OnWordDeleted -= SaveVocabularyToStorage;
         }
 
         private void LoadVocabularyFromStorage()
         {
             Vocabulary = _storageService.Load();
-            Debug.Log("Loaded " + Vocabulary.GetCount() + " words");
         }
         
         private void SaveVocabularyToStorage()

@@ -1,9 +1,8 @@
-using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Modules.VocabularyModule.Data.Input.Validation.UI
+namespace Modules.VocabularyModule.Data.Validation.UI
 {
     public class ValidationMessageView : MonoBehaviour
     {

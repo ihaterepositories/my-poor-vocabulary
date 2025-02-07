@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Modules.VocabularyModule.Data.Delete;
 using Modules.VocabularyModule.Data.Models;
 using Modules.VocabularyModule.Data.View.Sorting;
 using Modules.VocabularyModule.Data.View.Sorting.UI;
@@ -16,14 +17,14 @@ namespace Modules.VocabularyModule.Data.View
         [SerializeField] private TextMeshProUGUI textField;
         [SerializeField] private InputField searchInput;
         
-        private VocabularyController _vocabularyController;
-        private List<Word> _vocabulary;
+        private Vocabulary _vocabulary;
+        private List<Word> _vocabularyWords;
         private int _lastSortType;
         
         [Inject]
         private void Construct(VocabularyController vocabularyController)
         {
-            _vocabularyController = vocabularyController;
+            _vocabulary = vocabularyController.Vocabulary;
         }
 
         private void Start()
@@ -34,25 +35,30 @@ namespace Modules.VocabularyModule.Data.View
             searchInput.onValueChanged.AddListener(_ => ShowSearched());
             
             Sort(0);
-            Show(FormatWords(_vocabulary));
+            ShowWords(FormatWords(_vocabularyWords));
         }
 
         private void OnEnable()
         {
             VocabularySortButton.OnClicked += ShowSorted;
+            WordDeleteController.OnWordDeleted += RefreshView;
         }
         
         private void OnDisable()
         {
             VocabularySortButton.OnClicked -= ShowSorted;
+            WordDeleteController.OnWordDeleted -= RefreshView;
+        }
+        
+        private void RefreshView()
+        {
+            LoadVocabulary();
+            ShowWords(FormatWords(_vocabularyWords));
         }
 
         private void LoadVocabulary()
         {
-            _vocabulary = _vocabularyController.Vocabulary.GetAll();
-            
-            if (_vocabulary == null)
-                Debug.LogError(gameObject.name+": words are null");
+            _vocabularyWords = _vocabulary.GetAll();
         }
 
         private void ShowSorted(int sortType)
@@ -64,30 +70,29 @@ namespace Modules.VocabularyModule.Data.View
                 _lastSortType = sortType;
             }
 
-            Show(FormatWords(_vocabulary));
+            ShowWords(FormatWords(_vocabularyWords));
         }
         
         private void ShowSearched()
         {
             if (searchInput.text == string.Empty || searchInput.text == " " || searchInput.text == null)
             {
-                Show(FormatWords(_vocabulary));
                 return;
             }
 
             var searchedWords = GetSearchedWords();
-            Show(FormatWords(searchedWords, true));
+            ShowWords(FormatWords(searchedWords, true));
         }
 
         private void Sort(int sortType)
         {
-            _vocabulary = VocabularySortFactory.GetSorter(sortType).Sort(_vocabulary);
+            _vocabularyWords = VocabularySortFactory.GetSorter(sortType).Sort(_vocabularyWords);
         }
         
         private List<Word> GetSearchedWords()
         {
             var search = searchInput.text.ToLower();
-            return _vocabulary
+            return _vocabularyWords
                 .Where(word => 
                     word.Original.ToLower().Contains(search) || 
                     word.Translations.Any(t => t.ToLower().Contains(search)))
@@ -116,7 +121,7 @@ namespace Modules.VocabularyModule.Data.View
             return formattedWords;
         }
         
-        private void Show(List<string> wordsToShow)
+        private void ShowWords(List<string> wordsToShow)
         {
             textField.text = String.Join("\n", wordsToShow);
         }

@@ -2668,7 +2668,7 @@ GameObject:
   - component: {fileID: 908758650}
   - component: {fileID: 908758652}
   m_Layer: 0
-  m_Name: InputMessageText
+  m_Name: ValidationMessageView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

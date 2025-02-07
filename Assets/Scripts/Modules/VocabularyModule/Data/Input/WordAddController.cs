@@ -2,9 +2,9 @@ using System;
 using System.Linq;
 using Constants;
 using Modules.ScoreModule;
-using Modules.VocabularyModule.Data.Input.Validation;
-using Modules.VocabularyModule.Data.Input.Validation.UI;
 using Modules.VocabularyModule.Data.Models;
+using Modules.VocabularyModule.Data.Validation;
+using Modules.VocabularyModule.Data.Validation.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -44,8 +44,8 @@ namespace Modules.VocabularyModule.Data.Input
             
             // Remove focusing from other buttons to make "Return" key free to use 
             addWordPanelCallButton.onClick.AddListener(() => EventSystem.current.SetSelectedGameObject(null));
-            addWordPanelCallButton.onClick.AddListener(() => _isPanelActive = !_isPanelActive);
             
+            addWordPanelCallButton.onClick.AddListener(() => _isPanelActive = !_isPanelActive);
             addWordButton.onClick.AddListener(AddWord);
         }
 
@@ -69,7 +69,7 @@ namespace Modules.VocabularyModule.Data.Input
                 return;
             }
             
-            if (!_vocabularyController.Vocabulary.ContainsOriginalWord(originalWordInputField.text))
+            if (!_vocabularyController.Vocabulary.ContainsByOriginalWord(originalWordInputField.text))
             {
                 var word = CreateWord();
                 AddWordToVocabulary(word);
