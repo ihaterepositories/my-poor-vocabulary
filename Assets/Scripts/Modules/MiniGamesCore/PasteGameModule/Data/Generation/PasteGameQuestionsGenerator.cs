@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Modules.MiniGamesCore.Abstraction.Interfaces;
+using Modules.MiniGamesCore.Abstraction.Models;
 using Modules.MiniGamesCore.PasteGameModule.Data.Factories;
 using Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators.Interfaces;
-using Modules.MiniGamesCore.PasteGameModule.Data.Models;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
@@ -12,7 +13,7 @@ using Zenject;
 
 namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation
 {
-    public class PasteGameTestsGenerator : MonoBehaviour
+    public class PasteGameQuestionsGenerator : MonoBehaviour, IMiniGameQuestionsGenerator
     {
         private IAsyncSentenceGenerator _sentenceGenerator;
         private Vocabulary _vocabulary;
@@ -26,7 +27,7 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation
             _sentenceGenerator = asyncSentenceGenerator;
         }
         
-        public void Generate(Action<List<PasteGameTestData>> onCompleteCallback, int testsCount)
+        public void Generate(Action<List<MiniGameQuestionData>> onCompleteCallback, int testsCount)
         {
             _testsCount = testsCount;
             string characterName = PlayerPrefs.GetString("PickedPasteGameCharacter", string.Empty);
@@ -34,7 +35,7 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation
             StartCoroutine(GenerateCoroutine(onCompleteCallback));
         }
 
-        private IEnumerator GenerateCoroutine(Action<List<PasteGameTestData>> onCompleteCallback)
+        private IEnumerator GenerateCoroutine(Action<List<MiniGameQuestionData>> onCompleteCallback)
         {
             var task = GenerateAsync();
             
@@ -46,7 +47,7 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation
             if (task.Exception != null)
             {
                 Debug.LogError("Error while generating paste game tests: " + task.Exception.Message);
-                onCompleteCallback?.Invoke(new List<PasteGameTestData>());
+                onCompleteCallback?.Invoke(new List<MiniGameQuestionData>());
             }
             else
             {
@@ -54,11 +55,11 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation
             }
         }
 
-        private async Task<List<PasteGameTestData>> GenerateAsync()
+        private async Task<List<MiniGameQuestionData>> GenerateAsync()
         {
             try
             {
-                var tests = new List<PasteGameTestData>();
+                var tests = new List<MiniGameQuestionData>();
 
                 for (var i = 0; i < _testsCount; i++)
                 {
@@ -69,7 +70,7 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation
                     if (sentence.Contains(wordToPaste))
                     {
                         sentence = sentence.Replace(wordToPaste, "...");
-                        tests.Add(new PasteGameTestData(wordToPaste, sentence));
+                        tests.Add(new MiniGameQuestionData(sentence, new List<string>{wordToPaste}));
                     }
                     else
                     {
@@ -82,7 +83,7 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation
             catch (Exception e)
             {
                 Debug.LogError("Error while generating paste game tests: " + e.Message);    
-                return new List<PasteGameTestData>();
+                return new List<MiniGameQuestionData>();
             }
         }
     }

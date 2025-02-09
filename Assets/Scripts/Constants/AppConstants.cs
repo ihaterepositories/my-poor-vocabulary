@@ -11,5 +11,7 @@ namespace Constants
         public const int ExpPerTest = 10;
         public const int ExpPerAddedWord = 15;
         public const int ExpPerDayReward = 50;
+
+        public const int MaxTranslationsPerWord = 5;
     }
 }

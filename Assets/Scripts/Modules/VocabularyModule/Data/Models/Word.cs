@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Constants;
+using UnityEngine;
 
 namespace Modules.VocabularyModule.Data.Models
 {
@@ -16,6 +18,16 @@ namespace Modules.VocabularyModule.Data.Models
             Translations = new List<string>{translation};
             AddingDate = DateTime.Now;
             IsIncorrectTranslatedInTranslationGame = false;
+        }
+
+        public bool CheckForNewTranslationAddAbility(string translation)
+        {
+            return Translations.Count < AppConstants.MaxTranslationsPerWord && !Translations.Contains(translation);
+        }
+        
+        public void AddTranslation(string translation)
+        {
+            Translations.Add(translation);
         }
     }
 }

@@ -1,8 +1,8 @@
+using System.Collections.Generic;
 using Constants;
 using DG.Tweening;
-using Modules.MiniGamesCore;
+using Modules.MiniGamesCore.Abstraction;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UserInterface.Functional
@@ -10,7 +10,7 @@ namespace UserInterface.Functional
     public class MiniGameTestResultView : MonoBehaviour
     {
         [SerializeField] private Text resultText;
-        [FormerlySerializedAs("miniGameControllerBase")] [SerializeField] private MiniGameController miniGameController;
+        [SerializeField] private MiniGameController miniGameController;
 
         private void OnEnable()
         {
@@ -32,10 +32,11 @@ namespace UserInterface.Functional
             resultText.text = "+" + AppConstants.ExpPerTest + "exp";
         }
         
-        private void ShowOnWrongResult(string correctWord)
+        private void ShowOnWrongResult(List<string> rightAnswers)
         {
             resultText.DOFlip();
-            resultText.text = "Wrong, right answer is " + correctWord + "...";
+            string rightAnswerJoined = rightAnswers.Count > 1 ? string.Join(", ", rightAnswers) : rightAnswers[0];
+            resultText.text = "Wrong, right is " + rightAnswerJoined + "...";
         }
     }
 }

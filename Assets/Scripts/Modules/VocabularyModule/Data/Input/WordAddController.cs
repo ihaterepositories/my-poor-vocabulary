@@ -76,7 +76,14 @@ namespace Modules.VocabularyModule.Data.Input
             else
             {
                 var word = _vocabularyController.Vocabulary.GetByOriginal(originalWordInputField.text);
-                AddNewTranslationToWord(word, translatedWordInputField.text);
+
+                if (word.CheckForNewTranslationAddAbility(translatedWordInputField.text))
+                {
+                    validationMessageView.ShowError($"Translation already exists or translations count is maximum ({AppConstants.MaxTranslationsPerWord}).");
+                    return;
+                }
+                
+                word.AddTranslation(translatedWordInputField.text);
             }
             
             ClearInputs();
@@ -111,11 +118,6 @@ namespace Modules.VocabularyModule.Data.Input
         private void AddWordToVocabulary(Word word)
         {
             _vocabularyController.Vocabulary.Add(word);
-        }
-        
-        private void AddNewTranslationToWord(Word word, string translation)
-        {
-            word.Translations.Add(translation);
         }
 
         private void ClearInputs()

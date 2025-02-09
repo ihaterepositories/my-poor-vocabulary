@@ -1,54 +1,36 @@
-using System.Collections.Generic;
 using Constants;
+using Modules.MiniGamesCore.Abstraction;
 using Modules.MiniGamesCore.CorrectionGameModule.Data.Generation;
-using Modules.MiniGamesCore.CorrectionGameModule.Data.Generation.TypoGenerators.Interfaces;
-using Modules.MiniGamesCore.CorrectionGameModule.Data.Models;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 namespace Modules.MiniGamesCore.CorrectionGameModule
 {
     public class CorrectionGameController : MiniGameController
     {
+        [SerializeField] private CorrectionGameQuestionsGenerator questionsGenerator;
         [SerializeField] private Text typoWordText;
 
-        private IAsyncTypoGenerator _asyncTypoGenerator;
-        private List<CorrectionGameTestData> _tests;
+        protected override void AssignQuestionsGenerator()
+        {
+            QuestionsGenerator = questionsGenerator;
+        }
         
-        [Inject]
-        private void Construct(IAsyncTypoGenerator asyncTypoGenerator)
-        {
-            _asyncTypoGenerator = asyncTypoGenerator;
-        }
-
-        private void Start()
-        {
-            GenerateTests();
-        }
-
-        private void GenerateTests()
-        {
-            var testsGenerator = new CorrectionGameTestsGenerator(_asyncTypoGenerator, Vocabulary, testsPerGame);
-            _tests = testsGenerator.Generate();
-        }
-
         protected override void ShowNextTest()
         {
-            typoWordText.text = _tests[CurrentTestIndex].TypoWord;
+            typoWordText.text = CurrentQuestion;
         }
-        
+
         protected override void EvaluateTest()
         {
-            var input = userAnswerField.text;
-            if (input == _tests[CurrentTestIndex].OriginalWord)
+            if (CurrentRightAnswers.Contains(UserAnswer))
             {
                 ScoreController.AddExp(AppConstants.ExpPerTest);
                 InvokeEventsOnRightAnswer();
             }
             else
             {
-                InvokeEventsOnWrongAnswer(_tests[CurrentTestIndex].OriginalWord);
+                InvokeEventsOnWrongAnswer(CurrentRightAnswers);
             }
         }
     }

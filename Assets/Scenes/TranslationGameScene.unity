@@ -122,6 +122,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &320836969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 320836971}
+  - component: {fileID: 320836970}
+  m_Layer: 0
+  m_Name: TranslationGameQuestionsGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &320836970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320836969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9bc91ead6a14c11937cf397a5f9b8fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &320836971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320836969}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &462159084
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,10 +274,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62303441b7af4ef0b79a0f59a90d848f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testsPerGame: 10
   userAnswerField: {fileID: 1771970502}
-  wordToTranslateText: {fileID: 462159086}
-  possibleAnswersText: {fileID: 843576191}
   progressBar: {fileID: 2103182790}
+  messageText: {fileID: 1067934774}
+  questionsGenerator: {fileID: 320836970}
+  wordToTranslateText: {fileID: 462159086}
 --- !u!4 &665228587
 Transform:
   m_ObjectHideFlags: 0
@@ -438,8 +484,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -770}
-  m_SizeDelta: {x: 2000, y: 150}
+  m_AnchoredPosition: {x: 0, y: -850}
+  m_SizeDelta: {x: 3000, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067934773
 MonoBehaviour:
@@ -477,7 +523,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0d7920b7e2bc3f04b9266df620b7e36a, type: 3}
-    m_FontSize: 75
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 6
@@ -488,7 +534,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Looks through vocabulary, please wait...
 --- !u!222 &1067934775
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1541,3 +1587,4 @@ SceneRoots:
   - {fileID: 1680904722}
   - {fileID: 1152246254}
   - {fileID: 665228587}
+  - {fileID: 320836971}

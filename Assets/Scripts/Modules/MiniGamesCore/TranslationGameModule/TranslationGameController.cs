@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
 using Constants;
+using Modules.MiniGamesCore.Abstraction;
 using Modules.MiniGamesCore.TranslationGameModule.Data.Generation;
-using Modules.MiniGamesCore.TranslationGameModule.Data.Models;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,48 +8,31 @@ namespace Modules.MiniGamesCore.TranslationGameModule
 {
     public class TranslationGameController : MiniGameController
     {
+        [SerializeField] private TranslationGameQuestionsGenerator questionsGenerator;
         [SerializeField] private Text wordToTranslateText;
-        [SerializeField] private Text possibleAnswersText;
+
+        protected override void AssignQuestionsGenerator()
+        {
+            QuestionsGenerator = questionsGenerator;
+        }
         
-        private List<TranslationGameTestData> _tests;
-
-        private void Start()
-        {
-            GenerateTests();
-        }
-
-        private void GenerateTests()
-        {
-            var testsGenerator = new TranslationGameTestsGenerator(testsPerGame, Vocabulary);
-            _tests = testsGenerator.Generate();
-        }
-
         protected override void ShowNextTest()
         {
-            wordToTranslateText.text = _tests[CurrentTestIndex].WordToTranslate;
-
-            // var formattedPossibleAnswers = _tests[CurrentTestIndex].PossibleAnswers
-            //     .Select(pa => "[" + pa + "]")
-            //     .ToList();
-            //
-            // possibleAnswersText.text = string.Join(" ", formattedPossibleAnswers);
+            wordToTranslateText.text = CurrentQuestion;
         }
 
         protected override void EvaluateTest()
         {
-            var input = userAnswerField.text;
-            var rightAnswers = _tests[CurrentTestIndex].CorrectAnswers;
-            
-            if (rightAnswers.Contains(input))
+            if (CurrentRightAnswers.Contains(UserAnswer))
             {
                 ScoreController.AddExp(AppConstants.ExpPerTest);
                 InvokeEventsOnRightAnswer();
-                Vocabulary.ModifyTranslationTestAttemptFor(_tests[CurrentTestIndex].WordToTranslate, true);
+                Vocabulary.ModifyTranslationTestAttemptFor(CurrentQuestion, true);
             }
             else
             {
-                InvokeEventsOnWrongAnswer(string.Join(", ", _tests[CurrentTestIndex].CorrectAnswers));
-                Vocabulary.ModifyTranslationTestAttemptFor(_tests[CurrentTestIndex].WordToTranslate, false);
+                InvokeEventsOnWrongAnswer(CurrentRightAnswers);
+                Vocabulary.ModifyTranslationTestAttemptFor(CurrentQuestion, false);
             }
         }
     }

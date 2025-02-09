@@ -4,6 +4,7 @@ using Random = System.Random;
 
 namespace Modules.VocabularyModule.Data.Models
 {
+    // TODO: refactor (add some methods to Word model)
     public class Vocabulary
     {
         private List<Word> Words { get; set; }

@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using Modules.MiniGamesCore.Abstraction.Interfaces;
+using Modules.MiniGamesCore.Abstraction.Models;
 using Modules.ScoreModule;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
@@ -7,22 +10,28 @@ using UnityEngine.UI;
 using UserInterface.Functional.ProgressBar;
 using Zenject;
 
-namespace Modules.MiniGamesCore
+namespace Modules.MiniGamesCore.Abstraction
 {
     public abstract class MiniGameController : MonoBehaviour
     {
         [SerializeField] protected int testsPerGame = 10;
         [SerializeField] protected InputField userAnswerField;
         [SerializeField] protected ProgressBar progressBar;
+        [SerializeField] protected Text messageText;
         
+        protected IMiniGameQuestionsGenerator QuestionsGenerator;
+        protected string UserAnswer => userAnswerField.text;
+        protected string CurrentQuestion => _questions[_currentQuestionIndex].Question;
+        protected List<string> CurrentRightAnswers => _questions[_currentQuestionIndex].RightAnswers;
         protected Vocabulary Vocabulary;
         protected ScoreController ScoreController;
-        protected int CurrentTestIndex;
 
+        private List<MiniGameQuestionData> _questions;
+        private int _currentQuestionIndex;
         private bool _isGameEnd;
         
         public event Action OnRightAnswer;
-        public event Action<string> OnWrongAnswerWithMessage;
+        public event Action<List<string>> OnWrongAnswerWithMessage;
         public static event Action OnWrongAnswer; 
         
         [Inject]
@@ -32,17 +41,28 @@ namespace Modules.MiniGamesCore
             ScoreController = scoreController;
         }
 
+        private void Awake()
+        {
+            AssignQuestionsGenerator();
+        }
+
+        private void Start()
+        {
+            userAnswerField.gameObject.SetActive(false);
+            GenerateQuestions();
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Return) && !_isGameEnd)
             {
                 EvaluateTest();
-                CurrentTestIndex++;
+                _currentQuestionIndex++;
                 
                 RefreshInputField();
                 UpdateProgressBar();
                 
-                if (CurrentTestIndex < testsPerGame)
+                if (_currentQuestionIndex < testsPerGame)
                 {
                     ShowNextTest();
                 }
@@ -54,6 +74,21 @@ namespace Modules.MiniGamesCore
             }
         }
 
+        protected abstract void AssignQuestionsGenerator();
+        
+        private void GenerateQuestions()
+        {
+            if (QuestionsGenerator == null)
+            {
+                Debug.LogError("Questions generator is not assigned!");
+                return;
+            }
+            
+            QuestionsGenerator.Generate(StartGame, testsPerGame);
+        }
+        
+        protected abstract void EvaluateTest();
+        
         private void RefreshInputField()
         {
             userAnswerField.text = string.Empty;
@@ -62,19 +97,26 @@ namespace Modules.MiniGamesCore
 
         private void UpdateProgressBar()
         {
-            if (CurrentTestIndex <= testsPerGame)
-                progressBar.SetProgress(CurrentTestIndex, testsPerGame);
+            if (_currentQuestionIndex <= testsPerGame)
+                progressBar.SetProgress(_currentQuestionIndex, testsPerGame);
         }
         
-        protected abstract void EvaluateTest();
         protected abstract void ShowNextTest();
+
+        private void StartGame(List<MiniGameQuestionData> questions)
+        {
+            messageText.text = string.Empty;
+            _questions = questions;
+            ShowNextTest();
+            userAnswerField.gameObject.SetActive(true);
+        }
 
         protected void InvokeEventsOnRightAnswer()
         {
             OnRightAnswer?.Invoke();
         }
 
-        protected void InvokeEventsOnWrongAnswer(string word)
+        protected void InvokeEventsOnWrongAnswer(List<string> word)
         {
             OnWrongAnswerWithMessage?.Invoke(word);
             OnWrongAnswer?.Invoke();
