@@ -21,8 +21,13 @@ namespace Modules.MiniGamesCore.CorrectionGameModule
         {
             _asyncTypoGenerator = asyncTypoGenerator;
         }
-        
-        protected override void GenerateTests()
+
+        private void Start()
+        {
+            GenerateTests();
+        }
+
+        private void GenerateTests()
         {
             var testsGenerator = new CorrectionGameTestsGenerator(_asyncTypoGenerator, Vocabulary, testsPerGame);
             _tests = testsGenerator.Generate();

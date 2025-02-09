@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators.Factories
+namespace Modules.MiniGamesCore.PasteGameModule.Data.Factories
 {
     public static class PasteGameCharactersDescriptionsFactory
     {
@@ -18,7 +16,8 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerato
                 case "Cowboy": return "Cowboy. A simple, colloquial style with an American Western flavor.";
                 case "Fantasy wizard": return "Fantasy wizard. A pompous style, mystical expressions.";
                 case "An actor from a Shakespearean play": return "An actor from a Shakespearean play. Rhyme, poetic phrases.";
-                default: Debug.LogError("Character name not found"); return string.Empty;
+                default:
+                    return "Medieval knight. Speaks loftily, using archaic words and constructions.";
             }
         }
     }

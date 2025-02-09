@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using Constants;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -22,10 +23,10 @@ namespace UserInterface.Functional.Navigation
         {
             _fogEffect.Increase(AppConstants.SceneLoadDelay);
             yield return new WaitForSeconds(AppConstants.SceneLoadDelay);
-            LoadScene(sceneAddress);
+            yield return LoadScene(sceneAddress);
         }
         
-        private async void LoadScene(string sceneAddress)
+        private async Task LoadScene(string sceneAddress)
         {
             var handle = Addressables.LoadSceneAsync(sceneAddress);
             await handle.Task;

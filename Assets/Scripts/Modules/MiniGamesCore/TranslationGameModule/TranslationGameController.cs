@@ -1,5 +1,5 @@
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using Constants;
 using Modules.MiniGamesCore.TranslationGameModule.Data.Generation;
 using Modules.MiniGamesCore.TranslationGameModule.Data.Models;
@@ -14,8 +14,13 @@ namespace Modules.MiniGamesCore.TranslationGameModule
         [SerializeField] private Text possibleAnswersText;
         
         private List<TranslationGameTestData> _tests;
-         
-        protected override void GenerateTests()
+
+        private void Start()
+        {
+            GenerateTests();
+        }
+
+        private void GenerateTests()
         {
             var testsGenerator = new TranslationGameTestsGenerator(testsPerGame, Vocabulary);
             _tests = testsGenerator.Generate();

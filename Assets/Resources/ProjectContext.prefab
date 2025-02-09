@@ -78,3 +78,4 @@ MonoBehaviour:
   fogEffectPrefab: {fileID: 6476864578061541445, guid: aa8edf2999a5f3a4cba3b6a1735e4c5c, type: 3}
   scoreControllerPrefab: {fileID: 3973663488132430172, guid: f9306528868bdee468dac92ec1641295, type: 3}
   eventSoundPlayerPrefab: {fileID: 3403928035707264259, guid: e235213c177fa0a4983d87b3d4791891, type: 3}
+  mainThreadExecutor: {fileID: 7719115333836478988, guid: 233fe83ee2d62dd4e8745bf06ee20fe5, type: 3}

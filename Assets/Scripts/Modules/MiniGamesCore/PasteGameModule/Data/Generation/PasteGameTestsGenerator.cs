@@ -1,29 +1,57 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Modules.MiniGamesCore.PasteGameModule.Data.Factories;
 using Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators.Interfaces;
 using Modules.MiniGamesCore.PasteGameModule.Data.Models;
+using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
+using Zenject;
 
 namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation
 {
-    public class PasteGameTestsGenerator
+    public class PasteGameTestsGenerator : MonoBehaviour
     {
-        private readonly IAsyncSentenceGenerator _sentenceGenerator;
-        private readonly Vocabulary _vocabulary;
-        private readonly int _testsPerGame;
+        private IAsyncSentenceGenerator _sentenceGenerator;
+        private Vocabulary _vocabulary;
+        private int _testsCount;
+        private string _characterDescription;
         
-        public PasteGameTestsGenerator(IAsyncSentenceGenerator asyncSentenceGenerator, Vocabulary vocabulary, int testsPerGame)
+        [Inject]
+        private void Construct(IAsyncSentenceGenerator asyncSentenceGenerator, VocabularyController vocabularyController)
         {
-            _vocabulary = vocabulary;
+            _vocabulary = vocabularyController.Vocabulary;
             _sentenceGenerator = asyncSentenceGenerator;
-            _testsPerGame = testsPerGame;
         }
         
-        public List<PasteGameTestData> Generate()
+        public void Generate(Action<List<PasteGameTestData>> onCompleteCallback, int testsCount)
         {
-            return Task.Run(async () => await GenerateAsync()).Result;
+            _testsCount = testsCount;
+            string characterName = PlayerPrefs.GetString("PickedPasteGameCharacter", string.Empty);
+            _characterDescription = PasteGameCharactersDescriptionsFactory.GetDescription(characterName);
+            StartCoroutine(GenerateCoroutine(onCompleteCallback));
+        }
+
+        private IEnumerator GenerateCoroutine(Action<List<PasteGameTestData>> onCompleteCallback)
+        {
+            var task = GenerateAsync();
+            
+            while (!task.IsCompleted)
+            {
+                yield return null;
+            }
+    
+            if (task.Exception != null)
+            {
+                Debug.LogError("Error while generating paste game tests: " + task.Exception.Message);
+                onCompleteCallback?.Invoke(new List<PasteGameTestData>());
+            }
+            else
+            {
+                onCompleteCallback?.Invoke(task.Result);
+            }
         }
 
         private async Task<List<PasteGameTestData>> GenerateAsync()
@@ -32,19 +60,28 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation
             {
                 var tests = new List<PasteGameTestData>();
 
-                for (var i = 0; i < _testsPerGame; i++)
+                for (var i = 0; i < _testsCount; i++)
                 {
                     var wordToPaste = _vocabulary.GetRandom().Original;
-                    var sentence = await _sentenceGenerator.GenerateSentenceWithWord(wordToPaste);
-                    sentence = sentence.Replace(wordToPaste, "...");
-                    tests.Add(new PasteGameTestData(wordToPaste, sentence));
+                    var sentence = await _sentenceGenerator.GenerateSentence(wordToPaste, _characterDescription);
+
+                    // TODO: maybe add sentence validation
+                    if (sentence.Contains(wordToPaste))
+                    {
+                        sentence = sentence.Replace(wordToPaste, "...");
+                        tests.Add(new PasteGameTestData(wordToPaste, sentence));
+                    }
+                    else
+                    {
+                        i--;
+                    }
                 }
 
                 return tests;
             }
             catch (Exception e)
             {
-                Debug.LogError("Error while generating paste game tests: " + e.Message);
+                Debug.LogError("Error while generating paste game tests: " + e.Message);    
                 return new List<PasteGameTestData>();
             }
         }

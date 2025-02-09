@@ -23,9 +23,9 @@ namespace UserInterface.Functional.Widgets
 
         private void Start()
         {
-            levelText.DOCounter(0,_scoreController.GetLevel(), 3f);
-            progressBar.SetProgress(_scoreController.GetCurrentLevelExp(), AppConstants.LevelSplitExpCount, 3f);
-            expText.DOCounter(0, _scoreController.GetCurrentLevelExp(), 3f)
+            levelText.DOCounter(0,_scoreController.GetLevel(), 1f);
+            progressBar.SetProgress(_scoreController.GetCurrentLevelExp(), AppConstants.LevelSplitExpCount, 1f);
+            expText.DOCounter(0, _scoreController.GetCurrentLevelExp(), 1f)
                 .OnComplete(SetInfo);
         }
 

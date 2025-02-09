@@ -2,10 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Modules.MiniGamesCore.TranslationGameModule.Data.Models;
-using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
-using Zenject;
 using Random = UnityEngine.Random;
 
 namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation

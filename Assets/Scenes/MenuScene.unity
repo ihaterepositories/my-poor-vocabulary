@@ -4739,7 +4739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   callButton: {fileID: 1402626382}
   initialDelay: 0.1
-  delayStep: 0.15
+  delayStep: 0.03
   objectsToCall:
   - rectTransform: {fileID: 1402626381}
     onScreenPosition: {x: -440, y: 0, z: 0}

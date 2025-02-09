@@ -63,7 +63,7 @@ namespace Infrastructure
         {
             Container.Bind<IStorageService>().To<LocalStorageService>().AsSingle();
             Container.Bind<IAsyncTypoGenerator>().To<LstmTypoGenerator>().AsSingle();
-            Container.Bind<IAsyncSentenceGenerator>().To<TestSentenceGenerator>().AsSingle();
+            Container.Bind<IAsyncSentenceGenerator>().To<MockSentenceGenerator>().AsSingle();
         }
     }
 }

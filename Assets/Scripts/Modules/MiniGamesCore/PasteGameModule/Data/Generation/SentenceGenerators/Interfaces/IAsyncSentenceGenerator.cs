@@ -4,6 +4,6 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerato
 {
     public interface IAsyncSentenceGenerator
     {
-        public Task<string> GenerateSentenceWithWord(string word);
+        public Task<string> GenerateSentence(string word, string characterDescription);
     }
 }

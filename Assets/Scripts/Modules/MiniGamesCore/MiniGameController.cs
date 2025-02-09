@@ -18,6 +18,8 @@ namespace Modules.MiniGamesCore
         protected Vocabulary Vocabulary;
         protected ScoreController ScoreController;
         protected int CurrentTestIndex;
+
+        private bool _isGameEnd;
         
         public event Action OnRightAnswer;
         public event Action<string> OnWrongAnswerWithMessage;
@@ -30,31 +32,40 @@ namespace Modules.MiniGamesCore
             ScoreController = scoreController;
         }
 
-        private void Start()
-        {
-            GenerateTests();
-            ShowNextTest();
-        }
-
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return) && !_isGameEnd)
             {
                 EvaluateTest();
                 CurrentTestIndex++;
                 
-                userAnswerField.text = string.Empty;
-                userAnswerField.ActivateInputField();
-                progressBar.SetProgress(CurrentTestIndex, testsPerGame);
+                RefreshInputField();
+                UpdateProgressBar();
                 
                 if (CurrentTestIndex < testsPerGame)
                 {
                     ShowNextTest();
                 }
+                else
+                {
+                    _isGameEnd = true;
+                    // userAnswerField.gameObject.SetActive(false);
+                }
             }
         }
+
+        private void RefreshInputField()
+        {
+            userAnswerField.text = string.Empty;
+            userAnswerField.ActivateInputField();
+        }
+
+        private void UpdateProgressBar()
+        {
+            if (CurrentTestIndex <= testsPerGame)
+                progressBar.SetProgress(CurrentTestIndex, testsPerGame);
+        }
         
-        protected abstract void GenerateTests();
         protected abstract void EvaluateTest();
         protected abstract void ShowNextTest();
 

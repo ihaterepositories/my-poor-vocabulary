@@ -9,7 +9,7 @@ namespace Modules.MiniGamesCore.CorrectionGameModule.Data.Generation.TypoGenerat
 {
     public class LstmTypoGenerator : IAsyncTypoGenerator
     {
-        private readonly string _apiUrl = AppConstants.TypoGeneratingRequestUrl;
+        private readonly string _apiUrl = AppLinks.LstmModelApiUrl;
         
         public async Task<string>GenerateTypo(string word)
         {

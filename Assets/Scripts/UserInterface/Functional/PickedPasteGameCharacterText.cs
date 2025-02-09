@@ -1,4 +1,4 @@
-using Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators.Factories;
+using Modules.MiniGamesCore.PasteGameModule.Data.Factories;
 using UnityEngine;
 using UnityEngine.UI;
 using UserInterface.Functional.OptionDataTransfering;

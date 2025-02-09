@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using Constants;
 using Modules.ScoreModule;
 using Modules.VocabularyModule.Data.Models;
