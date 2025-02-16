@@ -2622,7 +2622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adb982364784173b9c35000f72fd4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tip: unlock on 50+ words
+  tip: unlock on 40+ words
   tipView: {fileID: 136340156}
 --- !u!114 &824330679
 MonoBehaviour:
@@ -2653,7 +2653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 958423fd6d414e1aa05b77c49d1edb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordsCountToUnlock: 2
   wordAddController: {fileID: 1852900097}
 --- !u!1 &908758648
 GameObject:

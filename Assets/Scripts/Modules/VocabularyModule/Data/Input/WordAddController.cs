@@ -77,7 +77,7 @@ namespace Modules.VocabularyModule.Data.Input
             {
                 var word = _vocabularyController.Vocabulary.GetByOriginal(originalWordInputField.text);
 
-                if (word.CheckForNewTranslationAddAbility(translatedWordInputField.text))
+                if (!word.CheckForNewTranslationAddAbility(translatedWordInputField.text))
                 {
                     validationMessageView.ShowError($"Translation already exists or translations count is maximum ({AppConstants.MaxTranslationsPerWord}).");
                     return;

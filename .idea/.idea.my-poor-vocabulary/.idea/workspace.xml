@@ -6,12 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TranslationGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TranslationGameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/AppConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/AppConstants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Generation/SentenceGenerators/GptSentenceGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Generation/SentenceGenerators/GptSentenceGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameQuestionsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameQuestionsGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGamesButtonBlocker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGamesButtonBlocker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Zenject-ReflectionBaking.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/Signals/Zenject-Signals.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Input/WordAddController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Input/WordAddController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.56f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Software\Unity\Editors\2022.3.51f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Data\Projects\Unity\my-poor-vocabulary -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Data\Projects\Unity\my-poor-vocabulary" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -70,7 +72,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.56f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Software\Unity\Editors\2022.3.51f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Data\Projects\Unity\my-poor-vocabulary -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Data\Projects\Unity\my-poor-vocabulary" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -82,9 +84,6 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
-      <option name="runtimes">
-        <list />
-      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -95,9 +94,6 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
-      <option name="runtimes">
-        <list />
-      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -147,6 +143,8 @@
       <workItem from="1739554700084" duration="165000" />
       <workItem from="1739556914752" duration="24000" />
       <workItem from="1739714126748" duration="925000" />
+      <workItem from="1739717089796" duration="165000" />
+      <workItem from="1739717921366" duration="751000" />
     </task>
     <servers />
   </component>
