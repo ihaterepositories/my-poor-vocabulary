@@ -21,8 +21,8 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerato
 
         private string GetPrompt(string word, string characterDescription)
         {
-            return $"You are a character with the following traits: {characterDescription}. " +
-                   $"Write a natural in the style of this character that includes the word \"{word}\". " +
+            return $"You are a character with the following traits: {characterDescription} " +
+                   $"Write a natural sentence in the style of this character that includes the word \"{word}\". " +
                    $"Do not modify the form of the word. " +
                    $"Your response should be only the generated sentence with no explanations or additional text.";
         }

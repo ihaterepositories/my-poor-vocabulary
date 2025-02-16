@@ -1,14 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Constants;
 using Modules.MiniGamesCore.Abstraction.Interfaces;
 using Modules.MiniGamesCore.Abstraction.Models;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Models;
 using UnityEngine;
 using Zenject;
-using Random = UnityEngine.Random;
+using Random = System.Random;
 
 namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
 {
@@ -32,9 +34,9 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
                 return;
             }
             
-            if (_vocabulary.GetCount() < 50)
+            if (_vocabulary.GetCount() < AppConstants.WordsCountToUnlockMiniGames)
             {
-                Debug.LogError("Vocabulary must contain at least 50 words to generate tests");
+                Debug.LogError($"Vocabulary must contain at least {AppConstants.WordsCountToUnlockMiniGames} words to generate tests");
                 return;
             }
             
@@ -60,13 +62,13 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
             }
         }
 
-
         private async Task<List<MiniGameQuestionData>> GenerateAsync()
         {
             return await Task.Run(() =>
             {
                 var words = InitializeWordsList();
                 var tests = new List<MiniGameQuestionData>();
+                Random rnd = new Random();
 
                 for (int i = 0; i < words.Count; i++)
                 {
@@ -79,7 +81,7 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
                     else
                     {
                         gameQuestion = new MiniGameQuestionData(
-                            words[i].Translations[Random.Range(0, words[i].Translations.Count)],
+                            words[i].Translations[rnd.Next(0, words[i].Translations.Count)],
                             new List<string> { words[i].Original });
                     }
             
@@ -90,56 +92,57 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
             });
         }
 
-        private List<Word> InitializeWordsList()
-        {
-            var randomWords = new List<Word>();
-            for (int i = 0; i < _testsCount; i++)
-            {
-                randomWords.Add(_vocabulary.GetRandom());
-            }
-            return randomWords;
-        }
-
         // private List<Word> InitializeWordsList()
         // {
-        //     var newestWords = _vocabulary
-        //         .GetSortedByNewest()
-        //         .Take(_testsCount/3)
-        //         .ToList();
-        //     
         //     var randomWords = new List<Word>();
-        //     for (int i = 0; i < _testsCount/3; i++)
+        //     for (int i = 0; i < _testsCount; i++)
         //     {
         //         randomWords.Add(_vocabulary.GetRandom());
         //     }
-        //     
-        //     var incorrectAnsweredWords = _vocabulary
-        //         .GetIncorrectTranslatedInTranslationGame()
-        //         .ToList();
-        //     
-        //     // add some random words if there are not enough incorrect answered words
-        //     if (incorrectAnsweredWords.Count < _testsCount/3)
-        //     {
-        //         var missingWordsCount = _testsCount/3 - incorrectAnsweredWords.Count;
-        //         for (int i = 0; i < missingWordsCount; i++)
-        //         {
-        //             incorrectAnsweredWords.Add(_vocabulary.GetRandom());
-        //         }
-        //     }
-        //     // take only needed amount of incorrect answered words if there are too many of them
-        //     else
-        //     {
-        //         incorrectAnsweredWords = incorrectAnsweredWords.Take(_testsCount/3).ToList();
-        //     }
-        //
-        //     return newestWords.Concat(randomWords).Concat(incorrectAnsweredWords).ToList();
+        //     return randomWords;
         // }
+
+        private List<Word> InitializeWordsList()
+        {
+            var newestWords = _vocabulary
+                .GetSortedByNewest()
+                .Take(_testsCount/3)
+                .ToList();
+            
+            var randomWords = new List<Word>();
+            for (int i = 0; i < _testsCount/3; i++)
+            {
+                randomWords.Add(_vocabulary.GetRandom());
+            }
+            
+            var incorrectAnsweredWords = _vocabulary
+                .GetIncorrectTranslatedInTranslationGame()
+                .ToList();
+            
+            // add some random words if there are not enough incorrect answered words
+            if (incorrectAnsweredWords.Count < _testsCount/3)
+            {
+                var missingWordsCount = _testsCount/3 - incorrectAnsweredWords.Count;
+                for (int i = 0; i < missingWordsCount; i++)
+                {
+                    incorrectAnsweredWords.Add(_vocabulary.GetRandom());
+                }
+            }
+            // take only needed amount of incorrect answered words if there are too many of them
+            else
+            {
+                incorrectAnsweredWords = incorrectAnsweredWords.Take(_testsCount/3).ToList();
+            }
+        
+            return newestWords.Concat(randomWords).Concat(incorrectAnsweredWords).ToList();
+        }
         
         private List<T> ShuffleList<T>(List<T> list)
         {
+            Random rnd = new Random();
             for (int i = list.Count - 1; i > 0; i--)
             {
-                int j = Random.Range(0, i + 1);
+                int j = rnd.Next(0, i + 1);
                 (list[i], list[j]) = (list[j], list[i]);
             }
             return list;

@@ -13,5 +13,7 @@ namespace Constants
         public const int ExpPerDayReward = 50;
 
         public const int MaxTranslationsPerWord = 5;
+
+        public const int WordsCountToUnlockMiniGames = 40;
     }
 }

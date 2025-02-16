@@ -5,39 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/Data/Generation/CorrectionGameQuestionsGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameQuestionsGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CorrectionGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CorrectionGameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PasteGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PasteGameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TranslationGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TranslationGameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/AppConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/AppConstants.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/Data/Generation/CorrectionGameTestsGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/Data/Generation/CorrectionGameTestsGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/Data/Generation/CorrectionGameQuestionsGenerator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/Data/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/Data/Models/CorrectionGameTestData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/Data/Models/CorrectionGameTestData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/MiniGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/Abstraction/MiniGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/MiniGameController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/Abstraction/MiniGameController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Generation/PasteGameTestsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Generation/PasteGameQuestionsGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Generation/PasteGameTestsGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Generation/PasteGameQuestionsGenerator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Models/PasteGameTestData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Models/PasteGameTestData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameTestsGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameTestsGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameQuestionsGenerator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Models/TranslationGameTestData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Models/TranslationGameTestData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Input/WordAddController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Input/WordAddController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Models/Vocabulary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Models/Vocabulary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Models/Word.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Models/Word.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGameTestResultView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGameTestResultView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Sound/EventSoundPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Sound/EventSoundPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Generation/SentenceGenerators/GptSentenceGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/Data/Generation/SentenceGenerators/GptSentenceGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameQuestionsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameQuestionsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGamesButtonBlocker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGamesButtonBlocker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +143,10 @@
       <workItem from="1739106643076" duration="245000" />
       <workItem from="1739106954219" duration="1444000" />
       <workItem from="1739108471579" duration="11795000" />
+      <workItem from="1739303214043" duration="3050000" />
+      <workItem from="1739554700084" duration="165000" />
+      <workItem from="1739556914752" duration="24000" />
+      <workItem from="1739714126748" duration="925000" />
     </task>
     <servers />
   </component>

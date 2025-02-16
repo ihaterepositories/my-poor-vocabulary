@@ -1,3 +1,4 @@
+using Constants;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Input;
 using UnityEngine;
@@ -7,9 +8,10 @@ namespace UserInterface.Functional
 {
     public class MiniGamesButtonBlocker : MonoBehaviour
     {
-        [SerializeField] private int wordsCountToUnlock = 49;
         [SerializeField] private WordAddController wordAddController;
+        
         private VocabularyController _vocabularyController;
+        private readonly int _wordsCountToUnlock = AppConstants.WordsCountToUnlockMiniGames;
         
         [Inject]
         private void Construct(VocabularyController vocabularyController)
@@ -34,7 +36,7 @@ namespace UserInterface.Functional
         
         private void CheckWordsCountAndUnlock()
         {
-            if (_vocabularyController.Vocabulary.GetCount() > wordsCountToUnlock)
+            if (_vocabularyController.Vocabulary.GetCount() >= _wordsCountToUnlock)
             {
                 gameObject.SetActive(false);
             }
