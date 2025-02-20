@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using UserInterface.SerializingModels;
 
 namespace UserInterface.Functional
@@ -8,7 +9,7 @@ namespace UserInterface.Functional
     public class PasteGameCharacterDialogIconProvider : MonoBehaviour
     {
         [SerializeField] private List<SerializableKeyValue<Sprite>> iconsContainer;
-        [SerializeField] private SpriteRenderer icon;
+        [SerializeField] private Image icon;
         [SerializeField] private Canvas canvas;
 
         private void Start()

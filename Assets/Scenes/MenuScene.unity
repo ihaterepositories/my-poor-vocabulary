@@ -4402,7 +4402,7 @@ MonoBehaviour:
   uiButton: {fileID: 1328495913}
   isGoBackButton: 0
   hotkey: 0
-  sceneAddress: Assets/Scenes/PasteGameTopicPickScene.unity
+  sceneAddress: Assets/Scenes/PasteGameCharacterPickScene.unity
 --- !u!114 &1328495917
 MonoBehaviour:
   m_ObjectHideFlags: 0
