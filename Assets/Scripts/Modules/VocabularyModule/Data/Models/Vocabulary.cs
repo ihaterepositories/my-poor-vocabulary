@@ -8,6 +8,7 @@ namespace Modules.VocabularyModule.Data.Models
     public class Vocabulary
     {
         private List<Word> Words { get; set; }
+        private int _lastRandomWordListIndex = int.MinValue;
         
         public Vocabulary(List<Word> words)
         {
@@ -41,7 +42,15 @@ namespace Modules.VocabularyModule.Data.Models
         public Word GetRandom()
         {
             var random = new Random();
-            return Words[random.Next(Words.Count)];
+            var index = random.Next(Words.Count);
+            
+            if (index == _lastRandomWordListIndex)
+            {
+                return GetRandom();
+            }
+
+            _lastRandomWordListIndex = index;
+            return Words[index];
         }
         
         public List<Word> GetIncorrectTranslatedInTranslationGame()

@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62303441b7af4ef0b79a0f59a90d848f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testsPerGame: 30
+  testsPerGame: 12
   userAnswerField: {fileID: 1771970502}
   progressBar: {fileID: 2103182790}
   messageText: {fileID: 1067934774}

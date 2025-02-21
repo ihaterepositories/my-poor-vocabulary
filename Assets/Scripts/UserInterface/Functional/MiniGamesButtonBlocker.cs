@@ -1,7 +1,9 @@
 using Constants;
+using DG.Tweening;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Input;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace UserInterface.Functional
@@ -9,6 +11,7 @@ namespace UserInterface.Functional
     public class MiniGamesButtonBlocker : MonoBehaviour
     {
         [SerializeField] private WordAddController wordAddController;
+        [SerializeField] private Image buttonImage;
         
         private VocabularyController _vocabularyController;
         private readonly int _wordsCountToUnlock = AppConstants.WordsCountToUnlockMiniGames;
@@ -32,11 +35,16 @@ namespace UserInterface.Functional
         private void OnDisable()
         {
             WordAddController.OnWordAdded -= CheckWordsCountAndUnlock;
+            buttonImage.DOKill();
         }
         
         private void CheckWordsCountAndUnlock()
         {
-            if (_vocabularyController.Vocabulary.GetCount() >= _wordsCountToUnlock)
+            if (_vocabularyController.Vocabulary.GetCount() == _wordsCountToUnlock)
+            {
+                buttonImage.DOFade(0f, 1f).OnComplete(() => gameObject.SetActive(false));
+            }
+            else if (_vocabularyController.Vocabulary.GetCount() > _wordsCountToUnlock)
             {
                 gameObject.SetActive(false);
             }

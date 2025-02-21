@@ -14,6 +14,6 @@ namespace Constants
 
         public const int MaxTranslationsPerWord = 5;
 
-        public const int WordsCountToUnlockMiniGames = 40;
+        public const int WordsCountToUnlockMiniGames = 12;
     }
 }

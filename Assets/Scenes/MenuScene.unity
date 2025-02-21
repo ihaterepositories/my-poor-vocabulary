@@ -714,11 +714,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 453217438}
   - {fileID: 136340154}
   - {fileID: 1852900096}
   - {fileID: 454334075}
   - {fileID: 1086021425}
+  - {fileID: 1084595575}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &236228501
@@ -1482,38 +1482,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429658272}
   m_CullTransparentMesh: 1
---- !u!1 &453217437
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 453217438}
-  m_Layer: 0
-  m_Name: VocabularyButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &453217438
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453217437}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1084595575}
-  m_Father: {fileID: 153526480}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &454334074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,7 +2530,7 @@ RectTransform:
   m_GameObject: {fileID: 824330674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418522858}
@@ -2622,7 +2590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adb982364784173b9c35000f72fd4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tip: unlock on 40+ words
+  tip: unlock on 12 words
   tipView: {fileID: 136340156}
 --- !u!114 &824330679
 MonoBehaviour:
@@ -2654,6 +2622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordAddController: {fileID: 1852900097}
+  buttonImage: {fileID: 824330676}
 --- !u!1 &908758648
 GameObject:
   m_ObjectHideFlags: 0
@@ -3644,7 +3613,7 @@ GameObject:
   - component: {fileID: 1084595577}
   - component: {fileID: 1084595576}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: VocabularyButtonCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3663,7 +3632,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1754962691}
-  m_Father: {fileID: 453217438}
+  m_Father: {fileID: 153526480}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5847,7 +5816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIncrease: 1
-  scaleMultiplier: 1.1
+  scaleMultiplier: 1.05
   isRotate: 0
   rotateAngle: 10
   rectTransform: {fileID: 1754962691}

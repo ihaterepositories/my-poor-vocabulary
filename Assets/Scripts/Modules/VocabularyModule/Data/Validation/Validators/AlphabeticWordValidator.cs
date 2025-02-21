@@ -13,7 +13,7 @@ namespace Modules.VocabularyModule.Data.Validation.Validators
             
             foreach (var ch in chars)
             {
-                if (!char.IsLetter(ch))
+                if (!char.IsLetter(ch) && ch != '\'' && ch != '`')
                 {
                     SendValidationError($"{inputPart} contains non-alphabetic characters");
                     return false;

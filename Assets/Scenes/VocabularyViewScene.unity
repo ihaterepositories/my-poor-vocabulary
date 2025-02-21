@@ -955,7 +955,7 @@ GameObject:
   - component: {fileID: 493789473}
   - component: {fileID: 493789472}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: VocabularyViewCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1040,7 +1040,7 @@ RectTransform:
   - {fileID: 556248258}
   - {fileID: 1936243530}
   - {fileID: 2017558897}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 572695581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1240,6 +1240,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563976341}
   m_CullTransparentMesh: 1
+--- !u!1 &572695580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 572695581}
+  m_Layer: 0
+  m_Name: UserInterface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &572695581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572695580}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15033025, y: -0.01750726, z: 0.03973891}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 918930509}
+  - {fileID: 493789475}
+  - {fileID: 1198017150}
+  - {fileID: 1435125784}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &584373527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,7 +2122,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 781864965}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 572695581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2153,7 +2188,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 50
   m_Viewport: {fileID: 1327292519}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 1182632147}
@@ -2864,7 +2899,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1372982996}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 572695581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3135,7 +3170,7 @@ RectTransform:
   - {fileID: 844106901}
   - {fileID: 591140879}
   - {fileID: 992010596}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 572695581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4216,9 +4251,6 @@ SceneRoots:
   - {fileID: 975499776}
   - {fileID: 1150798125}
   - {fileID: 2144684128}
-  - {fileID: 918930509}
-  - {fileID: 493789475}
-  - {fileID: 1198017150}
-  - {fileID: 1435125784}
+  - {fileID: 572695581}
   - {fileID: 230608381}
   - {fileID: 432758756}

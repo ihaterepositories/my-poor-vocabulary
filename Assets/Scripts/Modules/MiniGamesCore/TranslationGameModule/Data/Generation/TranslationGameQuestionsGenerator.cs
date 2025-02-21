@@ -28,20 +28,12 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
         
         public void Generate(Action<List<MiniGameQuestionData>> onCompleteCallback, int testsCount)
         {
-            if (testsCount % 3 != 0 || testsCount < 30)
+            if (testsCount % 3 != 0)
             {
-                Debug.LogError("Translation game tests count must be divisible by 3 and at least 30");
+                Debug.LogError("Translation game tests count must be divisible by 3");
                 return;
             }
-            
-            if (_vocabulary.GetCount() < AppConstants.WordsCountToUnlockMiniGames)
-            {
-                Debug.LogError($"Vocabulary must contain at least {AppConstants.WordsCountToUnlockMiniGames} words to generate tests");
-                return;
-            }
-            
             _testsCount = testsCount;
-
             StartCoroutine(GenerateCoroutine(onCompleteCallback));
         }
         
@@ -66,7 +58,8 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
         {
             return await Task.Run(() =>
             {
-                var words = InitializeWordsList();
+                var words =  _vocabulary.GetCount() >= AppConstants.WordsCountToUnlockMiniGames ? InitializeWordsList() : InitializeRandomWordsList();
+
                 var tests = new List<MiniGameQuestionData>();
                 Random rnd = new Random();
 
@@ -92,15 +85,15 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
             });
         }
 
-        // private List<Word> InitializeWordsList()
-        // {
-        //     var randomWords = new List<Word>();
-        //     for (int i = 0; i < _testsCount; i++)
-        //     {
-        //         randomWords.Add(_vocabulary.GetRandom());
-        //     }
-        //     return randomWords;
-        // }
+        private List<Word> InitializeRandomWordsList()
+        {
+            var randomWords = new List<Word>();
+            for (int i = 0; i < _testsCount; i++)
+            {
+                randomWords.Add(_vocabulary.GetRandom());
+            }
+            return randomWords;
+        }
 
         private List<Word> InitializeWordsList()
         {
@@ -147,42 +140,5 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
             }
             return list;
         }
-        
-        // private List<string> FindSimilarStringsTo(string input, List<string> words)
-        // {
-        //     return words
-        //         .Select(word => new { Word = word, Distance = LevenshteinDistance(input, word) })
-        //         .OrderBy(pair => pair.Distance)
-        //         .Take(10)
-        //         .Select(pair => pair.Word)
-        //         .ToList();
-        // }
-        //
-        // private int LevenshteinDistance(string source, string target)
-        // {
-        //     if (source == null) return target?.Length ?? 0;
-        //     if (target == null) return source.Length;
-        //
-        //     int m = source.Length;
-        //     int n = target.Length;
-        //     var dp = new int[m + 1, n + 1];
-        //
-        //     for (int i = 0; i <= m; i++) dp[i, 0] = i;
-        //     for (int j = 0; j <= n; j++) dp[0, j] = j;
-        //
-        //     for (int i = 1; i <= m; i++)
-        //     {
-        //         for (int j = 1; j <= n; j++)
-        //         {
-        //             int cost = (source[i - 1] == target[j - 1]) ? 0 : 1;
-        //             dp[i, j] = Math.Min(
-        //                 Math.Min(dp[i - 1, j] + 1, dp[i, j - 1] + 1),
-        //                 dp[i - 1, j - 1] + cost
-        //             );
-        //         }
-        //     }
-        //
-        //     return dp[m, n];
-        // }
     }
 }
