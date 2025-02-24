@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Constants;
 using DG.Tweening;
@@ -9,6 +10,8 @@ namespace UserInterface.Functional
 {
     public class MiniGameTestResultView : MonoBehaviour
     {
+        [SerializeField] private Color rightAnswerColor;
+        [SerializeField] private Color wrongAnswerColor;
         [SerializeField] private Text resultText;
         [SerializeField] private MiniGameController miniGameController;
 
@@ -28,15 +31,15 @@ namespace UserInterface.Functional
 
         private void ShowRightResult()
         {
-            resultText.DOFlip();
-            resultText.text = "+" + AppConstants.ExpPerTest + "exp";
+            resultText.DOText("Last answer: ", 0.2f).OnComplete(()=>
+                resultText.DOText($"Last answer: right, + {AppConstants.ExpPerTest} exp.", 0.75f));
         }
         
         private void ShowOnWrongResult(List<string> rightAnswers)
         {
-            resultText.DOFlip();
             string rightAnswerJoined = rightAnswers.Count > 1 ? string.Join(", ", rightAnswers) : rightAnswers[0];
-            resultText.text = "Wrong, right is " + rightAnswerJoined + "...";
+            resultText.DOText("Last answer: ", 0.2f).OnComplete(()=>
+                resultText.DOText($"Last answer: wrong, right answer is {rightAnswerJoined}.", 0.75f));
         }
     }
 }

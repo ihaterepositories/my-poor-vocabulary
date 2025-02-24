@@ -24,27 +24,31 @@ namespace UserInterface.Functional
 
         private void Awake()
         {
-            CheckWordsCountAndUnlock();
+            HideButtonIfNeeded();
         }
 
         private void OnEnable()
         {
-            WordAddController.OnWordAdded += CheckWordsCountAndUnlock;
+            WordAddController.OnWordAdded += CheckWordsCountAndUnlockAnimated;
         }
         
         private void OnDisable()
         {
-            WordAddController.OnWordAdded -= CheckWordsCountAndUnlock;
+            WordAddController.OnWordAdded -= CheckWordsCountAndUnlockAnimated;
             buttonImage.DOKill();
         }
         
-        private void CheckWordsCountAndUnlock()
+        private void CheckWordsCountAndUnlockAnimated()
         {
             if (_vocabularyController.Vocabulary.GetCount() == _wordsCountToUnlock)
             {
                 buttonImage.DOFade(0f, 1f).OnComplete(() => gameObject.SetActive(false));
             }
-            else if (_vocabularyController.Vocabulary.GetCount() > _wordsCountToUnlock)
+        }
+
+        private void HideButtonIfNeeded()
+        {
+            if (_vocabularyController.Vocabulary.GetCount() >= _wordsCountToUnlock)
             {
                 gameObject.SetActive(false);
             }

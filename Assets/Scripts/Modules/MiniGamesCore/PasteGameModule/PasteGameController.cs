@@ -9,7 +9,6 @@ namespace Modules.MiniGamesCore.PasteGameModule
     public class PasteGameController : MiniGameController
     {
         [SerializeField] private PasteGameQuestionsGenerator questionsGenerator;
-        [SerializeField] private Text sentenceText;
         [SerializeField] private Text hintText;
         
         protected override void AssignQuestionsGenerator()
@@ -19,7 +18,7 @@ namespace Modules.MiniGamesCore.PasteGameModule
         
         protected override void ShowNextTest()
         {
-            sentenceText.text = CurrentQuestion;
+            questionText.text = CurrentQuestion;
             hintText.text = GenerateHint();
         }
 

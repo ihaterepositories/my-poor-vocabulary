@@ -9,7 +9,6 @@ namespace Modules.MiniGamesCore.TranslationGameModule
     public class TranslationGameController : MiniGameController
     {
         [SerializeField] private TranslationGameQuestionsGenerator questionsGenerator;
-        [SerializeField] private Text wordToTranslateText;
 
         protected override void AssignQuestionsGenerator()
         {
@@ -18,7 +17,7 @@ namespace Modules.MiniGamesCore.TranslationGameModule
         
         protected override void ShowNextTest()
         {
-            wordToTranslateText.text = CurrentQuestion;
+            questionText.text = CurrentQuestion;
         }
 
         protected override void EvaluateTest()

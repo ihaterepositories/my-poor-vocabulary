@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using Modules.MiniGamesCore.Abstraction.Interfaces;
 using Modules.MiniGamesCore.Abstraction.Models;
 using Modules.ScoreModule;
@@ -15,6 +16,7 @@ namespace Modules.MiniGamesCore.Abstraction
     public abstract class MiniGameController : MonoBehaviour
     {
         [SerializeField] protected int testsPerGame = 10;
+        [SerializeField] protected Text questionText;
         [SerializeField] protected InputField userAnswerField;
         [SerializeField] protected ProgressBar progressBar;
         [SerializeField] protected Text messageText;
@@ -64,7 +66,7 @@ namespace Modules.MiniGamesCore.Abstraction
                 
                 if (_currentQuestionIndex < testsPerGame)
                 {
-                    ShowNextTest();
+                    ShowNextTestAnimated();
                 }
                 else
                 {
@@ -72,6 +74,11 @@ namespace Modules.MiniGamesCore.Abstraction
                     // userAnswerField.gameObject.SetActive(false);
                 }
             }
+        }
+
+        private void OnDisable()
+        {
+            questionText.DOKill();
         }
 
         protected abstract void AssignQuestionsGenerator();
@@ -99,6 +106,16 @@ namespace Modules.MiniGamesCore.Abstraction
         {
             if (_currentQuestionIndex <= testsPerGame)
                 progressBar.SetProgress(_currentQuestionIndex, testsPerGame);
+        }
+
+        private void ShowNextTestAnimated()
+        {
+            questionText
+                .DOFade(0f, 0.5f)
+                .OnComplete(() => {
+                    ShowNextTest();
+                    questionText.DOFade(1f, 0.5f);
+                });
         }
         
         protected abstract void ShowNextTest();
