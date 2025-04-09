@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CorrectionGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CorrectionGameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PasteGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PasteGameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TranslationGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TranslationGameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/Abstraction/MiniGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/Abstraction/MiniGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGameTestResultView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGameTestResultView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGamesButtonBlocker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGamesButtonBlocker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +146,7 @@
       <workItem from="1740065998714" duration="1213000" />
       <workItem from="1740140715934" duration="3308000" />
       <workItem from="1740418321039" duration="6358000" />
+      <workItem from="1744214991852" duration="2164000" />
     </task>
     <servers />
   </component>
