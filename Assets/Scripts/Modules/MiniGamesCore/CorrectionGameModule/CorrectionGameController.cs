@@ -2,8 +2,6 @@ using Constants;
 using Modules.MiniGamesCore.Abstraction;
 using Modules.MiniGamesCore.CorrectionGameModule.Data.Generation;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 namespace Modules.MiniGamesCore.CorrectionGameModule
 {

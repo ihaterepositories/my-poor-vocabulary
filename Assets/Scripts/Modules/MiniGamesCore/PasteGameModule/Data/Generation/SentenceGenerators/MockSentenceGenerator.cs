@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators.Interfaces;
-using UnityEngine;
 
 namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators
 {

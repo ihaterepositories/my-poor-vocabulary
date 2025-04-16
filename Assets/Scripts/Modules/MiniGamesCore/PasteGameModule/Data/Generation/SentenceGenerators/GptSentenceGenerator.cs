@@ -12,7 +12,7 @@ namespace Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerato
     public class GptSentenceGenerator : IAsyncSentenceGenerator
     {
         private readonly string _apiKey = AppKeys.OpenAiApiKey;
-        private readonly string _apiUrl = AppLinks.OpenAiApiUrl;
+        private readonly string _apiUrl = AppWays.OpenAiApiUrl;
         
         public async Task<string> GenerateSentence(string word, string characterDescription)
         {

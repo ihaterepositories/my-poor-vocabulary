@@ -2,11 +2,11 @@ using System;
 using Constants;
 using Modules.ScoreModule;
 using Modules.VocabularyModule.Data.Models;
-using Modules.VocabularyModule.Data.Validation;
-using Modules.VocabularyModule.Data.Validation.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UserInterface.Functional;
+using Utils.Validation;
 using Zenject;
 
 namespace Modules.VocabularyModule.Data.Input
@@ -17,11 +17,11 @@ namespace Modules.VocabularyModule.Data.Input
         [SerializeField] private InputField originalWordInputField;
         [SerializeField] private InputField translatedWordInputField;
         [SerializeField] private Button addWordButton;
-        [SerializeField] private ValidationMessageView validationMessageView;
+        [SerializeField] private ActionResultMessageView actionResultMessageView;
         [SerializeField] private Button addWordPanelCallButton;
         
         private VocabularyController _vocabularyController;
-        private InputValidationChainExecutor _inputValidationChainExecutor;
+        private InputValidator _inputValidator;
         private ScoreController _scoreController;
         
         private bool _isPanelActive;
@@ -39,7 +39,7 @@ namespace Modules.VocabularyModule.Data.Input
         
         private void Awake()
         {
-            _inputValidationChainExecutor = new InputValidationChainExecutor();
+            _inputValidator = new InputValidator();
             
             // Remove focusing from other buttons to make "Return" key free to use 
             addWordPanelCallButton.onClick.AddListener(() => EventSystem.current.SetSelectedGameObject(null));
@@ -64,7 +64,7 @@ namespace Modules.VocabularyModule.Data.Input
             if (!ValidateInputs())
             {
                 // TODO: spellcheck
-                validationMessageView.ShowError(GetValidationErrorMessage());
+                actionResultMessageView.ShowError(GetValidationErrorMessage());
                 return;
             }
             
@@ -79,7 +79,7 @@ namespace Modules.VocabularyModule.Data.Input
 
                 if (!word.CheckForNewTranslationAddAbility(translatedWordInputField.text))
                 {
-                    validationMessageView.ShowError($"Translation already exists or translations count is maximum ({AppConstants.MaxTranslationsPerWord}).");
+                    actionResultMessageView.ShowError($"Translation already exists or translations count is maximum ({AppConstants.MaxTranslationsPerWord}).");
                     return;
                 }
                 
@@ -87,7 +87,7 @@ namespace Modules.VocabularyModule.Data.Input
             }
             
             ClearInputs();
-            validationMessageView.HideMessage();
+            actionResultMessageView.HideMessage();
             _scoreController.AddExp(AppConstants.ExpPerAddedWord);
             OnWordAdded?.Invoke();
         }
@@ -100,12 +100,12 @@ namespace Modules.VocabularyModule.Data.Input
         
         private bool ValidateInputPart(string input, string inputPart)
         {
-            return _inputValidationChainExecutor.Execute(input, inputPart);
+            return _inputValidator.Validate(input);
         }
         
         private string GetValidationErrorMessage()
         {
-            return _inputValidationChainExecutor.LastValidationError;
+            return _inputValidator.LastValidationErrorDescription;
         }
         
         private Word CreateWord()

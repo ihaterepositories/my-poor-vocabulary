@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Constants;
-using UnityEngine;
 
 namespace Modules.VocabularyModule.Data.Models
 {

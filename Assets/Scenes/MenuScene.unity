@@ -6176,7 +6176,7 @@ MonoBehaviour:
   originalWordInputField: {fileID: 959697254}
   translatedWordInputField: {fileID: 13243897}
   addWordButton: {fileID: 272025087}
-  validationMessageView: {fileID: 908758652}
+  actionResultMessageView: {fileID: 908758652}
   addWordPanelCallButton: {fileID: 1974939906}
 --- !u!1 &1860531470
 GameObject:

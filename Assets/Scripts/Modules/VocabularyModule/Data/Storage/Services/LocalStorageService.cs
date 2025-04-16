@@ -10,7 +10,7 @@ namespace Modules.VocabularyModule.Data.Storage.Services
 {
     public class LocalStorageService : IStorageService
     {
-        private readonly string _localStoragePath = AppLinks.LocalStoragePath;
+        private readonly string _localStoragePath = AppWays.LocalStoragePath;
         
         public Vocabulary Load()
         {

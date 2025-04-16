@@ -1,4 +1,3 @@
-using Modules.MiniGamesCore;
 using Modules.MiniGamesCore.Abstraction;
 using Modules.ScoreModule;
 using UnityEngine;

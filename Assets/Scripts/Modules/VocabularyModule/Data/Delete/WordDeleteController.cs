@@ -1,10 +1,11 @@
 using System;
 using Modules.VocabularyModule.Data.Models;
-using Modules.VocabularyModule.Data.Validation;
-using Modules.VocabularyModule.Data.Validation.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
+using UserInterface.Functional;
+using Utils.Validation;
 using Zenject;
 
 namespace Modules.VocabularyModule.Data.Delete
@@ -14,11 +15,11 @@ namespace Modules.VocabularyModule.Data.Delete
         [SerializeField] private InputField inputField;
         [SerializeField] private Button deleteButton;
         [SerializeField] private Button wordDeleteMenuCallButton;
-        [SerializeField] private ValidationMessageView validationMessageView;
+        [FormerlySerializedAs("validationMessageView")] [SerializeField] private ActionResultMessageView actionResultMessageView;
 
         private bool _isWordDeleteMenuActive;
         private Vocabulary _vocabulary;
-        private InputValidationChainExecutor _inputValidationChainExecutor;
+        private InputValidator _validator;
 
         public static event Action OnWordDeleted; 
 
@@ -30,7 +31,7 @@ namespace Modules.VocabularyModule.Data.Delete
 
         private void Start()
         {
-            _inputValidationChainExecutor = new InputValidationChainExecutor();
+            _validator = new InputValidator();
             
             // Determine if menu is active by menu`s call button click
             wordDeleteMenuCallButton.onClick.AddListener(()=>_isWordDeleteMenuActive=!_isWordDeleteMenuActive);
@@ -53,17 +54,17 @@ namespace Modules.VocabularyModule.Data.Delete
         {
             if (!ValidateInput())
             {
-                validationMessageView.ShowError(GetValidationErrorMessage());
+                actionResultMessageView.ShowError(GetValidationErrorMessage());
                 return;
             }
 
             if (!_vocabulary.ContainsByOriginalWord(inputField.text))
             {
-                validationMessageView.ShowError("This word does not exist in the vocabulary.");
+                actionResultMessageView.ShowError("This word does not exist in the vocabulary.");
                 return;
             }
             
-            validationMessageView.HideMessage();
+            actionResultMessageView.HideMessage();
             DeleteWordFromVocabulary();
             OnWordDeleted?.Invoke();
             inputField.text = string.Empty;
@@ -71,12 +72,12 @@ namespace Modules.VocabularyModule.Data.Delete
 
         private bool ValidateInput()
         {
-            return _inputValidationChainExecutor.Execute(inputField.text, "Original word");
+            return _validator.Validate(inputField.text);
         }
         
         private string GetValidationErrorMessage()
         {
-            return _inputValidationChainExecutor.LastValidationError;
+            return _validator.LastValidationErrorDescription;
         }
 
         private void DeleteWordFromVocabulary()

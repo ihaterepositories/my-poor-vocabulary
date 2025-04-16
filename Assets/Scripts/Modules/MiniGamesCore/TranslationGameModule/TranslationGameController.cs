@@ -2,7 +2,6 @@ using Constants;
 using Modules.MiniGamesCore.Abstraction;
 using Modules.MiniGamesCore.TranslationGameModule.Data.Generation;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Modules.MiniGamesCore.TranslationGameModule
 {
