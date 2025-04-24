@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 134718539}
   - component: {fileID: 134718538}
   - component: {fileID: 134718537}
-  - component: {fileID: 134718536}
+  - component: {fileID: 134718540}
   m_Layer: 5
   m_Name: AZSortButton
   m_TagString: Untagged
@@ -308,20 +308,6 @@ RectTransform:
   m_AnchoredPosition: {x: 200, y: 750}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &134718536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134718534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae8be0e6bc64af4b2f9154efd735995, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortType: 2
-  button: {fileID: 134718537}
 --- !u!114 &134718537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +390,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134718534}
   m_CullTransparentMesh: 1
+--- !u!114 &134718540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134718534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a01a82205e466680a5095367782e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberToTransfer: 2
+  button: {fileID: 134718537}
 --- !u!1 &223323257
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +525,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textField: {fileID: 2082871768}
   searchInput: {fileID: 57981748}
+  sortOptionButtons:
+  - {fileID: 1156552115}
+  - {fileID: 584373533}
+  - {fileID: 134718540}
+  - {fileID: 352556056}
 --- !u!1 &233486894
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +621,7 @@ GameObject:
   - component: {fileID: 352556055}
   - component: {fileID: 352556054}
   - component: {fileID: 352556053}
-  - component: {fileID: 352556052}
+  - component: {fileID: 352556056}
   m_Layer: 5
   m_Name: ZASortButton
   m_TagString: Untagged
@@ -644,20 +649,6 @@ RectTransform:
   m_AnchoredPosition: {x: 550, y: 750}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &352556052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352556050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae8be0e6bc64af4b2f9154efd735995, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortType: 3
-  button: {fileID: 352556053}
 --- !u!114 &352556053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,6 +731,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352556050}
   m_CullTransparentMesh: 1
+--- !u!114 &352556056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352556050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a01a82205e466680a5095367782e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberToTransfer: 3
+  button: {fileID: 352556053}
 --- !u!1 &432758754
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,7 +777,7 @@ MonoBehaviour:
   inputField: {fileID: 844106902}
   deleteButton: {fileID: 1800719803}
   wordDeleteMenuCallButton: {fileID: 591140880}
-  validationMessageView: {fileID: 992010599}
+  actionResultMessageView: {fileID: 992010599}
 --- !u!4 &432758756
 Transform:
   m_ObjectHideFlags: 0
@@ -1287,7 +1292,7 @@ GameObject:
   - component: {fileID: 584373532}
   - component: {fileID: 584373531}
   - component: {fileID: 584373530}
-  - component: {fileID: 584373529}
+  - component: {fileID: 584373533}
   m_Layer: 5
   m_Name: OldestSortButton
   m_TagString: Untagged
@@ -1315,20 +1320,6 @@ RectTransform:
   m_AnchoredPosition: {x: -200, y: 750}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &584373529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 584373527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae8be0e6bc64af4b2f9154efd735995, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortType: 1
-  button: {fileID: 584373530}
 --- !u!114 &584373530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1411,6 +1402,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584373527}
   m_CullTransparentMesh: 1
+--- !u!114 &584373533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584373527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a01a82205e466680a5095367782e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberToTransfer: 1
+  button: {fileID: 584373530}
 --- !u!1 &591140878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,10 +2678,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1156552110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae8be0e6bc64af4b2f9154efd735995, type: 3}
+  m_Script: {fileID: 11500000, guid: 58a01a82205e466680a5095367782e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortType: 0
+  numberToTransfer: 0
   button: {fileID: 1156552112}
 --- !u!1 &1182632145
 GameObject:

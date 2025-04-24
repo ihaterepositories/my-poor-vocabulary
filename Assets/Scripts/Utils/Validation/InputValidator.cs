@@ -12,7 +12,7 @@ namespace Utils.Validation
         
         public InputValidator()
         {
-            Validators.Abstraction.InputValidationChainMember.OnValidationFailed += SetValidationError;
+            InputValidationChainMember.OnValidationFailed += SetValidationError;
         }
         
         private void SetValidationError(string message)
@@ -25,6 +25,12 @@ namespace Utils.Validation
             var validatorConfig = new ValidatorConfig();
             validatorConfig.UseAll();
             
+            var validationChain = CreateChain(validatorConfig);
+            return validationChain.Validate(input);
+        }
+        
+        public bool Validate(string input, ValidatorConfig validatorConfig)
+        {
             var validationChain = CreateChain(validatorConfig);
             return validationChain.Validate(input);
         }
@@ -61,10 +67,10 @@ namespace Utils.Validation
             }
         
             if (config.UseEmptyValidator) AddValidator(new EmptyInputValidator());
-            if (config.UseLengthValidator) AddValidator(new VocabularyWordLengthValidator());
+            if (config.UseVocabularyWordLengthValidator) AddValidator(new VocabularyWordLengthValidator());
             if (config.UseExtraSpacesValidator) AddValidator(new ExtraSpacesValidator());
             if (config.UseAlphabeticWordValidator) AddValidator(new AlphabeticWordValidator());
-            if (config.UseWordsCountValidator) AddValidator(new VocabularyWordWordsCountValidator());
+            if (config.UseVocabularyWordWordsCountValidator) AddValidator(new VocabularyWordWordsCountValidator());
         
             return first;
         }

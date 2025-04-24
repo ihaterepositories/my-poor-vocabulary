@@ -4,10 +4,10 @@ using System.Linq;
 using Modules.VocabularyModule.Data.Delete;
 using Modules.VocabularyModule.Data.Models;
 using Modules.VocabularyModule.Data.View.Sorting;
-using Modules.VocabularyModule.Data.View.Sorting.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UserInterface.Functional;
 using Zenject;
 
 namespace Modules.VocabularyModule.Data.View
@@ -16,6 +16,7 @@ namespace Modules.VocabularyModule.Data.View
     {
         [SerializeField] private TextMeshProUGUI textField;
         [SerializeField] private InputField searchInput;
+        [SerializeField] private List<NumericDataTransferButton> sortOptionButtons;
         
         private Vocabulary _vocabulary;
         private List<Word> _vocabularyWords;
@@ -40,13 +41,21 @@ namespace Modules.VocabularyModule.Data.View
 
         private void OnEnable()
         {
-            VocabularySortButton.OnClicked += ShowSorted;
+            foreach (var b in sortOptionButtons)
+            {
+                b.OnTransferData += ShowSorted;
+            }
+            
             WordDeleteController.OnWordDeleted += RefreshView;
         }
         
         private void OnDisable()
         {
-            VocabularySortButton.OnClicked -= ShowSorted;
+            foreach (var b in sortOptionButtons)
+            {
+                b.OnTransferData -= ShowSorted;
+            }
+            
             WordDeleteController.OnWordDeleted -= RefreshView;
         }
         

@@ -37,6 +37,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 608ecc7b914e94f4daa640f3fdad6cff
+    m_Address: Assets/Scenes/SchoolSystemScenes/LoginRegisterChooseScene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60fa1221c16114d4c978fe1f5a03da52
+    m_Address: Assets/Scenes/SchoolSystemScenes/SignUpScene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a580be281d088d94281bd815ff47d701
+    m_Address: Assets/Scenes/SchoolSystemScenes/AccountScene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e9f3b5293cc48bf49ad4218495543dcb
     m_Address: Assets/Scenes/PasteGameScene.unity
     m_ReadOnly: 0

@@ -6,9 +6,9 @@ using Modules.ScoreModule;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Storage.Interfaces;
 using Modules.VocabularyModule.Data.Storage.Services;
+using Navigation;
+using Navigation.Effects;
 using UnityEngine;
-using UserInterface.Functional.Navigation;
-using UserInterface.Functional.Navigation.Effects;
 using UserInterface.Sound;
 using Zenject;
 
