@@ -24,12 +24,12 @@ namespace Modules.MiniGamesCore.TranslationGameModule
             if (CurrentRightAnswers.Contains(UserAnswer))
             {
                 ScoreController.AddExp(AppConstants.ExpPerTest);
-                InvokeEventsOnRightAnswer();
+                HandleRightAnswer();
                 Vocabulary.ModifyTranslationTestAttemptFor(CurrentQuestion, true);
             }
             else
             {
-                InvokeEventsOnWrongAnswer(CurrentRightAnswers);
+                HandleWrongAnswer(CurrentRightAnswers);
                 Vocabulary.ModifyTranslationTestAttemptFor(CurrentQuestion, false);
             }
         }

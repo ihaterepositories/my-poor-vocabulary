@@ -2,6 +2,7 @@ using Modules.MiniGamesCore.CorrectionGameModule.Data.Generation.TypoGenerators;
 using Modules.MiniGamesCore.CorrectionGameModule.Data.Generation.TypoGenerators.Interfaces;
 using Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators;
 using Modules.MiniGamesCore.PasteGameModule.Data.Generation.SentenceGenerators.Interfaces;
+using Modules.ProgressControlModule.ActivityDataSavers;
 using Modules.ScoreModule;
 using Modules.VocabularyModule;
 using Modules.VocabularyModule.Data.Storage.Interfaces;
@@ -55,6 +56,12 @@ namespace Infrastructure
             Container
                 .Bind<EventSoundPlayer>()
                 .FromComponentInNewPrefab(eventSoundPlayerPrefab)
+                .AsSingle()
+                .NonLazy();
+
+            Container
+                .Bind<MiniGamesActivityDataSaver>()
+                .FromComponentInHierarchy()
                 .AsSingle()
                 .NonLazy();
         }

@@ -40,7 +40,7 @@ namespace UserInterface.Functional
         
         private void CheckWordsCountAndUnlockAnimated()
         {
-            if (_vocabularyController.Vocabulary.GetCount() == _wordsCountToUnlock)
+            if (_vocabularyController.Vocabulary.GetWordsCount() == _wordsCountToUnlock)
             {
                 buttonImage.DOFade(0f, 1f).OnComplete(() => gameObject.SetActive(false));
             }
@@ -48,7 +48,7 @@ namespace UserInterface.Functional
 
         private void HideButtonIfNeeded()
         {
-            if (_vocabularyController.Vocabulary.GetCount() >= _wordsCountToUnlock)
+            if (_vocabularyController.Vocabulary.GetWordsCount() >= _wordsCountToUnlock)
             {
                 gameObject.SetActive(false);
             }

@@ -33,11 +33,11 @@ namespace Modules.MiniGamesCore.PasteGameModule
             if (CurrentRightAnswers.Contains(UserAnswer))
             {
                 ScoreController.AddExp(AppConstants.ExpPerTest);
-                InvokeEventsOnRightAnswer();
+                HandleRightAnswer();
             }
             else
             {
-                InvokeEventsOnWrongAnswer(CurrentRightAnswers);
+                HandleWrongAnswer(CurrentRightAnswers);
             }
         }
     }

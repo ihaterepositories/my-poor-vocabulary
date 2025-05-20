@@ -58,7 +58,7 @@ namespace Modules.MiniGamesCore.TranslationGameModule.Data.Generation
         {
             return await Task.Run(() =>
             {
-                var words =  _vocabulary.GetCount() >= AppConstants.WordsCountToUnlockMiniGames ? InitializeWordsList() : InitializeRandomWordsList();
+                var words =  _vocabulary.GetWordsCount() >= AppConstants.WordsCountToUnlockMiniGames ? InitializeWordsList() : InitializeRandomWordsList();
 
                 var tests = new List<MiniGameQuestionData>();
                 Random rnd = new Random();

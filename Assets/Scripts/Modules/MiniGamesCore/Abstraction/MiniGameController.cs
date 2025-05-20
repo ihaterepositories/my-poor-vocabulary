@@ -30,11 +30,13 @@ namespace Modules.MiniGamesCore.Abstraction
 
         private List<MiniGameQuestionData> _questions;
         private int _currentQuestionIndex;
+        private int _rightAnsweredQuestionsCount;
         private bool _isGameEnd;
         
         public event Action OnRightAnswer;
         public event Action<List<string>> OnWrongAnswerWithMessage;
         public static event Action OnWrongAnswer; 
+        public static event Action<int> OnGameEndWithScore;
         
         [Inject]
         private void Construct(VocabularyController vocabularyController, ScoreController scoreController)
@@ -71,6 +73,7 @@ namespace Modules.MiniGamesCore.Abstraction
                 else
                 {
                     _isGameEnd = true;
+                    OnGameEndWithScore?.Invoke((_rightAnsweredQuestionsCount*100) / testsPerGame);
                     // userAnswerField.gameObject.SetActive(false);
                 }
             }
@@ -128,12 +131,13 @@ namespace Modules.MiniGamesCore.Abstraction
             userAnswerField.gameObject.SetActive(true);
         }
 
-        protected void InvokeEventsOnRightAnswer()
+        protected void HandleRightAnswer()
         {
+            _rightAnsweredQuestionsCount++;
             OnRightAnswer?.Invoke();
         }
 
-        protected void InvokeEventsOnWrongAnswer(List<string> word)
+        protected void HandleWrongAnswer(List<string> word)
         {
             OnWrongAnswerWithMessage?.Invoke(word);
             OnWrongAnswer?.Invoke();

@@ -5,49 +5,140 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="420062d8-6bca-45a2-84dc-b2c2583d153b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-poor-vocabulary/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Editor/Dependencies.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Editor/Dependencies.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Editor/Elringus.UnityGoogleDrive.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Editor/Elringus.UnityGoogleDrive.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Editor/GoogleDriveSettingsEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Editor/GoogleDriveSettingsEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/LICENSE.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Plugins/com.elringus.unitygoogledriveandroid.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Plugins/com.elringus.unitygoogledriveandroid.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Plugins/com.elringus.unitygoogledriveios.mm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Plugins/com.elringus.unitygoogledriveios.mm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/About.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/About.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/AudioFile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/AudioFile.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/Change.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/Change.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/ChangeList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/ChangeList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/Channel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/Channel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/File.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/File.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/FileList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/FileList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/GeneratedIds.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/GeneratedIds.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/Permission.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/Permission.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/ResourceData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/ResourceData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/StartPageToken.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/StartPageToken.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/TeamDrive.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/TeamDrive.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/TeamDriveList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/TeamDriveList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/TextureFile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/TextureFile.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/User.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/Data/User.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/GoogleDriveAbout.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/GoogleDriveAbout.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/GoogleDriveChanges.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/GoogleDriveChanges.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/GoogleDriveFiles.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/GoogleDriveFiles.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/GoogleDriveTeamDrives.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/API/GoogleDriveTeamDrives.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/AccessTokenRefresher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/AccessTokenRefresher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/AndroidAccessTokenProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/AndroidAccessTokenProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/AuthCodeExchanger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/AuthCodeExchanger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/AuthController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/AuthController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/GenericClientCredentials.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/GenericClientCredentials.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/IAccessTokenProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/IAccessTokenProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/IClientCredentials.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/IClientCredentials.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/IOSAccessTokenProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/IOSAccessTokenProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/LoopbackAccessTokenProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/LoopbackAccessTokenProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/RedirectAccessTokenProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/RedirectAccessTokenProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/UriSchemeClientCredentials.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Authorization/UriSchemeClientCredentials.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Elringus.UnityGoogleDrive.Runtime.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Elringus.UnityGoogleDrive.Runtime.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveRequest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveRequestYieldInstruction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveRequestYieldInstruction.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveResponseError.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveResponseError.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveResumableUploadRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveResumableUploadRequest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveUploadRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/GoogleDriveUploadRequest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities/AsyncExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities/AsyncExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities/CryptoUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities/CryptoUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities/Error.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities/Error.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities/Helpers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities/Helpers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities/JsonUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/Runtime/Utilities/JsonUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/ThirdParty.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/ThirdParty/JsonNet-Lite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/ThirdParty/JsonNet-Lite/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/ThirdParty/JsonNet-Lite/LICENSE.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/ThirdParty/JsonNet-Lite/UnityGoogleDrive.Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/ThirdParty/JsonNet-Lite/UnityGoogleDrive.Newtonsoft.Json.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGoogleDrive/package.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ExpController.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MiniGamesActivityDataSaver.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PasteGameCharacterPickScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PasteGameCharacterPickScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SchoolSystemScenes/SignInScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SchoolSystemScenes/SignInScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SchoolSystemScenes/SignUpScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SchoolSystemScenes/SignUpScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VocabularyViewScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VocabularyViewScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/AppPlayerPrefsKeys.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/AppPlayerPrefsKeys.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/AccountRegistration.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/Registration.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/AccountRegistration/AccountRegistrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/Registration/AccountRegistrar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/AccountRegistration/AccountRegistrar.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/Registration/AccountRegistrar.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/AccountRegistration/Data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/Registration/SerializingModels.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/AccountRegistration/Data/RegisterAccountForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/Registration/SerializingModels/RegisterAccountForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/AccountRegistration/Data/RegisterAccountForm.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/Registration/SerializingModels/RegisterAccountForm.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/AccountRegistration/Requests.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/Registration/Requests.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/AccountRegistration/Requests/RegistrationRequestHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/Registration/Requests/RegistrationRequestHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/AccountRegistration/Requests/RegistrationRequestHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/Registration/Requests/RegistrationRequestHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/View/Sorting/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/View/Sorting/UI/VocabularySortButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/View/Sorting/UI/VocabularySortButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/View/VocabularyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/View/VocabularyView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ActionResultMessageView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ActionResultMessageView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Navigation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Navigation.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Navigation/Effects.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Navigation/Effects.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Navigation/Effects/FogEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Navigation/Effects/FogEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Navigation/Effects/FogEffect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Navigation/Effects/FogEffect.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Navigation/SceneLoadProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Navigation/SceneLoadProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Navigation/SceneLoadProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Navigation/SceneLoadProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Navigation/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Navigation/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Navigation/SceneLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Navigation/SceneLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/OptionDataTransfering.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/OptionDataTransfering/OptionDataTransferButtonBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ToPlayerPrefsSaverButtonBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/OptionDataTransfering/OptionDataTransferButtonBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/ToPlayerPrefsSaverButtonBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/OptionDataTransfering/PasteGameCharacterOptionDataTransferButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/UserInterface/PasteGameCharacterToPlayerPrefsButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/OptionDataTransfering/PasteGameCharacterOptionDataTransferButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/UserInterface/PasteGameCharacterToPlayerPrefsButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/PasteGameCharacterDialogIconProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/UserInterface/PasteGameCharacterDialogIconProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/PasteGameCharacterDialogIconProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/UserInterface/PasteGameCharacterDialogIconProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/PickedPasteGameCharacterText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/UserInterface/PickedPasteGameCharacterText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/PickedPasteGameCharacterText.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/UserInterface/PickedPasteGameCharacterText.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Validation/InputValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/Validation/InputValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Validation/ValidatorConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/Validation/ValidatorConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/View/Fonts/CourierPrime-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/View/Fonts/CourierPrime-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/Abstraction/MiniGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/Abstraction/MiniGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/CorrectionGameModule/CorrectionGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/PasteGameModule/PasteGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameQuestionsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/Data/Generation/TranslationGameQuestionsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/MiniGamesCore/TranslationGameModule/TranslationGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/ProgressControlModule/ActivityDataSavers/MiniGamesActivityDataSaver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/ProgressControlModule/ActivityDataSavers/MiniGamesActivityDataSaver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/ProgressControlModule/ActivityDataSavers/VocabularyActivityDataSaver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/ProgressControlModule/ActivityDataSavers/VocabularyActivityDataSaver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/StudentActivity/Requests/Models/UpdateStudentProgressModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/StudentActivity/Requests/UpdateStudentProgressRequestHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/SchoolSystem/StudentActivity/StudentProgressUpdater.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Models/Vocabulary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/VocabularyModule/Data/Models/Vocabulary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGamesButtonBlocker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/MiniGamesButtonBlocker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Widgets/VocabularyCapacityWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/Functional/Widgets/VocabularyCapacityWidget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,22 +166,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Data/Projects/Unity/my-poor-vocabulary/Assets/Scripts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "2102f814",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Data/Projects/Unity/my-poor-vocabulary/Assets/Scripts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../Build\my-poor-vocabulary.exe" />
@@ -203,6 +294,7 @@
       <workItem from="1745330920175" duration="3906000" />
       <workItem from="1745436122332" duration="5282000" />
       <workItem from="1745489001212" duration="3311000" />
+      <workItem from="1747736919156" duration="2808000" />
     </task>
     <servers />
   </component>
