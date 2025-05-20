@@ -63,7 +63,7 @@ namespace Modules.VocabularyModule.Data.Models
             return Words.OrderByDescending(word => word.AddingDate).ToList();
         }
 
-        public int GetCount()
+        public int GetWordsCount()
         {
             return Words.Count;
         }

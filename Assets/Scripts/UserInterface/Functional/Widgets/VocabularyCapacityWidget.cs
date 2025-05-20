@@ -22,7 +22,7 @@ namespace UserInterface.Functional.Widgets
 
         private void Start()
         {
-            widgetText.DOCounter(0, _vocabulary.GetCount(), 3f);
+            widgetText.DOCounter(0, _vocabulary.GetWordsCount(), 3f);
         }
 
         private void OnEnable()
@@ -39,7 +39,7 @@ namespace UserInterface.Functional.Widgets
 
         private void SetText()
         {
-            widgetText.text = $"{_vocabulary.GetCount()}";
+            widgetText.text = $"{_vocabulary.GetWordsCount()}";
         }
     }
 }

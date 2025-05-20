@@ -1,5 +1,5 @@
 using DG.Tweening;
-using Modules.MiniGamesCore.Abstraction;
+using Modules.MiniGames.Abstraction;
 using UnityEngine;
 using UnityEngine.UI;
 
