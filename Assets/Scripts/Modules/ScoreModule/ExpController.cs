@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Modules.ScoreModule
 {
-    public class ScoreController : MonoBehaviour
+    public class ExpController : MonoBehaviour
     {
         private int _exp;
         private readonly int _levelSplitExpCount = AppConstants.LevelSplitExpCount;

@@ -9,5 +9,7 @@ namespace Constants
         public const string AverageMiniGamesScoreKey = "AverageMiniGamesScore";
         public const string TotalMiniGamesScoreKey = "TotalMiniGamesScore";
         public const string PlayedMiniGamesCountKey = "PlayedMiniGamesCount";
+        
+        public const string SchoolSystemStudentIdKey = "SchoolSystemStudentId";
     }
 }

@@ -47,7 +47,7 @@ namespace Infrastructure
                 .NonLazy();
 
             Container
-                .Bind<ScoreController>()
+                .Bind<ExpController>()
                 .FromComponentInNewPrefab(scoreControllerPrefab)
                 .AsSingle()
                 .NonLazy();

@@ -22,7 +22,7 @@ namespace Modules.VocabularyModule.Data.Input
         
         private VocabularyController _vocabularyController;
         private InputValidator _inputValidator;
-        private ScoreController _scoreController;
+        private ExpController _expController;
         
         private bool _isPanelActive;
         
@@ -31,10 +31,10 @@ namespace Modules.VocabularyModule.Data.Input
         [Inject]
         private void Construct(
             VocabularyController vocabularyController,
-            ScoreController scoreController)
+            ExpController expController)
         {
             _vocabularyController = vocabularyController;
-            _scoreController = scoreController;
+            _expController = expController;
         }
         
         private void Awake()
@@ -88,7 +88,7 @@ namespace Modules.VocabularyModule.Data.Input
             
             ClearInputs();
             actionResultMessageView.HideMessage();
-            _scoreController.AddExp(AppConstants.ExpPerAddedWord);
+            _expController.AddExp(AppConstants.ExpPerAddedWord);
             OnWordAdded?.Invoke();
         }
 

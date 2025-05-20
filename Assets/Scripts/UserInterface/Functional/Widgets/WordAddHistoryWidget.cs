@@ -47,7 +47,7 @@ namespace UserInterface.Functional.Widgets
             return _vocabulary
                 .GetSortedByNewest()
                 .Take(historySize)
-                .Select(word => word.Original + " -> " + word.AddingDate)
+                .Select(word => word.Original + " -> " + word.AddingDate.ToShortDateString())
                 .ToList();
         }
     }

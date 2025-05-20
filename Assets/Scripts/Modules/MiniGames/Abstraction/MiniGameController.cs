@@ -26,7 +26,7 @@ namespace Modules.MiniGames.Abstraction
         protected string CurrentQuestion => _questions[_currentQuestionIndex].Question;
         protected List<string> CurrentRightAnswers => _questions[_currentQuestionIndex].RightAnswers;
         protected Vocabulary Vocabulary;
-        protected ScoreController ScoreController;
+        protected ExpController ExpController;
 
         private List<MiniGameQuestionData> _questions;
         private int _currentQuestionIndex;
@@ -39,10 +39,10 @@ namespace Modules.MiniGames.Abstraction
         public static event Action<int> OnGameEndWithScore;
         
         [Inject]
-        private void Construct(VocabularyController vocabularyController, ScoreController scoreController)
+        private void Construct(VocabularyController vocabularyController, ExpController expController)
         {
             Vocabulary = vocabularyController.Vocabulary;
-            ScoreController = scoreController;
+            ExpController = expController;
         }
 
         private void Awake()

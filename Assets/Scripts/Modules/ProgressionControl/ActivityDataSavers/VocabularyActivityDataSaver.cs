@@ -32,7 +32,7 @@ namespace Modules.ProgressionControl.ActivityDataSavers
         private void UpdateVocabularyActivityData()
         {
             PlayerPrefs.SetInt(AppPlayerPrefsKeys.VocabularyWordsCountKey, _vocabulary.GetWordsCount());
-            PlayerPrefs.SetString(AppPlayerPrefsKeys.LastVocabularyUpdateDateKey, DateTime.Now.ToString(CultureInfo.InvariantCulture));
+            PlayerPrefs.SetString(AppPlayerPrefsKeys.LastVocabularyUpdateDateKey, DateTime.UtcNow.ToString(CultureInfo.InvariantCulture));
             PlayerPrefs.Save();
         }
     }

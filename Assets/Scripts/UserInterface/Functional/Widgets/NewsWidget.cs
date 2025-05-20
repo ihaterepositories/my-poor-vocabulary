@@ -12,12 +12,12 @@ namespace UserInterface.Functional.Widgets
     {
         [SerializeField] private Text newsText;
 
-        private ScoreController _scoreController;
+        private ExpController _expController;
         
         [Inject]
-        private void Construct(ScoreController scoreController)
+        private void Construct(ExpController expController)
         {
-            _scoreController = scoreController;
+            _expController = expController;
         }
         
         private void Start()
@@ -40,7 +40,7 @@ namespace UserInterface.Functional.Widgets
             string news = String.Empty;
             
             news += "New mini games is coming soon! • ";
-            news += $"{_scoreController.GetExpCountToReachNewLevel()} exp to reach next level";
+            news += $"{_expController.GetExpCountToReachNewLevel()} exp to reach next level";
             
             newsText.text = news;
         }

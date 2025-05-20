@@ -23,7 +23,7 @@ namespace Modules.MiniGames.TranslationGame
         {
             if (CurrentRightAnswers.Contains(UserAnswer))
             {
-                ScoreController.AddExp(AppConstants.ExpPerTest);
+                ExpController.AddExp(AppConstants.ExpPerTest);
                 HandleRightAnswer();
                 Vocabulary.ModifyTranslationTestAttemptFor(CurrentQuestion, true);
             }

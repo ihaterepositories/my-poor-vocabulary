@@ -1,4 +1,5 @@
 using System.Globalization;
+using Constants;
 using Modules.SchoolSystem.View.Abstraction;
 using Modules.SchoolSystem.View.DataModels.Student;
 using Modules.SchoolSystem.View.SerializingModels;
@@ -12,6 +13,9 @@ namespace Modules.SchoolSystem.View
 
         protected override void FillUiFields(StudentAccount account)
         {
+            // TODO: move to another logical place
+            PlayerPrefs.SetString(AppPlayerPrefsKeys.SchoolSystemStudentIdKey, account.Id.ToString());
+            
             uiFields.personalInfoText.text = $"{account.FirstName} {account.LastName}" + "\n" + 
                                              $"({account.Email})";
             

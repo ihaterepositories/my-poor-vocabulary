@@ -19,13 +19,13 @@ namespace UserInterface.Sound
 
         private void OnEnable()
         {
-            ScoreController.OnExpChanged += PlayExpEarnedSound;
+            ExpController.OnExpChanged += PlayExpEarnedSound;
             MiniGameController.OnWrongAnswer += PlayWrongAnswerSound;
         }
         
         private void OnDisable()
         {
-            ScoreController.OnExpChanged -= PlayExpEarnedSound;
+            ExpController.OnExpChanged -= PlayExpEarnedSound;
             MiniGameController.OnWrongAnswer -= PlayWrongAnswerSound;
         }
 

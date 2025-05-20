@@ -13,30 +13,30 @@ namespace UserInterface.Functional.Widgets
         [SerializeField] private Text expText;
         [SerializeField] private ProgressBar.ProgressBar progressBar;
         
-        private ScoreController _scoreController;
+        private ExpController _expController;
         
         [Inject]
-        private void Construct(ScoreController scoreController)
+        private void Construct(ExpController expController)
         {
-            _scoreController = scoreController;
+            _expController = expController;
         }
 
         private void Start()
         {
-            levelText.DOCounter(0,_scoreController.GetLevel(), 1f);
-            progressBar.SetProgress(_scoreController.GetCurrentLevelExp(), AppConstants.LevelSplitExpCount, 1f);
-            expText.DOCounter(0, _scoreController.GetCurrentLevelExp(), 1f)
+            levelText.DOCounter(0,_expController.GetLevel(), 1f);
+            progressBar.SetProgress(_expController.GetCurrentLevelExp(), AppConstants.LevelSplitExpCount, 1f);
+            expText.DOCounter(0, _expController.GetCurrentLevelExp(), 1f)
                 .OnComplete(SetInfo);
         }
 
         private void OnEnable()
         {
-            ScoreController.OnExpChanged += SetInfo;
+            ExpController.OnExpChanged += SetInfo;
         }
         
         private void OnDisable()
         {
-            ScoreController.OnExpChanged -= SetInfo;
+            ExpController.OnExpChanged -= SetInfo;
 
             levelText.DOKill();
             expText.DOKill();
@@ -45,9 +45,9 @@ namespace UserInterface.Functional.Widgets
 
         private void SetInfo()
         {
-            levelText.text = _scoreController.GetLevel() + " LVL";
-            expText.text = _scoreController.GetCurrentLevelExp() + "exp";
-            progressBar.SetProgress(_scoreController.GetCurrentLevelExp(), AppConstants.LevelSplitExpCount);
+            levelText.text = _expController.GetLevel() + " LVL";
+            expText.text = _expController.GetCurrentLevelExp() + "exp";
+            progressBar.SetProgress(_expController.GetCurrentLevelExp(), AppConstants.LevelSplitExpCount);
         }
     }
 }

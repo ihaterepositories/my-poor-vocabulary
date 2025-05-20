@@ -23,7 +23,7 @@ namespace Modules.MiniGames.CorrectionGame
         {
             if (CurrentRightAnswers.Contains(UserAnswer))
             {
-                ScoreController.AddExp(AppConstants.ExpPerTest);
+                ExpController.AddExp(AppConstants.ExpPerTest);
                 HandleRightAnswer();
             }
             else

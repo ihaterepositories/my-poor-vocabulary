@@ -14,13 +14,13 @@ namespace UserInterface.Functional.Widgets
         [SerializeField] private Sprite activeClaimButtonImage;
         [SerializeField] private Sprite inactiveClaimButtonImage;
 
-        private ScoreController _scoreController;
+        private ExpController _expController;
         private const string LastClaimDateKey = "LastClaimDate";
 
         [Inject]
-        private void Construct(ScoreController scoreController)
+        private void Construct(ExpController expController)
         {
-            _scoreController = scoreController;
+            _expController = expController;
         }
         
         private void Start()
@@ -35,7 +35,7 @@ namespace UserInterface.Functional.Widgets
             {
                 PlayerPrefs.SetString(LastClaimDateKey, DateTime.Now.ToString());
                 PlayerPrefs.Save();
-                _scoreController.AddExp(AppConstants.ExpPerDayReward);
+                _expController.AddExp(AppConstants.ExpPerDayReward);
             }
         }
 
