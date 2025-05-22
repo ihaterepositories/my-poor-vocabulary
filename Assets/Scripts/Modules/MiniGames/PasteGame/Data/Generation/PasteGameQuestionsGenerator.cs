@@ -6,8 +6,8 @@ using Modules.MiniGames.Abstraction.Interfaces;
 using Modules.MiniGames.Abstraction.Models;
 using Modules.MiniGames.PasteGame.Data.Factories;
 using Modules.MiniGames.PasteGame.Data.Generation.SentenceGenerators.Interfaces;
-using Modules.VocabularyModule;
-using Modules.VocabularyModule.Data.Models;
+using Modules.PersonalVocabulary;
+using Modules.PersonalVocabulary.Data.Models;
 using UnityEngine;
 using Zenject;
 

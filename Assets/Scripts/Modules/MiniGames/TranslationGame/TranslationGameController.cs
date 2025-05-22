@@ -25,12 +25,12 @@ namespace Modules.MiniGames.TranslationGame
             {
                 ExpController.AddExp(AppConstants.ExpPerTest);
                 HandleRightAnswer();
-                Vocabulary.ModifyTranslationTestAttemptFor(CurrentQuestion, true);
+                Vocabulary.ModifyProblematicStatusFor(CurrentQuestion, true);
             }
             else
             {
                 HandleWrongAnswer(CurrentRightAnswers);
-                Vocabulary.ModifyTranslationTestAttemptFor(CurrentQuestion, false);
+                Vocabulary.ModifyProblematicStatusFor(CurrentQuestion, false);
             }
         }
     }

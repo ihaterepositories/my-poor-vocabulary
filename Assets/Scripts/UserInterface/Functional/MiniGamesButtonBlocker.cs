@@ -1,7 +1,7 @@
 using Constants;
 using DG.Tweening;
-using Modules.VocabularyModule;
-using Modules.VocabularyModule.Data.Input;
+using Modules.PersonalVocabulary;
+using Modules.PersonalVocabulary.Data.Input;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;

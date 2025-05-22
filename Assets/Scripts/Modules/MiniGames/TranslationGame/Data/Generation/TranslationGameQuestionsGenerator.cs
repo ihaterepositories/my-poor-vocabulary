@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using Constants;
 using Modules.MiniGames.Abstraction.Interfaces;
 using Modules.MiniGames.Abstraction.Models;
-using Modules.VocabularyModule;
-using Modules.VocabularyModule.Data.Models;
+using Modules.PersonalVocabulary;
+using Modules.PersonalVocabulary.Data.Models;
 using UnityEngine;
 using Zenject;
 using Random = System.Random;
@@ -109,7 +109,7 @@ namespace Modules.MiniGames.TranslationGame.Data.Generation
             }
             
             var incorrectAnsweredWords = _vocabulary
-                .GetIncorrectTranslatedInTranslationGame()
+                .GetProblematicWords()
                 .ToList();
             
             // add some random words if there are not enough incorrect answered words

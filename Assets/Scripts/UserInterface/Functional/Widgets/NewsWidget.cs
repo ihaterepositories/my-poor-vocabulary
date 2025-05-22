@@ -1,6 +1,6 @@
 using System;
+using Modules.PersonalVocabulary.Data.Input;
 using Modules.ScoreModule;
-using Modules.VocabularyModule.Data.Input;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
