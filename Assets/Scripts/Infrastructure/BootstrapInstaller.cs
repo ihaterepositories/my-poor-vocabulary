@@ -62,8 +62,8 @@ namespace Infrastructure
         private void BindDependencyInjections()
         {
             Container.Bind<IStorageService>().To<LocalStorageService>().AsSingle();
-            Container.Bind<IAsyncTypoGenerator>().To<MockTypoGenerator>().AsSingle();
-            Container.Bind<IAsyncSentenceGenerator>().To<MockSentenceGenerator>().AsSingle();
+            Container.Bind<IAsyncTypoGenerator>().To<LstmTypoGenerator>().AsSingle();
+            Container.Bind<IAsyncSentenceGenerator>().To<GptSentenceGenerator>().AsSingle();
         }
     }
 }

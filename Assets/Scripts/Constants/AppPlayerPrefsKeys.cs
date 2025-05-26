@@ -11,5 +11,9 @@ namespace Constants
         public const string PlayedMiniGamesCountKey = "PlayedMiniGamesCount";
         
         public const string SchoolSystemStudentIdKey = "SchoolSystemStudentId";
+        
+        public const string WordsCountThroughWeekKey = "WordsCountThroughWeek";
+        public const string AverageGameScoreThroughWeekKey = "AverageGameScoreThroughWeek";
+        public const string GamesPlayedThroughWeekKey = "GamesPlayedThroughWeek";
     }
 }
