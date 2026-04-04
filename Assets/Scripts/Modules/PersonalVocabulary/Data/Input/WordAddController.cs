@@ -80,7 +80,9 @@ namespace Modules.PersonalVocabulary.Data.Input
 
                 if (!word.CheckForNewTranslationAddAbility(translatedWordInputField.text))
                 {
-                    actionResultMessageView.ShowError($"Translation already exists or translations count is maximum ({AppConstants.MaxTranslationsPerWord}).");
+                    actionResultMessageView.ShowError(
+                            $"Translation already exists or translations " +
+                            $"count is maximum ({AppConstants.MaxTranslationsPerWord}).");
                     return;
                 }
                 

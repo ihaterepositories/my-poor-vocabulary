@@ -1,0 +1,132 @@
+<linker>
+  <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Modules.ActivityAnalytic.ActivityDataSavers.MiniGamesActivityDataSaver" preserve="all" />
+    <type fullname="Modules.ActivityAnalytic.View.MiniGamesActivityView" preserve="all" />
+    <type fullname="Modules.ActivityAnalytic.View.ProblematicWordsListView" preserve="all" />
+    <type fullname="Modules.ActivityAnalytic.View.WeekProgressCharts.GamesAverageScoreWeekProgressChartView" preserve="all" />
+    <type fullname="Modules.ActivityAnalytic.View.WeekProgressCharts.GamesPlayedWeekProgressChartView" preserve="all" />
+    <type fullname="Modules.ActivityAnalytic.View.WeekProgressCharts.WordsCountWeekProgressChartView" preserve="all" />
+    <type fullname="Modules.MiniGames.CorrectionGame.CorrectionGameController" preserve="all" />
+    <type fullname="Modules.MiniGames.CorrectionGame.Data.Generation.CorrectionGameQuestionsGenerator" preserve="all" />
+    <type fullname="Modules.MiniGames.PasteGame.Data.Generation.PasteGameQuestionsGenerator" preserve="all" />
+    <type fullname="Modules.MiniGames.PasteGame.PasteGameController" preserve="all" />
+    <type fullname="Modules.MiniGames.PasteGame.UserInterface.PasteGameCharacterDialogIconProvider" preserve="all" />
+    <type fullname="Modules.MiniGames.PasteGame.UserInterface.PasteGameCharacterToPlayerPrefsButton" preserve="all" />
+    <type fullname="Modules.MiniGames.PasteGame.UserInterface.PickedPasteGameCharacterText" preserve="all" />
+    <type fullname="Modules.MiniGames.TranslationGame.Data.Generation.TranslationGameQuestionsGenerator" preserve="all" />
+    <type fullname="Modules.MiniGames.TranslationGame.TranslationGameController" preserve="all" />
+    <type fullname="Modules.PersonalVocabulary.Data.Delete.WordDeleteController" preserve="all" />
+    <type fullname="Modules.PersonalVocabulary.Data.View.VocabularyView" preserve="all" />
+    <type fullname="Modules.SchoolSystem.Login.SchoolAccountLoginer" preserve="all" />
+    <type fullname="Modules.SchoolSystem.Login.StudentAccountLoginer" preserve="all" />
+    <type fullname="Modules.SchoolSystem.Login.TeacherAccountLoginer" preserve="all" />
+    <type fullname="Modules.SchoolSystem.Registration.AccountRegistrar" preserve="all" />
+    <type fullname="Modules.SchoolSystem.View.SchoolAccountView" preserve="all" />
+    <type fullname="Modules.SchoolSystem.View.StudentAccountView" preserve="all" />
+    <type fullname="Modules.SchoolSystem.View.TeacherAccountView" preserve="all" />
+    <type fullname="Navigation.SceneLoadProvider" preserve="all" />
+    <type fullname="UserInterface.Animators.Generic.InteractableButtonAnimator" preserve="all" />
+    <type fullname="UserInterface.Animators.Generic.VerticalButtonPointerAnimator" preserve="all" />
+    <type fullname="UserInterface.Functional.ActionResultMessageView" preserve="all" />
+    <type fullname="UserInterface.Functional.MiniGameTestResultView" preserve="all" />
+    <type fullname="UserInterface.Functional.MiniGameTestResultViewIcon" preserve="all" />
+    <type fullname="UserInterface.Functional.NumericDataTransferButton" preserve="all" />
+    <type fullname="UserInterface.Functional.ProgressBar.ProgressBar" preserve="all" />
+    <type fullname="UserInterface.Functional.UserInterfaceActivatorButton" preserve="all" />
+    <type fullname="UserInterface.Functional.UserInterfaceCallButton" preserve="all" />
+    <type fullname="UserInterface.SerializingModels.MoveableUIObject" preserve="nothing" serialized="true" />
+    <type fullname="Modules.SchoolSystem.Registration.SerializingModels.RegisterAccountForm" preserve="nothing" serialized="true" />
+    <type fullname="Utils.JsonBuilding.SerializingModels.JsonReadyInputField" preserve="nothing" serialized="true" />
+    <type fullname="Modules.SchoolSystem.Login.SerializingModels.LoginAccountForm" preserve="nothing" serialized="true" />
+    <type fullname="Modules.SchoolSystem.View.SerializingModels.SchoolAccountViewUiFields" preserve="nothing" serialized="true" />
+    <type fullname="Modules.SchoolSystem.View.SerializingModels.StudentAccountViewUiFields" preserve="nothing" serialized="true" />
+    <type fullname="Modules.SchoolSystem.View.SerializingModels.TeacherAccountViewUiFields" preserve="nothing" serialized="true" />
+    <type fullname="UserInterface.SerializingModels.SerializableKeyValue`1[UnityEngine.Sprite]" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.LegacyResourcesProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneProvider" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="TMPro.TextMeshProUGUI" preserve="all" />
+    <type fullname="TMPro.TMP_FontAsset" preserve="all" />
+    <type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.FontAssetCreationSettings" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.KerningTable" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_Character" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_FontFeatureTable" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_FontWeightPair" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_GlyphAdjustmentRecord" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_GlyphPairAdjustmentRecord" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_GlyphValueRecord" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.AudioListener" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Camera" preserve="all" />
+    <type fullname="UnityEngine.GameObject" preserve="all" />
+    <type fullname="UnityEngine.LightmapSettings" preserve="all" />
+    <type fullname="UnityEngine.Material" preserve="all" />
+    <type fullname="UnityEngine.Object" preserve="all" />
+    <type fullname="UnityEngine.RectTransform" preserve="all" />
+    <type fullname="UnityEngine.RenderSettings" preserve="all" />
+    <type fullname="UnityEngine.Shader" preserve="all" />
+    <type fullname="UnityEngine.Sprite" preserve="all" />
+    <type fullname="UnityEngine.Texture2D" preserve="all" />
+    <type fullname="UnityEngine.Transform" preserve="all" />
+    <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Font" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.StandaloneInputModule" preserve="all" />
+    <type fullname="UnityEngine.UI.Button" preserve="all" />
+    <type fullname="UnityEngine.UI.CanvasScaler" preserve="all" />
+    <type fullname="UnityEngine.UI.ContentSizeFitter" preserve="all" />
+    <type fullname="UnityEngine.UI.GraphicRaycaster" preserve="all" />
+    <type fullname="UnityEngine.UI.GridLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.Image" preserve="all" />
+    <type fullname="UnityEngine.UI.InputField" preserve="all" />
+    <type fullname="UnityEngine.UI.Mask" preserve="all" />
+    <type fullname="UnityEngine.UI.Scrollbar" preserve="all" />
+    <type fullname="UnityEngine.UI.ScrollRect" preserve="all" />
+    <type fullname="UnityEngine.UI.Text" preserve="all" />
+    <type fullname="UnityEngine.UI.AnimationTriggers" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.ColorBlock" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.FontData" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.InputField/EndEditEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.InputField/OnChangeEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.InputField/SubmitEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Navigation" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.ScrollRect/ScrollRectEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Scrollbar/ScrollEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Canvas" preserve="all" />
+    <type fullname="UnityEngine.CanvasRenderer" preserve="all" />
+  </assembly>
+  <assembly fullname="Zenject, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Zenject.SceneContext" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.TextCoreFontEngineModule">
+    <type fullname="UnityEngine.TextCore.FaceInfo" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.Glyph" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.GlyphMetrics" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.GlyphRect" preserve="nothing" serialized="true" />
+  </assembly>
+</linker>
